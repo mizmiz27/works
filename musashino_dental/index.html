@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title> | むさしのデンタルクリニック</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/vegas.css">
+<link rel="stylesheet" href="css/cal.css">
+<!-- <script src="http://code.jquery.com/jquery.min.js"></script> -->
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/vegas.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(function(){
+  $('#main-visual').vegas({
+    slides: [
+     { src: 'images/main01.jpg' },
+     { src: 'images/main02.jpg' },
+     { src: 'images/main03.jpg' },
+    ],
+    delay: 20000,
+    transition: 'fade2',
+    animation: 'random',
+    animationDuration: '20000',
+    timer: false,
+    /*overlay: './images/overlays/02.png'*/
+  });
+});
+</script>
+</head>
+<body>
+	<header id="global-head">
+		<div id="logo"><a href="index.html"><img src="images/logo.jpg"></a></div>
+	</header>
+
+	<aside id="sidebar"></aside>
+
+	<main id="main">
+		<div id="main-in">
+			<div id="main-visual">
+				<img src="images/phone.png" id="phone">
+				<img src="images/copy.svg" id="copy">
+				<img src="images/main_sp.jpg" id="sp">
+				<div class="notice">
+					<h1>News</h1>
+					<ul>
+						<li>
+							<time class="important-notice__list__time" datetime="2021-02-07">2021/02/07</time>
+							<p><a href="index.html">新型コロナウイルス感染症に関する対応について（2月7日更新）</a></p>
+						</li>
+						<li>
+							<time class="important-notice__list__time" datetime="2021-01-25">2021/01/25</time>
+							<p><a href="index.html">緊急事態宣言延長に伴う診療時間の変更について</a></p>
+						</li>
+					</ul>
+					<p><a href="notice.html">もっと見る</a></p>
+				</div>
+			</div>
+			<div id="content">
+				<div id="catchcopy">
+					<h1>むさしのデンタルクリニックについて</h1>
+					<p>武蔵境から徒歩4分のむさしのデンタルクリニックでは、完全個室の専用予防ルームをご用意し、予防歯科に力を入れています。<br />
+					治療室とは分かれているため、リラックスした雰囲気のなか、お口のケアを出来る点が特徴です。<br />
+					患者さんからも歯医者への苦手意識が無くなり、気軽に来られるようになったと好評をいただいております。<br />
+					また、当院はマイクロスコープを早い段階に導入し勉強会などにも積極的に参加してきました。<br />
+					そのため、根管治療に強みと実績があり、常により良い治療を提供できるよう励み、<br />
+					おかげさまで地元武蔵境だけではなく、高尾、橋本、三鷹などからも患者さんが来院するようになりました。<br />
+					お口の事でお困りの際は、どんなことでも構いません。<br />
+					当院までお気軽にご相談ください。</p>
+				</div>
+				<div id="feature">
+					<div class="feature_inner">
+						<h2 class="num" id="no01">
+							痛みの少ない治療を心がけている歯医者です
+							<!-- <img src="images/title01.svg" class="pc">
+							<img src="images/title01_sp.svg" class="sp"> -->
+						</h2>
+						<div class="box clearfix">
+							<p>歯科治療の痛みをなるべく感じさせないように、<br />
+							痛くない治療を目指して、様々な工夫をしています。<br />
+							麻酔注射自体が痛くないように麻酔の前には<br />
+							必ず表面麻酔という塗る麻酔薬を使い、<br />
+							痛みが極力少なくなるようにしています。<br />
+							<br />
+							注射針は細いほうが痛みを感じにくくなりますので<br />
+							麻酔注射針は非常に細い針を使っています。<br />
+							注射をされた事がわからない患者さんも少なくありません。<br />
+							<br />
+							また、状況に応じて電動麻酔注射器も使っております。<br />
+							麻酔液を適切な速度でコントロールし、<br />
+							かつ緩やかに入れる事で、より痛みを感じにくくなります。<br />
+							<br />
+							これらの手法によって、麻酔注射時の痛みは<br>
+							ほとんどありませんのでご安心ください。<br />
+							これらの方法に限らず、より痛みの少ない治療をする<br>
+							歯医者を目指しております。
+							<a href="feature_1.html">詳しくはこちら</a></p>
+							<img src="images/topic_img1.jpg" height="600" width="510">
+						</div>
+					</div>
+					<div class="feature_inner">
+						<h2 class="num" id="no02">
+							丁寧なカウンセリングで安心して治療いただけます
+							<!-- <img src="images/title02.svg" class="pc">
+							<img src="images/title02_sp.svg" class="sp"> -->
+						</h2>
+						<div class="box clearfix">
+							<img src="images/topic_img2.jpg" height="600" width="510">
+							<p>当院では、トリートメント・コーディネーターと担当医によるカウンセリングを実施しております。<br>
+								また、専用のカウンセリング・ルームをご用意し、他の患者様にお話が聞こえることがないようにいたしております。安心して、トリートメント・コーディネーターや担当医にあなたの想いをお話し下さい。<br>
+								<br>
+								トリートメント・コーディネーターとのカウンセリングでは、患者様のご希望をお伺いし、歯科医師との橋渡し役として細かなご要望や不安をケアすることを目的としています。歯科医師には伝えづらい希望や要望、予約日時等の相談、費用や支払い方法に至るまで、お気軽に相談頂ける機会として設けております。<br>
+								<br>
+								歯科医師に聞きたいことや聞き忘れたこと、女性特有のお悩みなどなんでもご相談ください。
+							<a href="feature_2.html">詳しくはこちら</a></p>
+						</div>
+					</div>
+					<div class="feature_inner">
+						<h2 class="num" id="no03">
+							予防歯科・予防処置を大切にしています
+							<!-- <img src="images/title03.svg" class="pc">
+							<img src="images/title03_sp.svg" class="sp"> -->
+						</h2>
+						<div class="box clearfix">
+							<p>予防歯科とは、虫歯になってから治療を行うのではなく、<br />
+							虫歯になる事を防ぐ、予防を大切にすることです。<br />
+							<br />
+							生涯を通じて健康な歯でいるために、<br>
+							定期的な健診がとても大切です。<br />
+							<br />
+							当院では予防歯科に力を入れて、<br>
+							なるべく虫歯にならないように指導・治療を行っています。
+							<a href="prevention.html">詳しくはこちら</a></p>
+							<img src="images/topic_img3.jpg" height="600" width="510">
+						</div>
+					</div>
+				</div>
+				<div id="category">
+						<h2>診療科目</h2>
+						<ul>
+							<li>
+								<div class="icon" ><a href="general.html"><img src="images/icon01.png"></a></div>
+								<h3><a href="general.html">一般歯科</a></h3>
+								<p>歯科治療に対して、「怖い」「痛い」というイメージをお持ちの方は多いと思います。少しでも早い段階での治療が大切と分かっていても、不安感や恐怖心のため不調を我慢し続けているという方もいらっしゃるのではないでしょうか。むさしのデンタルクリニックでは、極力痛みの少ない治療を心がけ、不安を和らげるように努めています。</p>
+							</li>
+							<li>
+								<div class="icon"><a href="prevention.html"><img src="images/icon02.png"></a></div>
+								<h3><a href="prevention.html">予防治療</a></h3>
+								<p>むし歯や歯周病は早期発見・早期治療が大切だと言われていますが、最も重要なのは“ならないこと”。ですが、自己流のケアではどれだけ気を付けていても、磨き癖や磨き残しなどで知らず知らずのうちにむし歯や歯周病になっていることもあります。当院では専門の検査機器を使って、きめ細かくお口の状態をチェック。日常生活におけるケア方法をアドバイスします。</p>
+							</li>
+							<li>
+								<div class="icon" ><a href="periodontal.html"><img src="images/icon03.png"></a></div>
+								<h3><a href="periodontal.html">歯周病治療</a></h3>
+								<p>歯槽膿漏とも呼ばれる歯周病には、40歳以上の約8割が感染していると言われています。歯を失ってしまう原因の1位で、口の中が不衛生な状態によって起こる生活習慣病の一つです。主な原因は、歯磨きをしなかったり、磨き方に問題があること。それら、歯垢や歯石の中に住みついた細菌が毒素を出すことで歯茎に炎症が起こり、いずれは歯を支えている骨が溶け、歯が抜けてしまいます。</p>
+							</li>
+							<li>
+								<div class="icon" ><a href="orthodontics.html"><img src="images/icon04.png"></a></div>
+								<h3><a href="orthodontics.html">矯正歯科</a></h3>
+								<p>矯正歯科は“歯並びを良くする”ための専門的な治療です。きれいな歯並びは見た目の美しさだけではなく、健康にも関わってきます。正しいかみ合わせができていないと、きちんと食べ物を咀嚼できなかったり、顎に痛みが出るおそれもあるのです。口元の美しさ、健康維持のため、当院の矯正歯科をご検討ください。</p>
+							</li>
+							<li>
+								<div class="icon" ><a href="esthetic.html"><img src="images/icon05.png"></a></div>
+								<h3><a href="esthetic.html">審美歯科・ホワイトニング</a></h3>
+								<p>審美歯科の目的は、きれいな歯並びや白い歯を持つことにより、他人の印象や本人の自信にもつながり、そのための治療を行うといえるのです。機能的な治療はもちろんのこと、その上で、積極的に美しい歯を手に入れようという動きが審美歯科といえます。美しく健康な歯や歯肉を作ることが目的です。</p>
+							</li>
+							<li>
+								<div class="icon" ><a href="implant.html"><img src="images/icon06.png"></a></div>
+								<h3><a href="implant.html">インプラント</a></h3>
+								<p>インプラント治療は、まず歯が抜けた部分に人工の歯根（チタン製など）を植え、顎の骨に固定。そこに人工の歯を被せてかみ合わせを作っていきます。入れ歯が嫌な方、治療のために隣の歯を削りたくない方、天然に近いかみ合わせを回復させたい方に有効です。当クリニックでは安心して治療にのぞんでいただけるよう取り組んでいます。</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</main>
+
+	<footer></footer>
+</body>
+</html>
