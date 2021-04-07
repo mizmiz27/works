@@ -9,9 +9,11 @@ var autoprefixer = require('autoprefixer');
 var assets = require('postcss-assets');
 var cssdeclsort = require('css-declaration-sorter');
 var mqpacker = require('css-mqpacker');
+var merge = require('merge-stream');
 
 gulp.task('sass', function() {
-  return gulp.src('./musashino_dental/sass/**/*.scss')
+  var musashinoDental = gulp.src('./musashino_dental/sass/**/*.scss')
+  //return gulp.src('./musashino_dental/sass/**/*.scss')
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
@@ -22,8 +24,23 @@ gulp.task('sass', function() {
     .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./musashino_dental/css'));
+
+    var minkCafe = gulp.src('./mink_cafe/sass/**/*.scss')
+      .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+      .pipe(sourcemaps.init())
+      .pipe(sassGlob())
+      .pipe(sass({outputStyle: 'expanded'}))
+      .pipe(postcss([mqpacker()]))
+      .pipe(postcss([cssdeclsort({order: 'smacss'})]))
+      .pipe(postcss([assets({loadPaths: ['images/']})]))
+      .pipe(postcss([autoprefixer()]))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('./mink_cafe/css'));
+
+      return merge(musashinoDental, minkCafe);
 });
 
 gulp.task('sass:watch', function() {
   gulp.watch('./musashino_dental/sass/**/*.scss', gulp.task('sass'));
+  gulp.watch('./mink_cafe/sass/**/*.scss', gulp.task('sass'));
 });
