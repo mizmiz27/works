@@ -51,6 +51,10 @@ p {
   width: 980px;
   margin: 0 auto;
   display: block;
+  &.header_box {
+    overflow: hidden;
+    position: relative;
+  }
 }
 
 @mixin navSet {
@@ -88,10 +92,13 @@ header {
     height: 75px;
     border-bottom: solid 1px $color2;
     margin-top: 15px;
+    position: relative;
     a#logo {
-      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       img {
-        margin-top: 5px;
+        max-width: 260px;
       }
     }
     #header_member {
@@ -101,8 +108,8 @@ header {
         background-color: #fff;
         border: solid 1px #ccc;
         border-right: none;
-        height: 24px;
-        line-height: 24px;
+        height: 26px;
+        line-height: 26px;
         width: 180px;
         padding: 0 10px;
         position: absolute;
@@ -201,6 +208,7 @@ header {
     padding-top: 20px;
     color: $color1;
     background-image: url(../lp_1/img/icon_service.png);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
     vertical-align: middle;
