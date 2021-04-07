@@ -1,0 +1,496 @@
+@charset "utf-8";
+
+body {
+	line-height: 1.6;
+}
+
+#vd {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#vd * {
+	font-family: Meiryo, "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	box-sizing: border-box;
+}
+
+/*バナーリンクエリア*/
+#vd #bnrlink {
+	letter-spacing: -.4em;
+	width: 980px;
+	margin: 30px auto 0;
+}
+
+#vd #bnrlink a {
+	letter-spacing: normal;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	width: 476px;
+	height: 100%;
+	border: solid 2px #0f4836;
+	color: #0f4836;
+	text-decoration: none;
+	padding: 0 15px;
+}
+
+#vd #bnrlink a:first-child {
+	margin-right: 28px;
+}
+
+#vd #bnrlink a:hover {
+	background-color: #9fd81a;
+}
+
+#vd #bnrlink a:before {
+	content: url(/company/mcs/vd/img/arrow.png);
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+#vd #bnrlink a:hover::before {
+	content: url(/company/mcs/vd/img/arrow_on.png);
+}
+
+#vd #bnrlink a dl {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#vd #bnrlink a dl dt {
+	font-size: 24px;
+	font-weight: bold;
+	display: block;
+	border-bottom: solid 1px #0f4836;
+	position: relative;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+#vd #bnrlink a dl dd {
+	font-size: 14px;
+	padding-bottom: 50px;
+	display: block;
+	width: 100%;
+}
+
+#vd #bnrlink a dl dd span {
+	display: block;
+	margin-top: 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/*最新情報*/
+#vd #news {
+	position: relative;
+	margin: 2em 0;
+	padding: 15px;
+	border: solid 2px #9fd81a;
+	min-height: 62px;
+}
+
+#vd #news span.news-label {
+	position: absolute;
+	display: inline-block;
+	top: 15px;
+	left:15px;
+	padding: 0 10px;
+	height: 28px;
+	line-height: 28px;
+	vertical-align: top;
+	font-size: 16px;
+	font-weight: bold;
+	background: #9fd81a;
+	color: #0f4836;
+}
+
+#vd #news ul {
+	width: 845px;
+	margin-left: 100px
+}
+
+#vd #news ul li {
+	font-size: 14px;
+	border-top: dotted 1px #cccccc;
+	list-style: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#vd #news ul li:first-child {
+	border-top: none;
+	padding-top: 0;
+}
+
+#vd #news ul li:last-child {
+	padding-bottom: 0;
+}
+
+
+/*メインコンテンツ（サービス内容）*/
+#vd #service {
+	width: 100%;
+	margin-top: 50px;
+	letter-spacing: -.4em;
+}
+
+#vd #service #vd_user, 
+#vd #service #member {
+	width: 50%;
+	display: inline-block;
+	letter-spacing: normal;
+	vertical-align: top;
+}
+
+#vd #service #vd_user {
+	background-color: #e0eee4;
+}
+
+#vd #service #member {
+	background-color: #ecf6d1;
+}
+
+/*タイトル周り*/
+#vd #service #vd_user .title, 
+#vd #service #member .title {
+	height: 145px;
+	position: relative;
+}
+
+#vd #service #vd_user .title {
+	background-color: #0f4836;
+	color: #ffffff;
+}
+
+#vd #service #vd_user .title img {
+	position: absolute;
+	top: -12px;
+	left: -17px;
+}
+
+#vd #service #vd_user .title h2 {
+	position: absolute;
+	top: 23px;
+	left: 144px;
+	font-size: 38px;
+	line-height: 40px;
+	font-weight: normal;
+}
+
+#vd #service #vd_user .title h2 span {
+	font-size: 15px;
+	line-height: 24px;
+}
+
+#vd #service #member .title {
+	background-color: #9fd81a;
+	color: #0f4836;
+}
+
+#vd #service #member .title img {
+	position: absolute;
+	top: -12px;
+	right: -17px;
+}
+
+#vd #service #member .title h2 {
+	position: absolute;
+	top: 40px;
+	right: 134px;
+	font-size: 36px;
+	line-height: 34px;
+	font-weight: normal;
+	text-align: right;
+	margin-right: -0.3em;
+}
+
+#vd #service #member .title h2 span {
+	font-size: 22px;
+	line-height: 34px;
+	margin-right: 1em;
+}
+
+/*各サービス内容への頭出しリンクボタン*/
+#vd #service ul.btn {
+	list-style: none;
+	padding: 20px 30px 0;
+	letter-spacing: -.4em;
+}
+
+#vd #service ul.btn li {
+	width: 50%;
+	height: 40px;
+	display: inline-block;
+	letter-spacing: normal;
+	border-right: solid 1px #0f4836;
+	border-bottom: solid 1px #0f4836;
+	vertical-align: top;
+	font-weight: bold;
+	text-align: center;
+}
+
+#vd #service ul.btn li:nth-child(odd) {
+	border-left: solid 1px #0f4836;
+}
+
+#vd #service ul.btn li:first-child, 
+#vd #service ul.btn li:nth-child(2) {
+	border-top: solid 1px #0f4836;
+}
+
+#vd #service ul.btn li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 13px;
+	line-height: 40px;
+	color: #0f4836;
+	text-decoration: none;
+	position: relative;
+	background-color: #ffffff;
+	letter-spacing: normal;
+}
+
+#vd #service ul.btn li a.font_s {
+	font-size: 11px;
+	padding-right: 10px;
+}
+
+#vd #service #vd_user ul.btn li a:hover {
+	background-color: #0f4836;
+	color: #ffffff;
+}
+
+#vd #service #member ul.btn li a:hover {
+	background-color: #9fd81a;
+	color: #0f4836;
+}
+
+#vd #service ul.btn li a::after {
+	content: url(/company/mcs/vd/img/arrow_pglink.png);
+	display: block;
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-weight: normal;
+	width: 16px;
+	height: 16px;
+}
+
+#vd #service #vd_user ul.btn li a:hover::after {
+	content: url(/company/mcs/vd/img/arrow_pglink_on.png);
+}
+
+#vd #service #vd_user .content, 
+#vd #service #member .content {
+	padding: 35px 30px 30px;
+}
+
+#vd #service #vd_user .content p, 
+#vd #service #member .content p {
+	font-size: 14px;
+}
+
+#vd #service #vd_user .content p.caption, 
+#vd #service #member .content p.caption {
+	color: #0f4836;
+	margin-bottom: 15px;
+}
+
+#vd #service #member .content p.caption span {
+	display: block;
+	text-align: right;
+}
+
+#vd #service #vd_user .content ul,
+#vd #service #member .content ul {
+	list-style-type: none;
+}
+
+#vd #service #vd_user .content ul li,
+#vd #service #member .content ul li {
+	list-style-type: none;
+	height: 540px;
+	padding: 20px;
+	background-color: #ffffff;
+	position: relative;
+	margin-top: 20px;
+}
+
+#vd #service #vd_user .content ul li:first-child,
+#vd #service #member .content ul li:first-child {
+	margin-top: 0;
+}
+
+#vd #service #vd_user .content ul li h3, 
+#vd #service #member .content ul li h3 {
+	font-size: 18px;
+	padding: 10px;
+}
+
+#vd #service #vd_user .content ul li h3 {
+	color: #ffffff;
+	background-color: #0f4836;
+}
+
+#vd #service #member .content ul li h3 {
+	color: #0f4836;
+	background-color: #9fd81a;
+}
+
+#vd #service #vd_user .content ul li div, 
+#vd #service #member .content ul li div {
+	position: relative;
+	margin-left: -9px;
+	position: relative;
+	z-index: 5;
+}
+
+#vd #service #vd_user .content ul li div a, 
+#vd #service #member .content ul li div a {
+	display: block;
+	background-color: #ffffff;
+	width: 243px;
+	position: relative;
+	z-index: 15;
+}
+
+#vd #service #vd_user .content ul li div a, 
+#vd #service #member .content ul li div a {
+	text-align: center;
+	display: block;
+	margin: 25px auto 20px;
+	position: relative;
+	z-index: 20;
+}
+
+#vd #service #vd_user .content ul li div a:hover img, 
+#vd #service #member .content ul li div a:hover img {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+#vd #service #vd_user .content ul li div::after, 
+#vd #service #member .content ul li div::after {
+	width: 243px;
+	height: 180px;
+	content: '';
+	display: block;
+	margin-top: -190px;
+	margin-left: 88px;
+	position: relative;
+	z-index: 10;
+}
+
+#vd #service #vd_user .content ul li div::after {
+	background-color: rgba(224,238,228,0.7);
+	background-image: url(/company/mcs/vd/img/vd_user/bg_stripe1.png);
+}
+
+#vd #service #member .content ul li div::after {
+	background-color: rgba(236,246,209,0.85);
+	background-image: url(/company/mcs/vd/img/member/bg_stripe2.png);
+}
+
+#vd #service #vd_user .content ul li p, 
+#vd #service #member .content ul li p {
+	margin-top: 20px;
+}
+
+#vd #service #vd_user .content ul li p a, 
+#vd #service #member .content ul li p a {
+	color: #0f4836;
+}
+
+#vd #service #vd_user .content ul li p:last-child, 
+#vd #service #member .content ul li p:last-child {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+#vd #service #vd_user .content ul li p:last-child a, 
+#vd #service #member .content ul li p:last-child a {
+	color: #0288d1;
+}
+
+#vd #service #vd_user .content ul li p img.icon_pdf, 
+#vd #service #member .content ul li p img.icon_pdf {
+	margin-top: 2px;
+	vertical-align: top;
+}
+
+#vd #service #vd_user .content ul li table, 
+#vd #service #member .content ul li table {
+	border-collapse: collapse;
+	font-size: 14px;
+	margin-top: 1em;
+}
+
+#vd #service #vd_user .content ul li table th, 
+#vd #service #member .content ul li table th, 
+#vd #service #vd_user .content ul li table td, 
+#vd #service #member .content ul li table td {
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+
+/*お知らせ*/
+#vd #info {
+	margin-top: 40px;
+}
+
+#vd #info h2 {
+	color: #0f4836;
+	border-top: solid 1px #0f4836;
+	border-bottom: solid 1px #0f4836;
+	font-size: 18px;
+	padding: 13px 46px;
+	background-image: url(/company/mcs/vd/img/bg_info.png);
+	background-repeat: no-repeat;
+	background-position: 8px 12px;
+}
+
+#vd #info .inner {
+	padding: 20px 20px 10px;
+}
+
+#vd #info .inner h3 {
+	font-size: 18px;
+	margin-left: -0.5em;
+}
+
+#vd #info .inner table {
+	border-collapse: collapse;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+#vd #info .inner table th, 
+#vd #info .inner table td {
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+
+#vd #info .inner img {
+	margin-top: 10px;
+}
+
+#vd #info .inner p {
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+#vd #info a + p:last-child {
+	text-align: right;
+	margin-top: 10px;
+	color: #0288d1;
+}

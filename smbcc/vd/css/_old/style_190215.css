@@ -1,0 +1,433 @@
+@charset "utf-8";
+
+* {
+	font-family: Meiryo, "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	box-sizing: border-box;
+}
+
+#vd {
+	margin-top: 10px;
+}
+
+#vd #lead {
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#vd #lead h1 > span {
+	font-size: 46px;
+	color: #0288d1;
+	line-height: 1;
+	letter-spacing: 1px;
+	font-weight: normal;
+	position: relative;
+}
+
+#vd #lead h1 > span::before, 
+#vd #lead h1 > span::after {
+	content: '';
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	width: 24px;
+	height: 46px;
+	top: 50%;
+	-webkit-transform: translateY(-57%); /* Safari用 */
+	transform: translateY(-57%);
+}
+
+#vd #lead h1 > span::before {
+	background-image: url(../img/before_h1.png);
+	left: -22px;
+}
+
+#vd #lead h1 > span::after {
+	background-image: url(../img/after_h1.png);
+	right: -33px;
+}
+
+#vd #lead h1 > span > span {
+	font-size: 32px;
+	margin-left: -15px;
+}
+
+#vd #lead p {
+	font-size: 16px;
+	margin-top: 35px;
+	line-height: 30px;
+}
+
+#vd #lead ul,
+#vd #lead ul li {
+	list-style: none;
+}
+
+#vd #lead ul {
+	letter-spacing: -.4em;
+	margin-top: 48px;
+}
+
+#vd #lead ul li {
+	display: inline-block;
+	width: 426px;
+	height: 60px;
+	line-height: 60px;
+	border: solid 2px #0f4836;
+	font-size: 16px;
+	letter-spacing: normal;
+}
+
+#vd #lead ul li:first-child {
+	margin-right: 28px;
+}
+
+#vd #lead ul li a {
+	color: #0f4836;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#vd #lead ul li a:hover {
+	background-color: #9fd81a;
+}
+
+#vd #lead ul li a:before {
+	content: url(/company/mcs/vd/img/arrow.png);
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: 16px;
+	top: 30px;
+	-webkit-transform: translateY(-15px); /* Safari用 */
+	transform: translateY(-15px);
+}
+
+#vd #lead ul li a:hover::before {
+	content: url(/company/mcs/vd/img/arrow_on.png);
+}
+
+#vd #service {
+	width: 100%;
+	margin-top: 60px;
+	letter-spacing: -.4em;
+}
+
+#vd #service #vd_user, 
+#vd #service #member {
+	width: 50%;
+	display: inline-block;
+	letter-spacing: normal;
+	vertical-align: top;
+}
+
+#vd #service #vd_user {
+	background-color: #e0eee4;
+}
+
+#vd #service #member {
+	background-color: #ecf6d1;
+}
+
+#vd #service #vd_user .title, 
+#vd #service #member .title {
+	height: 145px;
+	position: relative;
+}
+
+#vd #service #vd_user .title {
+	background-color: #0f4836;
+	color: #ffffff;
+}
+
+#vd #service #vd_user .title img {
+	position: absolute;
+	top: -12px;
+	left: -17px;
+}
+
+#vd #service #vd_user .title h2 {
+	position: absolute;
+	top: 23px;
+	left: 144px;
+	font-size: 38px;
+	line-height: 40px;
+	font-weight: normal;
+}
+
+#vd #service #vd_user .title h2 span {
+	font-size: 15px;
+	line-height: 24px;
+}
+
+#vd #service #member .title {
+	background-color: #9fd81a;
+	color: #0f4836;
+}
+
+#vd #service #member .title img {
+	position: absolute;
+	top: -12px;
+	right: -17px;
+}
+
+#vd #service #member .title h2 {
+	position: absolute;
+	top: 40px;
+	right: 134px;
+	font-size: 36px;
+	line-height: 34px;
+	font-weight: normal;
+	text-align: right;
+	margin-right: -0.3em;
+}
+
+#vd #service #member .title h2 span {
+	font-size: 26px;
+	line-height: 34px;
+	margin-right: 0.7em;
+}
+
+#vd #service #vd_user .content, 
+#vd #service #member .content {
+	padding: 15px 30px 30px;
+}
+
+#vd #service #vd_user .content p, 
+#vd #service #member .content p {
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+#vd #service #vd_user .content p.caption, 
+#vd #service #member .content p.caption {
+	color: #0f4836;
+	font-weight: bold;
+	height: 125px;
+}
+
+#vd #service #member .content p.caption span {
+	display: block;
+	text-align: right;
+}
+
+#vd #service #vd_user .content ul,
+#vd #service #member .content ul {
+	list-style-type: none;
+}
+
+#vd #service #vd_user .content ul li,
+#vd #service #member .content ul li {
+	list-style-type: none;
+	height: 500px;
+	padding: 20px;
+	background-color: #ffffff;
+	position: relative;
+	margin-top: 20px;
+}
+
+#vd #service #vd_user .content ul li:first-child,
+#vd #service #member .content ul li:first-child {
+	margin-top: 0;
+}
+
+#vd #service #vd_user .content ul li h3, 
+#vd #service #member .content ul li h3 {
+	font-size: 18px;
+	padding: 10px;
+}
+
+#vd #service #vd_user .content ul li h3 {
+	color: #ffffff;
+	background-color: #0f4836;
+}
+
+#vd #service #member .content ul li h3 {
+	color: #0f4836;
+	background-color: #9fd81a;
+}
+
+#vd #service #vd_user .content ul li div, 
+#vd #service #member .content ul li div {
+	position: relative;
+	margin-left: -9px;
+	position: relative;
+	z-index: 5;
+}
+
+#vd #service #vd_user .content ul li div a, 
+#vd #service #member .content ul li div a {
+	display: block;
+	background-color: #ffffff;
+	width: 243px;
+	position: relative;
+	z-index: 15;
+}
+
+#vd #service #vd_user .content ul li div a, 
+#vd #service #member .content ul li div a {
+	text-align: center;
+	display: block;
+	margin: 25px auto 20px;
+	position: relative;
+	z-index: 20;
+}
+
+#vd #service #vd_user .content ul li div a:hover img, 
+#vd #service #member .content ul li div a:hover img {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+#vd #service #vd_user .content ul li div::after, 
+#vd #service #member .content ul li div::after {
+	width: 243px;
+	height: 180px;
+	content: '';
+	display: block;
+	margin-top: -190px;
+	margin-left: 88px;
+	position: relative;
+	z-index: 10;
+}
+
+#vd #service #vd_user .content ul li div::after {
+	background-color: rgba(224,238,228,0.7);
+	background-image: url(/company/mcs/vd/img/vd_user/bg_stripe1.png);
+}
+
+#vd #service #member .content ul li div::after {
+	background-color: rgba(236,246,209,0.85);
+	background-image: url(/company/mcs/vd/img/member/bg_stripe2.png);
+}
+
+#vd #service #vd_user .content ul li p, 
+#vd #service #member .content ul li p {
+	margin-top: 20px;
+}
+
+#vd #service #vd_user .content ul li p a, 
+#vd #service #member .content ul li p a {
+	color: #0f4836;
+}
+
+#vd #service #vd_user .content ul li p:last-child, 
+#vd #service #member .content ul li p:last-child {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+#vd #service #vd_user .content ul li p:last-child a, 
+#vd #service #member .content ul li p:last-child a {
+	color: #0288d1;
+}
+
+#vd #service #vd_user .content ul li p img.icon_pdf, 
+#vd #service #member .content ul li p img.icon_pdf {
+	margin-top: 2px;
+	vertical-align: top;
+}
+
+#vd #service #vd_user .content ul li table, 
+#vd #service #member .content ul li table {
+	border-collapse: collapse;
+	font-size: 14px;
+	margin-top: 1em;
+}
+
+#vd #service #vd_user .content ul li table th, 
+#vd #service #member .content ul li table th, 
+#vd #service #vd_user .content ul li table td, 
+#vd #service #member .content ul li table td {
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	line-height: 1.6;
+}
+
+#vd #service #member #info {
+	margin-top: 35px;
+}
+
+#vd #service #member #info h3 {
+	color: #0f4836;
+	border-top: solid 1px #0f4836;
+	border-bottom: solid 1px #0f4836;
+	font-size: 18px;
+	padding: 13px 46px;
+	background-image: url(/company/mcs/vd/img/member/bg_info.png);
+	background-repeat: no-repeat;
+	background-position: 8px 7px;
+}
+
+#vd #service #member #info table {
+	font-size: 12px;
+	padding: 0;
+	border-collapse: collapse;
+	table-layout: fixed;
+	margin-top: 20px;
+}
+
+#vd #service #member #info table caption {
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+#vd #service #member #info table th, 
+#vd #service #member #info table td {
+	padding: 0;
+	text-align: center;
+}
+
+#vd #service #member #info table th {
+	color: #ffffff;
+	background-color: #0f4836;
+	padding: 13px 0;
+}
+
+#vd #service #member #info table td {
+	padding: 10px;
+	font-feature-settings : "palt" 1;
+}
+
+#vd #service #member #info table th:first-child {
+	border-right: solid 1px #ffffff;
+}
+
+#vd #service #member #info table th:nth-child(2) {
+	width: 55px;
+	border-right: solid 1px #ffffff;
+}
+
+#vd #service #member #info table th:last-child {
+/*	width: 265px;*/
+}
+
+#vd #service #member #info table td {
+	border-right: solid 1px #0f4836;
+}
+
+#vd #service #member #info table td span.kerning {
+	letter-spacing: -0.5em;
+}
+
+#vd #service #member #info table td:last-child {
+	text-align: left;
+	border-right: none;
+}
+
+#vd #service #member #info table tr:nth-child(even) td {
+	background-color: #ffffff;
+}
+
+#vd #service #member #info table tr:nth-child(odd) td {
+	background-color: #e5e5e5;
+}
