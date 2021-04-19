@@ -1,6 +1,6 @@
 *.psd
 *.code-workspace
-*.DS_Store
+.DS_Store
 *.prproj
 *.psb
 *元素材/
