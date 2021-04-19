@@ -37,10 +37,23 @@ gulp.task('sass', function() {
       .pipe(sourcemaps.write())
       .pipe(gulp.dest('./mink_cafe/css'));
 
-      return merge(musashinoDental, minkCafe);
+      var smbcc = gulp.src('./smbcc/sass/**/*.scss')
+      .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+      .pipe(sourcemaps.init())
+      .pipe(sassGlob())
+      .pipe(sass({outputStyle: 'expanded'}))
+      .pipe(postcss([mqpacker()]))
+      .pipe(postcss([cssdeclsort({order: 'smacss'})]))
+      .pipe(postcss([assets({loadPaths: ['images/']})]))
+      .pipe(postcss([autoprefixer()]))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('./smbcc/css'));
+
+      return merge(musashinoDental, minkCafe, smbcc);
 });
 
 gulp.task('sass:watch', function() {
   gulp.watch('./musashino_dental/sass/**/*.scss', gulp.task('sass'));
   gulp.watch('./mink_cafe/sass/**/*.scss', gulp.task('sass'));
+  gulp.watch('./smbcc/sass/**/*.scss', gulp.task('sass'));
 });

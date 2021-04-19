@@ -18,6 +18,9 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 	box-sizing: border-box;
+	@media only screen and (max-width: 767px) {
+		font-size: 12px;
+	}
 }
 
 html {

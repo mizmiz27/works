@@ -1,261 +1,263 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<title>SMBCƒRƒ“ƒTƒ‹ƒeƒBƒ“ƒO</title>
-<script type="text/javascript">
-<!--
-absolute_location = document.location.href;
-var_absolute_location = absolute_location.split("\\");
-var_absolute_location_set =var_absolute_location.join("/");
-if(var_absolute_location_set.indexOf(".smbc-consulting.co.jp/") != -1){
-	absolute_num =var_absolute_location_set.indexOf(".smbc-consulting.co.jp/");
-	absolute_path = var_absolute_location_set.substring(0,absolute_num+23);
-}
-else{
-	absolute_path ='/';
-}
-jsfile_jquery ='<script src="'+absolute_path+'common/js/jquery/jquery.min.js" type="text/javascript"></'+'script>';
-
-jsfile ='<script src="'+absolute_path+'shared/js/common.js" type="text/javascript"></'+'script>';
-jsfile_common ='<script src="'+absolute_path+'common/js/common.js" type="text/javascript"></'+'script>';
-document.write(jsfile_jquery,jsfile,jsfile_common);
-//-->
-</script>
-<script type="text/javascript" src="/shared/js/common.js"></script>
-<script type="text/javascript" src="/common/js/jQueryAutoHeight.js"></script>
-<script type="text/javascript" src="/company/mcs/vd/js/vd.js"></script>
-<link rel="stylesheet" type="text/css" media="all" href="/common/css/common.css">
-<link rel="stylesheet" type="text/css" media="all" href="/company/mcs/vd/css/style.css">
+	<meta charset="utf-8">
+	<title>SMBCCï¼šSMBCçµŒå–¶æ‡‡è©±ä¼šã®ã”æ¡ˆå†…</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/vd.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../js/common.js"></script>
 </head>
+<body>
 
-<body onload="body_fn();">
-<div id="box_common">
-<div id="box_header"><!-- 2011.11 renewal --></div>
-
-<div id="box_category">
-<div id="box_category_menu">
-<noscript>
-“–ƒTƒCƒg‚ÍJavaScript‚ðon‚É‚µ‚Ä‚²——‚­‚¾‚³‚¢B
-</noscript>
+<header>
+<nav id="header_nav">
+	<ul class="inner">
+		<li class="topLink"><a href="#">ä¼šç¤¾æ¦‚è¦</a></li>
+		<li class="topLink"><a href="#">ãƒ‹ãƒ¥ãƒ¼ã‚¹ãƒªãƒªãƒ¼ã‚¹</a></li>
+		<li class="topLink"><a href="#">ãƒ—ãƒ©ã‚¤ãƒã‚·ãƒ¼ãƒ»ãƒãƒªã‚·ãƒ¼</a></li>
+		<li class="topLink last-child"><a href="#">æœ¬ã‚µã‚¤ãƒˆã®ã”åˆ©ç”¨æ–¹æ³•</a></li>
+	</ul>
+</nav>
+<div id="header_title">
+	<div class="inner header_box">
+		<a href="#" id="logo"><img src="img/logo.png"></a>
+		<div id="header_member">
+			<form>
+				<input type="text" name="query" id="box_search_text" size="30" value="ã‚µã‚¤ãƒˆå†…æ¤œç´¢">
+				<input type="image" alt="æ¤œç´¢" src="img/keyword_search.gif" id="box_search_btn" name="form_serch_btn">
+			</form>
+			<ul>
+				<li class="topLink"><a href="#">ãƒ­ã‚°ã‚¤ãƒ³ã™ã‚‹</a></li>
+				<li class="topLink"><a href="#">ãƒžã‚¤ãƒšãƒ¼ã‚¸ã¸</a></li>
+				<li class="topLink last-child"><a href="#">ã‚«ãƒ¼ãƒˆã‚’è¦‹ã‚‹</a></li>
+				<li class="topLink last-child"><a href="#">ã‚¢ã‚¯ã‚»ã‚¹ãƒžãƒƒãƒ—</a></li>
+			</ul>
+		</div>
+	</div>
 </div>
+<div id="hero">
+	<img src="img/key_visual.png">
 </div>
-
-<a name="top"></a>
-<div id="vd">
-<h1><img src="/company/mcs/vd/img/title.png" alt="SMBCƒRƒ“ƒTƒ‹ƒeƒBƒ“ƒO" width="980" height="300" /></h1>
-
-<div id="bnrlink">
-<a href="/">
-<dl>
-<dt>SMBCƒRƒ“ƒTƒ‹ƒeƒBƒ“ƒO‚É‚Â‚¢‚Ä</dt>
-<dd>3‚Â‚ÌŽ–‹Æ‚ð’Ê‚µA‚¨‹q‚³‚Ü‚Ì‰¿’l‘no‚É‘S—Í‚ÅŽæ‚è‘g‚Þƒ\ƒŠƒ…[ƒVƒ‡ƒ“ƒJƒ“ƒpƒj[‚Å‚·B
-<span>ƒ3‚Â‚ÌŽ–‹Æ„<br>
-&#9312;SMBCŒo‰c§˜b‰ï‚Ì‰^‰c &#9313;lÞˆç¬ƒT[ƒrƒX‚Ì’ñ‹Ÿ &#9314;ƒRƒ“ƒTƒ‹ƒeƒBƒ“ƒO‚Ì’ñ‹Ÿ</span></dd>
-</dl>
-</a>
-
-<a href="/company/mcs/discussion/"">
-<dl>
-<dt>SMBCŒo‰c§˜b‰ï‚Ì‚²ˆÄ“à</dt>
-<dd>ŽOˆäZ—F‹âs‚Ì‚¨Žæˆøæ‚ÌŒo‰c‰Û‘è‰ðŒˆ‚Ì‚½‚ß‚Ì<b>uŒo‰cî•ñ‚Ì”­Mv</b>‚¨‚æ‚Ñ<b>uŠé‹ÆŠÔ‚ÌŒð—¬v</b>‚ð–Ú“I‚Æ‚µ‚½ƒ}ƒlƒWƒƒ“ƒgƒNƒ‰ƒu‚Å‚·B<br>
-‚¨‹q‚³‚Ü‚ÌŽ–‹Æ”­“W‚ðŠè‚¢A‘½Ê‚ÈƒT[ƒrƒX‚ð‚²—pˆÓ‚µ‚Ä‚¨‚è‚Ü‚·‚Ì‚ÅAŒo‰cŽÒEŒo‰cŠ²•”‚©‚çŽáŽèŽÐˆõ‚Ü‚ÅAŠF‚³‚Ü‚Å‚²Šˆ—p‚­‚¾‚³‚¢B</dd>
-</dl>
-</a>
+<div class="inner txt_ct ">
+<h1>ã€ŽSMBCçµŒå–¶æ‡‡è©±ä¼šã€<span class="ft_s">ã¨ã¯ãƒ»ãƒ»ãƒ»</span></h1>
+<p>ä¸‰äº•ä½å‹éŠ€è¡Œã®ãŠå–å¼•å…ˆã®çµŒå–¶èª²é¡Œè§£æ±ºã®ãŸã‚ã®ã€ŒçµŒå–¶æƒ…å ±ã®ç™ºä¿¡ã€<br>
+ãŠã‚ˆã³ã€Œä¼æ¥­é–“ã®äº¤æµã€ã‚’ç›®çš„ã¨ã—ãŸãƒžãƒã‚¸ãƒ¡ãƒ³ãƒˆã‚¯ãƒ©ãƒ–ã§ã™ã€‚<br>
+ä¼šå“¡ä¼æ¥­ã•ã¾ã®äº‹æ¥­ç™ºå±•ã‚’é¡˜ã„ã€å¤šå½©ãªã‚µãƒ¼ãƒ“ã‚¹ã‚’ã”ç”¨æ„ã—ã¦ãŠã‚Šã¾ã™ã®ã§ã€<br>
+çµŒå–¶è€…ãƒ»çµŒå–¶å¹¹éƒ¨ã‹ã‚‰è‹¥æ‰‹ç¤¾å“¡ã¾ã§ã€çš†ã•ã¾ã§ã”æ´»ç”¨ãã ã•ã„ã€‚</p>
 </div>
+</header>
 
-<div id="news">
-<span class="news-label">ÅVî•ñ</span>
-<ul>
-<!-- ‚±‚±‚É<li></li>ƒ^ƒO‚ðì¬‚·‚é‚ÆA‚¨’m‚ç‚¹ƒ{ƒbƒNƒX‚ª¶¬‚³‚ê‚Ü‚·B -->
-</ul>
-</div>
+<main>
+	<div id="value" class="vd_content">
+		<div class="vd_content_head">
+			<div class="inner">
+				<h2>ä¸‰äº•ä½å‹éŠ€è¡Œ Value Door ID<span>ã‚’ãŠæŒã¡ã®ãŠå®¢ã•ã¾ãŒã”åˆ©ç”¨ã„ãŸã ã‘ã‚‹ã‚µãƒ¼ãƒ“ã‚¹</span></h2>
+				<img src="img/img_vd_user.png" class="icon">
+				<p>ä¸‰äº•ä½å‹éŠ€è¡Œ Value Door ID ã‚’ãŠæŒã¡ã®ãŠå®¢ã•ã¾ã¯ã€ã€ŒSMBCçµŒå–¶æ‡‡è©±ä¼šã€ä¼šå“¡å‘ã‘ã‚µãƒ¼ãƒ“ã‚¹ã®ä¸€éƒ¨ã‚’ç„¡æ–™ã§ã”åˆ©ç”¨ã„ãŸã ã‘ã¾ã™ã€‚</p>
+			</div>
+		</div>
+		<div class="vd_content_body">
+			<div class="inner">
+				<div class="column">
+					<div class="thumbnail">
+						<a><img src="img/vd_user/img_ph01.jpg"></a>
+					</div>
+					<div class="txt_box">
+						<h3>ãƒãƒƒãƒˆãƒ—ãƒ¬ã‚¹</h3>
+						<p>ç¨Žé‡‘ã‚„æ³•å¾‹ãªã©çµŒå–¶ã«é–¢ã™ã‚‹ã‚¿ã‚¤ãƒ ãƒªãƒ¼ã§èº«è¿‘ãªãƒˆãƒ”ãƒƒã‚¯ã‚¹ã‚’è§£èª¬ã—ã¦ã„ã¾ã™ã€‚<br>
+							A4ã‚µã‚¤ã‚º1ï½ž2æžšç¨‹åº¦ã«ã¾ã¨ã‚ã¦ã„ã¾ã™ã®ã§ã€ã¡ã‚‡ã£ã¨ã—ãŸç©ºãæ™‚é–“ã«ãŠèª­ã¿ã„ãŸã ã‘ã¾ã™ã€‚</p>
+						<div class="btn">
+							<p>ãƒãƒƒãƒˆãƒ—ãƒ¬ã‚¹ã«ã¤ã„ã¦</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="thumbnail">
+						<a><img src="img/vd_user/img_ph02.jpg"></a>
+					</div>
+					<div class="txt_box">
+						<h3>ä¸€å£ãƒ¡ãƒ¢</h3>
+						<p>æ—¥å¸¸ã®å…‰æ™¯ã‚„æ­´å²ã®ã‚¨ãƒ”ã‚½ãƒ¼ãƒ‰ã€å­£ç¯€ã®è©±é¡Œç­‰ã€æ§˜ã€…ãªãƒˆãƒ”ãƒƒã‚¯ã‚¹ã‚’é¡Œæã¨ã—ãŸã‚³ãƒ©ãƒ ã§ã™ã€‚<br>
+							æœç¤¼æ™‚ã®æŒ¨æ‹¶ã‚„çµŒå–¶ã®ãƒ’ãƒ³ãƒˆã¨ã—ã¦ã”åˆ©ç”¨ã„ãŸã ã‘ã¾ã™ã€‚</p>
+						<div class="btn">
+							<p>ä¸€å£ãƒ¡ãƒ¢ã«ã¤ã„ã¦</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="thumbnail">
+						<a><img src="img/vd_user/img_ph03.jpg"></a>
+					</div>
+					<div class="txt_box">
+						<h3>å®Ÿå‹™ã‚·ãƒªãƒ¼ã‚º</h3>
+						<p>çµŒå–¶å®Ÿå‹™ã«å½¹ç«‹ã¤å®Ÿè·µçš„ãƒŽã‚¦ãƒã‚¦æº€è¼‰ã®å½“ç¤¾ã‚ªãƒªã‚¸ãƒŠãƒ«æ›¸ç±ã§ã™ã€‚<br>
+							ç¤¾å“¡æ•™è‚²ã‚„è‡ªå·±å•“ç™ºæ•™æã€ç¤¾å†…ç ”ä¿®ãƒ†ã‚­ã‚¹ãƒˆã¨ã—ã¦ã‚‚ã”å¥½è©•ã„ãŸã ã„ã¦ãŠã‚Šã¾ã™ã€‚</p>
+						<div class="btn">
+							<p>å®Ÿå‹™ã‚·ãƒªãƒ¼ã‚ºã«ã¤ã„ã¦</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="thumbnail">
+						<a><img src="img/vd_user/img_ph04.jpg"></a>
+					</div>
+					<div class="txt_box">
+						<h3>äººã‚’è‚²ã¦ã‚‹</h3>
+						<p>æ§˜ã€…ãªåˆ†é‡Žã§æ´»èºã™ã‚‹ç¬¬ä¸€äººè€…ã«ã€è‡ªèº«ã®äººæè‚²æˆã«å¯¾ã™ã‚‹æ€ã„ã‚„å–ã‚Šçµ„ã¿ã«ã¤ã„ã¦èžãã‚¤ãƒ³ã‚¿ãƒ“ãƒ¥ãƒ¼è¨˜äº‹ã§ã™ã€‚</p>
+						<div class="btn">
+							<p>äººã‚’è‚²ã¦ã‚‹ã«ã¤ã„ã¦</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="thumbnail">
+						<a><img src="img/vd_user/img_ph05.jpg"></a>
+					</div>
+					<div class="txt_box">
+						<h3>å®šä¾‹è¬›æ¼”ä¼šã‚µãƒžãƒªãƒ¼</h3>
+						<p>æœˆ1å›žé–‹å‚¬ã—ã¦ã„ã‚‹å®šä¾‹è¬›æ¼”ä¼šã®ã‚µãƒžãƒªãƒ¼ã‚’åŽéŒ²ã—ã¦ã„ã¾ã™ã€‚</p>
+						<div class="btn">
+							<p>å®šä¾‹è¬›æ¼”ä¼šã‚µãƒžãƒªãƒ¼ã«ã¤ã„ã¦</p>
+						</div>
+					</div>
+				</div>
+		 </div>
+		</div>
+	</div>
 
-<div id="service">
-<div id="vd_user" class="inner">
-<div class="title">
-<img src="/company/mcs/vd/img/img_vd_user.png" width="138" height="138">
-<h2>ŽOˆäZ—F‹âs<br>
-Value Door ID<br>
-<span>‚ð‚¨Ž‚¿‚Ì‚¨‹q‚³‚Ü‚ª‚²—˜—p‚¢‚½‚¾‚¯‚éƒT[ƒrƒX</span></h2>
-</div>
+	<div id="member" class="vd_content">
+		<div class="vd_content_head">
+			<div class="inner">
+				<h2>ã€ŽSMBCçµŒå–¶æ‡‡è©±ä¼šã€<span>ä¼šå“¡å°‚ç”¨ã‚³ãƒ³ãƒ†ãƒ³ãƒ„</span></h2>
+				<img src="img/vd_member/img_vd_member.png" class="icon">
+				<p>ï½¢SMBCçµŒå–¶æ‡‡è©±ä¼šï½£ä¼šå“¡å‘ã‘ã‚µãƒ¼ãƒ“ã‚¹ã®ä»–ã€<br>
+					SMBCã‚³ãƒ³ã‚µãƒ«ãƒ†ã‚£ãƒ³ã‚°ãŒæä¾›ã—ã¦ã„ã‚‹ã‚µãƒ¼ãƒ“ã‚¹ã®ä¸€éƒ¨ã‚’ã”ç´¹ä»‹ã—ã¾ã™ã€‚<br>
+					ã”è³ªå•ç­‰ãŒã”ã–ã„ã¾ã—ãŸã‚‰ã€SMBCçµŒå–¶æ‡‡è©±ä¼šäº‹å‹™å±€ã¾ã§ãŠå•åˆã›ãã ã•ã„ã€‚<br>
+					SMBCçµŒå–¶æ‡‡è©±ä¼šäº‹å‹™å±€ ãƒ•ãƒªãƒ¼ãƒ€ã‚¤ã‚¢ãƒ«ï¼š0120-7109-49</p>
+			</div>
+		</div>
+		<div class="vd_content_body">
+			<div class="inner">
+				<div class="column">
+					<div class="thumbnail">
+						<a><img src="img/vd_member/img_ph01.jpg"></a>
+					</div>
+					<div class="txt_box">
+						<h3>çµŒå–¶ç›¸è«‡</h3>
+						<p>ãŠå®¢ã•ã¾ãŒç›´é¢ã•ã‚Œã‚‹ã•ã¾ã–ã¾ãªå•é¡Œã«ã€å¼è­·å£«ãƒ»ç¨Žç†å£«ãƒ»å…¬èªä¼šè¨ˆå£«ãƒ»å¼ç†å£«ãƒ»ç¤¾ä¼šä¿é™ºåŠ´å‹™å£«ãªã©ã®å°‚é–€å®¶ã®ã»ã‹ã€å½“ç¤¾ãƒ™ãƒ†ãƒ©ãƒ³ã‚¹ã‚¿ãƒƒãƒ•ãŒè¦ªèº«ã«ãªã£ã¦ã”ç›¸è«‡ã«å¿œã˜ã¾ã™ã€‚<br>
+							ä¼šå“¡ä¼æ¥­ã®ç¤¾å“¡ã®æ–¹ã¯ã©ãªãŸã§ã‚‚ã”åˆ©ç”¨ã„ãŸã ã‘ã¾ã™ã€‚ä½•å›žã”åˆ©ç”¨ã„ãŸã ã„ã¦ã‚‚ç„¡æ–™ã§ã™ã€‚<br>
+							ï¼ˆä¼šå“¡ä»¥å¤–ã®ãŠå®¢ã•ã¾ã¯ã€SMBCçµŒå–¶æ‡‡è©±ä¼šäº‹å‹™å±€ã¾ã§ã”é€£çµ¡ãã ã•ã„ã€‚ï¼‰</p>
+						<div class="btn">
+							<p>çµŒå–¶ç›¸è«‡ã«ã¤ã„ã¦</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="thumbnail">
+						<a><img src="img/vd_member/img_ph02.jpg"></a>
+					</div>
+					<div class="txt_box">
+						<h3>SMBCãƒžãƒã‚¸ãƒ¡ãƒ³ãƒˆï¼‹ï¼ˆãƒ—ãƒ©ã‚¹ï¼‰</h3>
+						<p>SMBCçµŒå–¶æ‡‡è©±ä¼šç‰¹åˆ¥ä¼šå“¡ã®çš†ã•ã¾ã¸æ¯ŽæœˆãŠå±Šã‘ã—ã¦ã„ã‚‹ä¼šå ±èªŒã§ã™ã€‚<br>
+							çµŒå–¶è€…ã‚¤ãƒ³ã‚¿ãƒ“ãƒ¥ãƒ¼ã‚„æœ€æ–°ãƒ†ã‚¯ãƒŽãƒ­ã‚¸ãƒ¼ã®ç´¹ä»‹ã€äººæè‚²æˆã‚’ãƒ†ãƒ¼ãƒžã¨ã—ãŸé€£è¼‰ãªã©ã€ä¸­å …ãƒ»ä¸­å°ä¼æ¥­ã®çµŒå–¶èª²é¡Œè§£æ±ºã«å½¹ç«‹ã¤æƒ…å ±ã‚’ãŠå±Šã‘ã„ãŸã—ã¾ã™ã€‚</p>
+						<div class="btn">
+							<p>SMBCãƒžãƒã‚¸ãƒ¡ãƒ³ãƒˆï¼‹<span style="margin-left: -0.5rem;">ï¼ˆãƒ—ãƒ©ã‚¹ï¼‰</span><span style="margin-left: -0.5rem;">ã«ã¤ã„ã¦</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="thumbnail">
+						<a><img src="img/vd_member/img_ph03.jpg"></a>
+					</div>
+					<div class="txt_box">
+						<h3>ã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ä¼šå“¡ã®ã”æ¡ˆå†…</h3>
+						<p>èµ·æ¥­ã—ã¦é–“ã‚‚ãªã„ã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ãƒ»ã‚¢ãƒ¼ãƒªãƒ¼ã‚¹ãƒ†ãƒ¼ã‚¸ã®ä¼æ¥­ã•ã¾ã«ã€å‰µæ¥­æœŸã«ã‚ã‚ŠãŒã¡ãªèª²é¡Œè§£æ±ºã«å½¹ç«‹ã¤è±Šå¯Œãªãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’ã€å®‰ä¾¡ã§æä¾›ã™ã‚‹ãƒžãƒã‚¸ãƒ¡ãƒ³ãƒˆã‚¯ãƒ©ãƒ–ã§ã™ã€‚<br>
+							ä¼šå“¡ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®ä»–ã«ã‚‚ã€SMBCã‚°ãƒ«ãƒ¼ãƒ—ã‚„å¤šå½©ãªå¤–éƒ¨ãƒ‘ãƒ¼ãƒˆãƒŠãƒ¼ã¨ã®é€£æºã«ã‚ˆã‚Šã€æ§˜ã€…ãªã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚„ã‚¤ãƒ™ãƒ³ãƒˆã‚’ã”ç”¨æ„ã—ã¦ãŠã‚Šã¾ã™ã€‚</p>
+						<div class="btn">
+							<p>ã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ä¼šå“¡ã®ã”æ¡ˆå†…ã«ã¤ã„ã¦</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="thumbnail">
+						<a><img src="img/vd_member/img_ph04.jpg"></a>
+					</div>
+					<div class="txt_box">
+						<h3>äººæè‚²æˆã‚µãƒ¼ãƒ“ã‚¹</h3>
+						<p>ä¼æ¥­ã•ã¾ãŒæŠ±ãˆã‚‹äººæè‚²æˆã«é–¢ã™ã‚‹çµŒå–¶èª²é¡Œã«ã¤ã„ã¦ã€3ç¨®é¡žã®äººæè‚²æˆæ–¹æ³•ã‚’ã”æä¾›ã—ã¦ãŠã‚Šã¾ã™ã€‚æ±äº¬ãƒ»å¤§é˜ªã«ã¦å¹´é–“ç´„3,000è¬›åº§ä»¥ä¸Šã‚’é–‹å‚¬ã—ã¦ã„ã‚‹ãƒ“ã‚¸ãƒã‚¹ã‚»ãƒŸãƒŠãƒ¼ã‚„ä¼æ¥­ã•ã¾ã®ãƒ‹ãƒ¼ã‚ºã«åˆã‚ã›ã¦ã‚«ã‚¹ã‚¿ãƒžã‚¤ã‚ºã—ãŸç¤¾å“¡ç ”ä¿®ã®ã”ææ¡ˆãªã©ã€æ§˜ã€…ãªä¼æ¥­ã•ã¾ã®ã”è¦æœ›ã«ãŠå¿œãˆå‡ºæ¥ã‚‹ä½“åˆ¶ã‚’æ§‹ç¯‰ã—ã¦ãŠã‚Šã¾ã™ã€‚</p>
+						<div class="btn">
+							<p>äººæè‚²æˆã‚µãƒ¼ãƒ“ã‚¹ã«ã¤ã„ã¦</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="thumbnail">
+						<a><img src="img/vd_member/img_ph05.jpg"></a>
+					</div>
+					<div class="txt_box">
+						<h3>å®šä¾‹è¬›æ¼”ä¼š</h3>
+						<p>çµŒæ¸ˆã€çµŒå–¶ã‹ã‚‰æ”¿æ²»ã€å¤–äº¤ã€æ•™é¤Šã¾ã§ã€å„åˆ†é‡Žã§æ´»èºã™ã‚‹ä¸€æµã®è¬›å¸«ã‚’ãŠæ‹›ãã—ã€æ±äº¬ãƒ»å¤§é˜ªã®2ä¼šå ´ã§æœˆ1å›žé–‹å‚¬ã—ã¦ã„ã¾ã™ã€‚<br>
+							ä¼šå“¡ã®ãŠå®¢ã•ã¾ä»¥å¤–ï¼š3åæ§˜ã¾ã§ç„¡æ–™<br>
+							ä¼šå“¡ä»¥å¤–ã®ãŠå®¢ã•ã¾ï¼šãŠ1äººæ§˜5,000å††ï¼ˆæ¶ˆè²»ç¨Žè¾¼ã¿ï¼‰</p>
+						<div class="btn">
+							<p>å®šä¾‹è¬›æ¼”ä¼šã«ã¤ã„ã¦</p>
+						</div>
+					</div>
+				</div>
+		 </div>
+		</div>
+	</div>
 
-<ul class="btn">
-<li><a href="#vd_no01">Netpress</a></li>
-<li><a href="#vd_no02">ˆêŒûƒƒ‚</a></li>
-<li><a href="#vd_no03">ŽÀ–±ƒVƒŠ[ƒY</a></li>
-<li><a href="#vd_no04">l‚ðˆç‚Ä‚é</a></li>
-<li><a href="#vd_no05">’è—áu‰‰‰ïƒTƒ}ƒŠ[</a></li>
-<li><a href="#info">‚¨’m‚ç‚¹</a></li>
-</ul>
+	<div id="membership_guide">
+		<h2><span class="inner">ãŠçŸ¥ã‚‰ã›</span></h2>
+		<div class="inner">
+			<table>
+				<caption>â– å®šä¾‹è¬›æ¼”ä¼šã®ã”æ¡ˆå†…</caption>
+				<tr>
+					<th>é–‹å‚¬æ—¥</th>
+					<th>é–‹å‚¬åœ°</th>
+					<th>è¬›æ¼”ä¼šå†…å®¹</th>
+				</tr>
+				<tr>
+					<td>2020/10/22</td>
+					<td>å¤§é˜ª</td>
+					<td>ç½å®³ã«å¼·ã„ä¼æ¥­ã¥ãã‚Š ï½žä»Šæ—¥ã‹ã‚‰å½¹ç«‹ã¤å®Ÿè·µçš„é˜²ç½ãƒ»å±æ©Ÿç®¡ç†ï½ž<br>
+						å±±æ‘ æ­¦å½¦ æ°ï¼ˆé˜²ç½ã‚·ã‚¹ãƒ†ãƒ ç ”ç©¶æ‰€ æ‰€é•·ï¼é˜²ç½ãƒ»å±æ©Ÿç®¡ç†ã‚¢ãƒ‰ãƒã‚¤ã‚¶ãƒ¼ï¼‰</td>
+				</tr>
+				<tr>
+					<td>2020/10/29</td>
+					<td>æ±äº¬</td>
+					<td>ç½å®³ã«å¼·ã„ä¼æ¥­ã¥ãã‚Š ï½žä»Šæ—¥ã‹ã‚‰å½¹ç«‹ã¤å®Ÿè·µçš„é˜²ç½ãƒ»å±æ©Ÿç®¡ç†ï½ž<br>
+						å±±æ‘ æ­¦å½¦ æ°ï¼ˆé˜²ç½ã‚·ã‚¹ãƒ†ãƒ ç ”ç©¶æ‰€ æ‰€é•·ï¼é˜²ç½ãƒ»å±æ©Ÿç®¡ç†ã‚¢ãƒ‰ãƒã‚¤ã‚¶ãƒ¼ï¼‰</td>
+				</tr>
+				<tr>
+					<td>2020/11/13</td>
+					<td>æ±äº¬</td>
+					<td>2019å¹´çµŒæ¸ˆå±•æœ› ï½žä¸–ç•Œã®æ§‹é€ å¤‰åŒ–ã¨æ—¥æœ¬ï½ž<br>
+						å¯ºå³¶ å®ŸéƒŽ æ°ï¼ˆä¸€èˆ¬è²¡å›£æ³•äºº æ—¥æœ¬ç·åˆç ”ç©¶æ‰€ ä¼šé•·ï¼‰</td>
+				</tr>
+				<tr>
+					<td>2020/11/17</td>
+					<td>å¤§é˜ª</td>
+					<td>2019å¹´çµŒæ¸ˆå±•æœ› ï½žä¸–ç•Œã®æ§‹é€ å¤‰åŒ–ã¨æ—¥æœ¬ï½ž<br>
+						å¯ºå³¶ å®ŸéƒŽ æ°ï¼ˆä¸€èˆ¬è²¡å›£æ³•äºº æ—¥æœ¬ç·åˆç ”ç©¶æ‰€ ä¼šé•·ï¼‰</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
 
-<div class="content">
-<p class="caption">ŽOˆäZ—F‹âs Value Door ID ‚ð‚¨Ž‚¿‚Ì‚¨‹q‚³‚Ü‚ÍAuSMBCŒo‰c§˜b‰ïv‰ïˆõŒü‚¯ƒT[ƒrƒX‚Ìˆê•”‚ð–³—¿‚Å‚²—˜—p‚¢‚½‚¾‚¯‚Ü‚·B<br>
-iŽOˆäZ—F‹âs‚ÌƒTƒCƒg‚æ‚è Value Door ƒƒOƒCƒ“‚ð‚µ‚½‚¤‚¦‚Å‚²—˜—p‚­‚¾‚³‚¢Bj</p>
-<ul>
-<li id="vd_no01">
-<h3>Netpress</h3>
-<div><a href="/smbcc/appli/netpress/search/wewd0300/display"><img src="img/vd_user/img_ph01.jpg" height="180" width="243" alt="Netpress"></a></div>
-<p>Å‹à‚â–@—¥‚È‚ÇŒo‰c‚ÉŠÖ‚·‚éƒ^ƒCƒ€ƒŠ[‚Åg‹ß‚ÈƒgƒsƒbƒNƒX‚ð‰ðà‚µ‚Ä‚¢‚Ü‚·B<br>
-A4ƒTƒCƒY1&#65374;2–‡’ö“x‚É‚Ü‚Æ‚ß‚Ä‚¢‚Ü‚·‚Ì‚ÅA‚¿‚å‚Á‚Æ‚µ‚½‹ó‚«ŽžŠÔ‚É‚¨“Ç‚Ý‚¢‚½‚¾‚¯‚Ü‚·B</p>
-<p><a href="/smbcc/appli/netpress/search/wewd0300/display">Netpress‚É‚Â‚¢‚Ä‚Í‚±‚¿‚ç</a></p>
-</li>
+	
 
-<li id="vd_no02">
-<h3>ˆêŒûƒƒ‚</h3>
-<div><a href="/company/mcs/basic/pub/memo/"><img src="img/vd_user/img_ph02.jpg" height="180" width="243" alt="ˆêŒûƒƒ‚"></a></div>
-<p>“úí‚ÌŒõŒi‚â—ðŽj‚ÌƒGƒsƒ\[ƒhA‹Gß‚Ì˜b‘è“™A—lX‚ÈƒgƒsƒbƒNƒX‚ð‘èÞ‚Æ‚µ‚½ƒRƒ‰ƒ€‚Å‚·B<br>
-’©—çŽž‚Ìˆ¥ŽA‚âŒo‰c‚Ìƒqƒ“ƒg‚Æ‚µ‚Ä‚²—˜—p‚¢‚½‚¾‚¯‚Ü‚·B</p>
-<p><a href="/company/mcs/basic/pub/memo/">ˆêŒûƒƒ‚‚É‚Â‚¢‚Ä‚Í‚±‚¿‚ç</a></p>
-</li>
-
-<li id="vd_no03">
-<h3>ŽÀ–±ƒVƒŠ[ƒY</h3>
-<div><a href="/smbcc/appli/sale/list/wswd0010/display"><img src="img/vd_user/img_ph03.jpg" height="180" width="243" alt="ŽÀ–±ƒVƒŠ[ƒY"></a></div>
-<p>Œo‰cŽÀ–±‚É–ð—§‚ÂŽÀ‘H“IƒmƒEƒnƒE–žÚ‚Ì“–ŽÐƒIƒŠƒWƒiƒ‹‘Ð‚Å‚·B<br>
-ŽÐˆõ‹³ˆç‚âŽ©ŒÈŒ[”­‹³ÞAŽÐ“àŒ¤CƒeƒLƒXƒg‚Æ‚µ‚Ä‚à‚²D•]‚¢‚½‚¾‚¢‚Ä‚¨‚è‚Ü‚·B</p>
-<p><a href="/smbcc/appli/sale/list/wswd0010/display">ŽÀ–±ƒVƒŠ[ƒY‚É‚Â‚¢‚Ä‚Í‚±‚¿‚ç</a></p>
-</li>
-
-<li id="vd_no04">
-<h3>l‚ðˆç‚Ä‚é</h3>
-<div><a href="http://smbcc.jp/annai/vd_no04.pdf" target="_blank"><img src="http://smbcc.jp/annai/img_vd_user_img_ph04.gif" height="180" width="243" alt="l‚ðˆç‚Ä‚é"></a></div>
-<p>—lX‚È•ª–ì‚ÅŠˆ–ô‚·‚é‘æˆêlŽÒ‚ÉAŽ©g‚ÌlÞˆç¬‚É‘Î‚·‚éŽv‚¢‚âŽæ‚è‘g‚Ý‚É‚Â‚¢‚Ä•·‚­ƒCƒ“ƒ^ƒrƒ…[‹LŽ–‚Å‚·B<br>
-<br>
-<a href="http://smbcc.jp/annai/vd_no04.pdf" target="_blank">“Á•Ê‘Î’k<br>
-ul‚¦‚³‚¹‚éŽw“±v‚ª‘IŽè‚ÌŽ©—§‚ÆŽ©M‚É‚Â‚È‚ª‚é<br>
-ƒƒzƒXƒg„ƒƒo[ƒg ƒLƒƒƒ“ƒxƒ‹ Ži“ú–{•¶ŠwŒ¤‹†ŽÒj<br>
-ƒƒQƒXƒg„ˆ×–– ‘å ŽiŒ³ƒvƒ—¤ã‘IŽèj</a><img src="/common/img/icon_pdflink.gif" class="icon_pdf"></p>
-<p>&nbsp;</p>
-</li>
-
-<li id="vd_no05">
-<h3>’è—áu‰‰‰ïƒTƒ}ƒŠ[</h3>
-<div><a href="http://smbcc.jp/annai/vd_no05.pdf" target="_blank"><img src="http://smbcc.jp/annai/img_vd_user_img_ph05.gif" height="180" width="243" alt="’è—áu‰‰‰ïƒTƒ}ƒŠ["></a></div>
-<p>ŒŽ1‰ñŠJÃ‚µ‚Ä‚¢‚é’è—áu‰‰‰ï‚ÌƒTƒ}ƒŠ[‚ðŽû˜^‚µ‚Ä‚¢‚Ü‚·B<br>
-<br>
-<a href="http://smbcc.jp/annai/vd_no05.pdf" target="_blank">‹³ˆç‚É‰ÈŠw“Iª‹’iƒGƒrƒfƒ“ƒXj‚ð<br>
-’†Žº –qŽq ŽiŒcœä‹`m‘åŠw‘‡­ôŠw•” y‹³Žöj</a><img src="/common/img/icon_pdflink.gif" class="icon_pdf"></p>
-<p>&nbsp;</p>
-</li>
-</ul>
-</div>
-
-</div>
-
-<div id="member" class="inner">
-<div class="title">
-<img src="/company/mcs/vd/img/img_member.png" width="138" height="138">
-<h2>uSMBCŒo‰c§˜b‰ïv<br>
-<span>‰ïˆõŒü‚¯ƒT[ƒrƒX“™‚Ì‚²Ð‰î</span></h2>
-</div>
-
-<ul class="btn">
-<li><a href="#mem_no01">Œo‰c‘Š’k</a></li>
-<li><a href="#mem_no02" class="font_s"><span>SMBCƒ}ƒlƒWƒƒ“ƒg{<span style="margin-left: -0.5em;">i</span>ƒvƒ‰ƒX<span style="letter-spacing: -0.5em">j</span></span></a></li>
-<li><a href="#mem_no03">ƒXƒ^[ƒgƒAƒbƒv‰ïˆõ</a></li>
-<li><a href="#mem_no04">lÞˆç¬ƒT[ƒrƒX</a></li>
-<li><a href="#mem_no05">’è—áu‰‰‰ï</a></li>
-<li><a href="#info">‚¨’m‚ç‚¹</a></li>
-</ul>
-
-<div class="content">
-<p class="caption">¢SMBCŒo‰c§˜b‰ï£‰ïˆõŒü‚¯ƒT[ƒrƒX‚Ì‘¼ASMBCƒRƒ“ƒTƒ‹ƒeƒBƒ“ƒO‚ª’ñ‹Ÿ‚µ‚Ä‚¢‚éƒT[ƒrƒX‚Ìˆê•”‚ð‚²Ð‰î‚µ‚Ü‚·B<br>
-‚²Ž¿–â“™‚ª‚²‚´‚¢‚Ü‚µ‚½‚çASMBCŒo‰c§˜b‰ïŽ––±‹Ç‚Ü‚Å‚¨–â‡‚¹‚­‚¾‚³‚¢B<br>
-<span>SMBCŒo‰c§˜b‰ïŽ––±‹Ç ƒtƒŠ[ƒ_ƒCƒAƒ‹F0120-7109-49</span></p>
-
-<ul>
-<li id="mem_no01">
-<h3>Œo‰c‘Š’k</h3>
-<div><a href="/company/mcs/basic/sodan/"><img src="img/member/img_ph01.jpg" height="180" width="243" alt="Œo‰c‘Š’k"></a></div>
-<p>‚¨‹q‚³‚Ü‚ª’¼–Ê‚³‚ê‚é‚³‚Ü‚´‚Ü‚È–â‘è‚ÉA•ÙŒìŽmEÅ—ŽmEŒö”F‰ïŒvŽmE•Ù—ŽmEŽÐ‰ï•ÛŒ¯˜J–±Žm‚È‚Ç‚Ìê–å‰Æ‚Ì‚Ù‚©A“–ŽÐƒxƒeƒ‰ƒ“ƒXƒ^ƒbƒt‚ªeg‚É‚È‚Á‚Ä‚²‘Š’k‚É‰ž‚¶‚Ü‚·B<br>
-¢SMBCŒo‰c§˜b‰ï£‰ïˆõ‚Ì‚¨‹q‚³‚Ü‚ÍiŽÐˆõ‚Ì•û‚Í‚Ç‚È‚½‚Å‚àjA‰½‰ñ‚Å‚à–³—¿‚Å‚²—˜—p‚¢‚½‚¾‚¯‚Ü‚·B‰ï”ïˆÈŠO‚É’Ç‰ÁƒRƒXƒg‚ð‹C‚É‚¹‚¸‚É‚²—˜—p‚¢‚½‚¾‚¯‚éŒ¾‚í‚Îg’èŠz§h‚ÌŒo‰c‘Š’kƒT[ƒrƒX‚Å‚·B<br>
-i‰ïˆõˆÈŠO‚Ì‚¨‹q‚³‚Ü‚ÍASMBCŒo‰c§˜b‰ïŽ––±‹Ç‚Ü‚Å‚²˜A—‚­‚¾‚³‚¢Bj
+	
+<p id="pagetop" style="display: block;">
+	<a href="#"></a>
 </p>
-<p><a href="/company/mcs/basic/sodan/">Œo‰c‘Š’k‚É‚Â‚¢‚Ä‚Í‚±‚¿‚ç</a></p>
-</li>
+</main>
 
-<li id="mem_no02">
-<h3>SMBCƒ}ƒlƒWƒƒ“ƒg{iƒvƒ‰ƒXj</h3>
-<div><a href="/company/mcs/businesswatch/managementplus/"><img src="img/member/img_ph02.jpg" height="180" width="243" alt="SMBCƒ}ƒlƒWƒƒ“ƒg{iƒvƒ‰ƒXj"></a></div>
-<p>¢SMBCŒo‰c§˜b‰ï£“Á•Ê‰ïˆõ‚Ì‚¨‹q‚³‚Ü‚Ö–ˆŒŽ‚¨“Í‚¯‚µ‚Ä‚¢‚é‰ï•ñŽ‚Å‚·B<br>
-{‚Ìƒe[ƒ}‚ðŽæ‚èã‚°‚é“ÁW‹LŽ–Al‚ðˆç‚Ä‚éilÞˆç¬‚É‚Â‚¢‚Ä‚ÌƒCƒ“ƒ^ƒrƒ…[jA’è—áu‰‰‰ïƒTƒ}ƒŠ[A’–ÚŠé‹Æ‚ÌÐ‰îAŒo‰c‚¨”Y‚Ý‘Š’kŽº‚È‚ÇA‚¨‹q‚³‚Ü‚ÌŒo‰c‰Û‘è‰ðŒˆ‚É–ð—§‚Âî•ñ‚ð‚¨“Í‚¯‚¢‚½‚µ‚Ü‚·B</p>
-<p><a href="/company/mcs/businesswatch/managementplus/">SMBCƒ}ƒlƒWƒƒ“ƒg{iƒvƒ‰ƒXj‚É‚Â‚¢‚Ä‚Í‚±‚¿‚ç</a></p>
-</li>
-
-<li id="mem_no03">
-<h3>ƒXƒ^[ƒgƒAƒbƒv‰ïˆõ</h3>
-<div><a href="/company/mcs/startup/"><img src="img/member/img_ph03.jpg" height="180" width="243" alt="ƒXƒ^[ƒgƒAƒbƒv‰ïˆõ"></a></div>
-<p>‹N‹Æ‚µ‚ÄŠÔ‚à‚È‚¢ƒXƒ^[ƒgƒAƒbƒvEƒA[ƒŠ[ƒXƒe[ƒW‚Ì‚¨‹q‚³‚Ü‚ÉA‘n‹ÆŠú‚É‚ ‚è‚ª‚¿‚È‰Û‘è‰ðŒˆ‚É–ð—§‚Â–L•x‚Èƒƒjƒ…[‚ðAˆÀ‰¿‚Å’ñ‹Ÿ‚·‚éƒ}ƒlƒWƒƒ“ƒgƒNƒ‰ƒu‚Å‚·B<br>
-‰ïˆõƒƒjƒ…[‚Ì‘¼‚É‚àASMBCƒOƒ‹[ƒv‚â‘½Ê‚ÈŠO•”ƒp[ƒgƒi[‚Æ‚Ì˜AŒg‚É‚æ‚èA—lX‚ÈƒRƒ“ƒeƒ“ƒc‚âƒCƒxƒ“ƒg‚ð‚²—pˆÓ‚µ‚Ä‚¨‚è‚Ü‚·B</p>
-<p><a href="/company/mcs/startup/">ƒXƒ^[ƒgƒAƒbƒv‰ïˆõ‚É‚Â‚¢‚Ä‚Í‚±‚¿‚ç</a></p>
-</li>
-
-<li id="mem_no04">
-<h3>lÞˆç¬ƒT[ƒrƒX</h3>
-<div><a href="/company/mcs/group02/"><img src="img/member/img_ph04.jpg" height="180" width="243" alt="lÞˆç¬ƒT[ƒrƒX"></a></div>
-<p>‚¨‹q‚³‚Ü‚ª•ø‚¦‚élÞˆç¬‚ÉŠÖ‚·‚éŒo‰c‰Û‘è‚É‚Â‚¢‚ÄA3Ží—Þ‚ÌlÞˆç¬•û–@‚ð‚²’ñ‹Ÿ‚µ‚Ä‚¨‚è‚Ü‚·B“Œ‹žE‘åã‚É‚Ä”NŠÔ–ñ3,000uÀˆÈã‚ðŠJÃ‚µ‚Ä‚¢‚éƒrƒWƒlƒXƒZƒ~ƒi[‚â‚¨‹q‚³‚Ü‚Ìƒj[ƒY‚É‡‚í‚¹‚ÄƒJƒXƒ^ƒ}ƒCƒY‚µ‚½ŽÐˆõŒ¤C‚Ì‚²’ñˆÄ‚È‚ÇA—lX‚È‚²—v–]‚É‚¨‰ž‚¦o—ˆ‚é‘Ì§‚ð\’z‚µ‚Ä‚¨‚è‚Ü‚·B</p>
-<p><a href="/company/mcs/group02/">lÞˆç¬ƒT[ƒrƒX‚É‚Â‚¢‚Ä‚Í‚±‚¿‚ç</a></p>
-</li>
-
-<li id="mem_no05">
-<h3>’è—áu‰‰‰ï</h3>
-<div><a href="/smbcc/appli/lecture/list/wewd0070/display"><img src="img/member/img_ph05.jpg" height="180" width="243" alt="’è—áu‰‰‰ï"></a></div>
-<p>ŒoÏAŒo‰c‚©‚ç­Ž¡AŠOŒðA‹³—{‚Ü‚ÅAŠe•ª–ì‚ÅŠˆ–ô‚·‚éˆê—¬‚ÌuŽt‚ð‚¨µ‚«‚µA“Œ‹žE‘åã‚Ì2‰ïê‚ÅŒŽ1‰ñŠJÃ‚µ‚Ä‚¢‚Ü‚·B</p>
-<table>
-<tr>
-<th>¡‰ïˆõ‚Ì‚¨‹q‚³‚Ü</th>
-<td><b>F</b>3–¼—l‚Ü‚Å–³—¿</td>
-</tr>
-<tr>
-<th>¡‰ïˆõˆÈŠO‚Ì‚¨‹q‚³‚Ü</th>
-<td><b>F</b>‚¨1l—l5,000‰~iÁ”ïÅž‚Ýj</td>
-</tr>
-</table>
-<p><a href="/smbcc/appli/lecture/list/wewd0070/display">’è—áu‰‰‰ï‚É‚Â‚¢‚Ä‚Í‚±‚¿‚ç</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="info">
-<h2>‚¨’m‚ç‚¹</h2>
-<div class="inner">
-<h3>y’è—áu‰‰‰ï‚Ì‚²ˆÄ“àz</h3>
-<table>
-<tr>
-<th>¡‰ïˆõ‚Ì‚¨‹q‚³‚Ü</th>
-<td><b>F</b>3–¼—l‚Ü‚Å–³—¿</td>
-</tr>
-<tr>
-<th>¡‰ïˆõˆÈŠO‚Ì‚¨‹q‚³‚Ü</th>
-<td><b>F</b>‚¨1l—l5,000‰~iÁ”ïÅž‚Ýj</td>
-</tr>
-</table>
-<a href="/company/mcs/group02/"><img src="http://smbcc.jp/annai/tbl_lecture.gif" height="350" width="940"></a>
-<p><a href="/smbcc/appli/lecture/list/wewd0070/display">’è—áu‰‰‰ï‚É‚Â‚¢‚Ä‚Í‚±‚¿‚ç</a></p>
-</div>
-
-<div class="inner">
-<h3>y’–ÚŽsêƒŒƒ|[ƒg‚Ì‚²ˆÄ“àz</h3>
-<p>Še‹ÆŠE‚Ì‚È‚©‚Å‚àA’–Ú‚·‚×‚«Žsê‚ÌƒŒƒ|[ƒg‚ðŽl”¼Šú–ˆ‚É‚¨“Í‚¯‚µ‚Ä‚¨‚è‚Ü‚·B<br>
-’ñ‹ŸFiŠ”j–î–ìŒoÏŒ¤‹†Š</p>
-<a href="/company/mcs/industry/attention.html"><img src="http://smbcc.jp/annai/tbl_attention.gif" height="424" width="940"></a>
-<p><a href="/company/mcs/industry/attention.html">’–ÚŽsêƒŒƒ|[ƒg‚É‚Â‚¢‚Ä‚Í‚±‚¿‚ç</a></p>
-</div>
-</div>
-
-
-
-</div>
-
-
-<div id="box_footer"></div>
-<div class="clear_float"></div>
-
-</div>
+<footer>
+	<small id="copyright">Copyright Â© 2016 SMBC Consulting Co.,Ltd.All rights reserved.</small>
+</footer>
 </body>
 </html>
