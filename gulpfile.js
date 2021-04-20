@@ -25,7 +25,7 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./musashino_dental/css'));
 
-    var minkCafe = gulp.src('./mink_cafe/sass/**/*.scss')
+    var oheroPapa = gulp.src('./ohero_papa/sass/**/*.scss')
       .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
       .pipe(sourcemaps.init())
       .pipe(sassGlob())
@@ -35,7 +35,7 @@ gulp.task('sass', function() {
       .pipe(postcss([assets({loadPaths: ['images/']})]))
       .pipe(postcss([autoprefixer()]))
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest('./mink_cafe/css'));
+      .pipe(gulp.dest('./ohero_papa/css'));
 
       var smbcc = gulp.src('./smbcc/sass/**/*.scss')
       .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
@@ -49,11 +49,11 @@ gulp.task('sass', function() {
       .pipe(sourcemaps.write())
       .pipe(gulp.dest('./smbcc/css'));
 
-      return merge(musashinoDental, minkCafe, smbcc);
+      return merge(musashinoDental, oheroPapa, smbcc);
 });
 
 gulp.task('sass:watch', function() {
   gulp.watch('./musashino_dental/sass/**/*.scss', gulp.task('sass'));
-  gulp.watch('./mink_cafe/sass/**/*.scss', gulp.task('sass'));
+  gulp.watch('./ohero_papa/sass/**/*.scss', gulp.task('sass'));
   gulp.watch('./smbcc/sass/**/*.scss', gulp.task('sass'));
 });
