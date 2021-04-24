@@ -49,11 +49,24 @@ gulp.task('sass', function() {
       .pipe(sourcemaps.write())
       .pipe(gulp.dest('./smbcc/css'));
 
-      return merge(musashinoDental, oheroPapa, smbcc);
+      var sumidaMarathon = gulp.src('./sumida_marathon/sass/**/*.scss')
+      .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+      .pipe(sourcemaps.init())
+      .pipe(sassGlob())
+      .pipe(sass({outputStyle: 'expanded'}))
+      .pipe(postcss([mqpacker()]))
+      .pipe(postcss([cssdeclsort({order: 'smacss'})]))
+      .pipe(postcss([assets({loadPaths: ['images/']})]))
+      .pipe(postcss([autoprefixer()]))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('./sumida_marathon/css'));
+
+      return merge(musashinoDental, oheroPapa, smbcc, sumidaMarathon);
 });
 
 gulp.task('sass:watch', function() {
   gulp.watch('./musashino_dental/sass/**/*.scss', gulp.task('sass'));
   gulp.watch('./ohero_papa/sass/**/*.scss', gulp.task('sass'));
   gulp.watch('./smbcc/sass/**/*.scss', gulp.task('sass'));
+  gulp.watch('./sumida_marathon/sass/**/*.scss', gulp.task('sass'));
 });

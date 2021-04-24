@@ -1,0 +1,464 @@
+@import "components/03parts";
+
+.clearfix:after {
+  content: ".";
+  display: block; 
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.txt_ct {
+  text-align: center;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Noto Sans JP", "Meiryo UI", メイリオ, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  position: relative;
+  overflow-x: hidden;
+  background-color: $color4;
+  &.modal-open {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+}
+
+p {
+  line-height: 1.4;
+}
+
+.inner {
+  width: 960px;
+  margin: 0 auto;
+  @include media(l) {
+    width: 90%;
+  }
+}
+
+.flex_content {
+  display: flex;
+  @include media(l) {
+    flex-direction: column;
+  }
+}
+
+.test {
+  width: 100px;
+  height: 100px;
+  background-color: $color3;
+  cursor: pointer;
+}
+
+.openbtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background: $color1;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  display: none;
+  @include media(xl) {
+    display: block;
+  }
+  @include media(m) {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+  }
+  &:hover {
+     background-color: #fff;
+    box-shadow: 0px 0px 0px 2px $color1;
+    span {
+      background-color: $color1;
+    }
+  }
+  span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 45%;
+    @include media(m) {
+      left: 11px;
+    }
+    &:nth-of-type(1) {
+      top: 15px;
+      @include media(m) {
+        top: 11px;
+      }
+    }
+    &:nth-of-type(2) {
+      top: 23px;
+      @include media(m) {
+        top: 19px;
+      }
+    }
+    &:nth-of-type(3) {
+      top: 31px;
+      @include media(m) {
+        top: 27px;
+      }
+    }
+  }
+/*activeクラスが付与された後のボタンのアイコン設定*/
+  &.active {
+    span:nth-of-type(1) {
+      top: 18px;
+      left: 18px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 30%;
+      @include media(m) {
+        top: 12px;
+        left: 14px;
+      }
+    }
+    span:nth-of-type(2) {
+      opacity: 0;
+    }
+    span:nth-of-type(3) {
+      top: 30px;
+      left: 18px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 30%;
+      @include media(m) {
+        top: 24px;
+        left: 14px;
+      }
+    }
+  }
+  &.fadeDown {
+    animation-name: fadeDownAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: block;
+  }
+}
+
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+.menu_sp {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0160e2;
+  position: relative;
+  //display: none;
+  opacity: 0;
+  position: fixed;
+  transition: all 0.4s;
+  &.active {
+    z-index: 800;
+    opacity: 1;
+    .link_box {
+      width: 50%;
+      height: 100vh;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -25%);
+      @include media(l) {
+        width: 75%;
+      }
+      @include media(m) {
+        width: 50%;
+        transform: translate(-50%, -35%);
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      ul {
+        li {
+          width: 100%;
+          padding: 1rem 0;
+          position: relative;
+          padding-left: 0.5rem;
+          margin-left: 10px;
+          a {
+            color: #fff;
+            cursor: pointer;
+          }
+          &::before {
+            @include arrow;
+            width: 8px;
+            height: 8px;
+            border-width: 1px;
+            top: 50%;
+            left: -10px;
+            transform: translateY(-50%) rotate(45deg);
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  padding: 35px 80px 15px 70px;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  //margin-top: -100px;
+  opacity: 0;
+  animation: fadeIn 1s ease 4s 1 forwards;
+  @include media(xl) {
+    display: block;
+    padding: 0;
+    animation: none;
+    opacity: 1;
+  }
+  #header_logo {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    a.sp {
+      display: none;
+    }
+    @include media(l) {
+      left: 20px;
+    }
+    @include media(m) {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      padding-left: 10px;
+    }
+    img {
+      width: 110px;
+      @include media(l) {
+        width: 80px;
+      }
+      @include media(m) {
+        width: 60px;
+      }
+    }
+  }
+  nav.pc {
+    margin-left: auto;
+    width: 50%;
+    @include media(xl) {
+      display: none;
+    }
+    ul {
+      display: flex;
+      @include media(l) {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      li {
+        margin-left: 40px;
+        text-align: center;
+        width: 100%;
+        span {
+          display: block;
+          margin-bottom: 10px;
+          width: 100%;
+          img {
+            width: 35%;
+          }
+        }
+        @include media(l) {
+          width: 100%;
+          margin: 0;
+          padding: 35px 0;
+          text-align: center;
+          font-size: 1.2rem;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover {
+            color: #051a77;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  &.scrolled {
+    nav.pc {
+      display: none;
+    }
+  }
+  #menu_btn {
+    display: none;
+    @include media(l) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      background-color: #000;
+      .menu_btn_box {
+        box-sizing: content-box;
+        display: block !important;
+        position: relative;
+        width: 26px;
+        height: 20px;
+        margin: 20px 17px;
+        span {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          margin: 0 auto;
+          background-color: #fff;
+          &:nth-last-of-type(2) {
+            top: 8px;
+          }
+          &:nth-last-of-type(3) {
+            top: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100vw;
+  background-color: #0160e2;
+  color: #fff;
+  padding: 40px 0;
+  position: relative;
+  a {
+    #scroll_top {
+      position: absolute;
+      top: -50px;
+      right: 10%;
+      width: 130px;
+      text-align: center;
+      background-color: #0160e2;
+      height: 50px;
+      line-height: 50px;
+      z-index: 10;
+      border-radius: 10px 10px 0 0;
+      font-size: 0.8rem;
+      @include media(l) {
+        display: none;
+      }
+    }
+    &:hover {
+      #scroll_top {
+        background-color: $color1;
+      }
+    }
+  }
+  @include media(l) {
+    padding: 20px 0;
+  }
+  a {
+    color: #fff;
+  }
+  .footer_logo {
+    text-align: center;
+    img {
+      width: 20%;
+      @include media(l) {
+        width: 50%;
+      }
+    }
+  }
+  .link_box {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include media(m) {
+      display: none;
+    }
+    ul {
+      @include media(l) {
+        display: none;
+      }
+      li {
+        width: 100%;
+        padding: 1rem 0;
+        position: relative;
+        padding-left: 0.5rem;
+        margin-left: 10px;
+        &::before {
+          @include arrow;
+          width: 8px;
+          height: 8px;
+          border-width: 1px;
+          top: 50%;
+          left: -10px;
+          transform: translateY(-50%) rotate(45deg);
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  #copyright {
+    text-align: center;
+    margin: 40px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid #fff;
+    @include media(l) {
+      margin-top: 0;
+      border-top: none;
+      padding-top: 0;
+    }
+    span {
+      font-size: 0.8rem;
+    }
+  }
+}
