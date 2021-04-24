@@ -71,7 +71,7 @@ header {
   padding: 48px 80px 15px 70px;
   display: flex;
   align-items: center;
-  @include media(l) {
+  @include media(xl) {
     height: 60px;
     display: block;
     padding: 0;
@@ -83,7 +83,7 @@ header {
     padding-top: 10px;
     padding-bottom: 10px;
     height: 75px;
-    @include media(l) {
+    @include media(xl) {
       padding: 0;
       background-color: #E73656;
       border-bottom: none;
@@ -98,7 +98,7 @@ header {
     padding-top: 10px;
     padding-bottom: 10px;
     height: 75px;
-    @include media(l) {
+    @include media(xl) {
       padding: 0;
       background-color: #E73656;
       border-bottom: none;
@@ -109,7 +109,7 @@ header {
     a.sp {
       display: none;
     }
-    @include media(l) {
+    @include media(xl) {
       position: absolute;
       top: 50%;
       left: 0;
@@ -124,7 +124,7 @@ header {
     }
     img {
       width: 300px;
-      @include media(l) {
+      @include media(xl) {
         width: 200px;
       }
       &.slideImg {
@@ -134,7 +134,7 @@ header {
   }
   nav {
     margin-left: auto;
-    @include media(l) {
+    @include media(xl) {
       position: fixed;
       background-color: #000;
       top: 60px;
@@ -152,7 +152,7 @@ header {
     }
     ul {
       display: flex;
-      @include media(l) {
+      @include media(xl) {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -161,7 +161,7 @@ header {
       }
       li {
         margin-left: 45px;
-        @include media(l) {
+        @include media(xl) {
           width: 100%;
           margin: 0;
           padding: 35px 0;
@@ -181,7 +181,7 @@ header {
   }
   #menu_btn {
     display: none;
-    @include media(l) {
+    @include media(xl) {
       display: block;
       position: absolute;
       top: 0;
@@ -229,7 +229,7 @@ header {
     top: 0;
     left: 0;
     overflow: hidden;
-    @include media(l) {
+    @include media(xl) {
       position: relative;
       background-image: url(../images/top_bg_2.jpg);
     background-position: bottom -30px center;
@@ -246,7 +246,7 @@ header {
       width: 100vw;
       height: 100vh;
       z-index: 100;
-      @include media(l) {
+      @include media(xl) {
         //display: none;
       }
     }
@@ -266,7 +266,7 @@ header {
       width: 100%;
       z-index: 100; 
       padding: 50px 80px;
-      @include media(l) {
+      @include media(xl) {
         padding: 20px 0 20px 20px;
         width: 60%;
       }
@@ -276,7 +276,7 @@ header {
         font-weight: bold;
         line-height: 0.6;
         letter-spacing: 0.1rem;
-        @include media(l) {
+        @include media(xl) {
           line-height: 1.6;
           font-size: 4rem;
         }
@@ -284,7 +284,7 @@ header {
           font-size: 0.9rem;
           font-weight: normal;
           padding-left: 0.3rem;
-          @include media(l) {
+          @include media(xl) {
             display: block;
             // line-height: 0.6rem;
           }
@@ -297,13 +297,13 @@ header {
       top: 0vh;
       left: 0;
       position: relative;
-      @include media(l) {
+      @include media(xl) {
         display: none;
       }
     }
     // .top_bg_sp {
     //   display: none;
-    //   @include media(l) {
+    //   @include media(xl) {
     //     display: block;
     //     height: calc(100vh - 60px);
     //     margin-top: 60px;
@@ -352,7 +352,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      @include media(l) {
+      @include media(xl) {
         flex-direction: column;
         justify-content: flex-start;
         margin-top: 60px;
@@ -361,7 +361,7 @@ header {
       .box_wrap {
         width: 40vw;
         z-index: 30;
-        @include media(l) {
+        @include media(xl) {
           width: 80vw;
         }
         .box {
@@ -370,7 +370,7 @@ header {
           //background-color: rgba(255, 255, 255, 1);
           background-color: #e9e9e9;
           position: relative;
-          @include media(l) {
+          @include media(xl) {
             padding-top: 0;
             background-color: #fff;
           }
@@ -385,7 +385,7 @@ header {
             padding: 0 40px;
             width: 100%;
             height: 100%;
-            @include media(l) {
+            @include media(xl) {
               padding: 0;
               display: block;
               position: relative;
@@ -414,7 +414,7 @@ header {
             }
             p {
               margin-top: 2.5rem;
-              @include media(l) {
+              @include media(xl) {
                 text-align: left;
               }
             }
@@ -426,7 +426,7 @@ header {
         position: absolute;
         right: 70px;
         top: 40px;
-        @include media(l) {
+        @include media(xl) {
           width: 80%;
           position: relative;
           right: 0;
@@ -439,7 +439,7 @@ header {
         position: absolute;
         left: 100px;
         bottom: 40px;
-        @include media(l) {
+        @include media(xl) {
           position: relative;
           width: 80%;
           left: 0;
@@ -461,14 +461,14 @@ header {
         width: 100vw;
         height: 90vh;
         overflow: hidden;
-        @include media(l) {
+        @include media(xl) {
           height: auto;
         }
         .bg_wrap {
           width: 40%;
           position: absolute;
           z-index: 20;
-          @include media(l) {
+          @include media(xl) {
             position: relative;
             width: 100%;
           }
@@ -476,7 +476,7 @@ header {
             background: linear-gradient(#009DE1, #0081CC);
             padding-top: 100%;
             position: relative;
-            @include media(l) {
+            @include media(xl) {
               padding-top: 0;
             }
             .bg_inner {
@@ -489,7 +489,7 @@ header {
               display: flex;
               justify-content: center;
               flex-direction: column;
-              @include media(l) {
+              @include media(xl) {
                 position: relative;
                 padding: 60px 20px;
               }
@@ -499,7 +499,7 @@ header {
                 color: #fff;
                 font-size: 2.8rem;
                 border-bottom: solid 1px #fff;
-                @include media(l) {
+                @include media(xl) {
                   font-size: 2.4rem;
                 }
               }
@@ -530,7 +530,7 @@ header {
                 position: relative;
                 transition: all 0.3s ease-in-out;
                 cursor: pointer;
-                @include media(l) {
+                @include media(xl) {
                   margin-left: 20px;
                   margin-top: 40px;
                 }
@@ -574,7 +574,7 @@ header {
           width: 65%;
           position: absolute;
           z-index: 10;
-          @include media(l) {
+          @include media(xl) {
             position: relative;
             width: 100%;
             margin: 0 auto;
@@ -586,7 +586,7 @@ header {
           .bg_wrap {
             right: 8vw;
             top: 7vh;
-            @include media(l) {
+            @include media(xl) {
               top: 0;
               right: 0;
             }
@@ -594,7 +594,7 @@ header {
           img {
             top: 15vh;
             left: 0vw;
-            @include media(l) {
+            @include media(xl) {
               top: 0;
               right: 0;
               margin-top: 40px;
@@ -603,13 +603,13 @@ header {
         }
         &.no02 {
           margin-top: 10vh;
-          @include media(l) {
+          @include media(xl) {
             margin-top: 0;
           }
           .bg_wrap {
             left: 8vw;
             bottom: 7vh;
-            @include media(l) {
+            @include media(xl) {
               bottom: 0;
               left: 0;
             }
@@ -617,7 +617,7 @@ header {
           img {
             top: -15vh;
             right: 0vw;
-            @include media(l) {
+            @include media(xl) {
               top: 0;
             }
           }
@@ -635,7 +635,7 @@ header {
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
-        @include media(l) {
+        @include media(xl) {
           width: 90%;
         }
         li {
@@ -680,7 +680,7 @@ header {
                 font-family: 'Font Awesome 5 Free';
                 font-weight: 900;
                 padding-left: 10px;
-                @include media(l) {
+                @include media(xl) {
                   padding-left: 5px;
                 }
               }
@@ -706,7 +706,7 @@ header {
       background-color: #EAF6FD;
       padding-top: 60px;
       height: 100vh;
-      @include media(l) {
+      @include media(xl) {
         height: auto;
         padding-bottom: 60px;
       }
@@ -716,7 +716,7 @@ header {
         width: 50vw;
         margin: 60px auto 0;
         padding-left: 1%;
-        @include media(l) {
+        @include media(xl) {
           width: 80%;
         }
         li {
@@ -750,7 +750,7 @@ header {
         justify-content: space-around;
         margin: 0 auto 60px;
         max-width: 800px;
-        @include media(l) {
+        @include media(xl) {
           width: 80%;
         }
         li {
@@ -806,7 +806,7 @@ header {
       table {
         width: 75%;
         margin: 30px auto;
-        @include media(l) {
+        @include media(xl) {
           width: 80%;
           margin-bottom: 0;
         }
@@ -815,7 +815,7 @@ header {
             padding: 10px 0;
             vertical-align: top;
             line-height: 1.6;
-            @include media(l) {
+            @include media(xl) {
               display: block;
               padding: 20px 0 0;
               &:nth-child(even) {
@@ -843,7 +843,7 @@ header {
     @at-root #main.is-animation .scroll_icon {
       color: #000;
     }
-    @include media(l) {
+    @include media(xl) {
       display: none;
     }
     p {
@@ -877,7 +877,7 @@ footer {
   background-color: #333;
   color: #fff;
   padding: 60px 0;
-  @include media(l) {
+  @include media(xl) {
     padding: 20px 0;
   }
   a {
@@ -887,7 +887,7 @@ footer {
     text-align: center;
     img {
       width: 20%;
-      @include media(l) {
+      @include media(xl) {
         width: 50%;
       }
     }
@@ -896,7 +896,7 @@ footer {
     width: 50%;
     margin: 40px auto 0;
     font-size: 0;
-    @include media(l) {
+    @include media(xl) {
       display: none;
     }
     li {
@@ -927,7 +927,7 @@ footer {
   left:-100vw;
   display: flex;
   padding: 95px 20px 20px;
-  @include media(l) {
+  @include media(xl) {
     flex-direction: column;
     overflow-y: auto;
     bottom: 0;
@@ -969,7 +969,7 @@ footer {
     .bg_box {
       padding-top: 100%;
       position: relative;
-      @include media(l) {
+      @include media(xl) {
         padding-top: 0;
       }
       .bg_inner {
@@ -982,7 +982,7 @@ footer {
         display: flex;
         justify-content: top;
         flex-direction: column;
-        @include media(l) {
+        @include media(xl) {
           padding: 20px 0 0 0;
           position: relative;
         }
@@ -1011,7 +1011,7 @@ footer {
           color: #000;
           line-height: 2;
           margin-top: 40px;
-          @include media(l) {
+          @include media(xl) {
             margin-top: 20px;
             line-height: 1.4;
           }
@@ -1064,7 +1064,7 @@ footer {
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
-    @include media(l) {
+    @include media(xl) {
       width: 85%;
     }
     img {
