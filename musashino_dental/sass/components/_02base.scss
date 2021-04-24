@@ -14,8 +14,8 @@ $breakpoints: (
 }
 
 .clearfix:after {
-  content: ".";  /* �V�����v�f���� */
-  display: block;  /* �u���b�N���x���v�f�� */
+  content: ".";
+  display: block;
   clear: both;
   height: 0;
   visibility: hidden;
@@ -90,7 +90,7 @@ p {
   width: 270px;
   padding: 22px 35px ;
   z-index: 100;
-  @include media(m) {
+  @include media(xl) {
     width: 100%;
     padding: 0;
     top: 0;
@@ -102,13 +102,13 @@ p {
       margin: 0 auto;
       display: block;
     }
-    @include media(m) {
+    @include media(xl) {
       display: none;
     }
   }
   #logo_sp {
     display: none;
-    @include media(m) {
+    @include media(xl) {
       display: flex;
       background-color: #fff;
       height: 60px;
@@ -123,7 +123,7 @@ p {
   }
   #menu_btn {
     display: none;
-    @include media(m) {
+    @include media(xl) {
       display: block;
       width: 60px;
       height: 60px;
@@ -193,7 +193,7 @@ p {
   text-align: center;
   z-index: 90;
   font-family: 'Noto Serif JP', serif;
-  @include media(l) {
+  @include media(xl) {
     display: none;
   }
   #global-nav {
@@ -230,7 +230,7 @@ p {
   width: calc(100% - 270px);
   margin-left: 270px;
   max-width: 1200px;
-  @include media(m) {
+  @include media(xl) {
     margin-left: 0;
     margin-top: 60px;
     width: 100%;
@@ -753,20 +753,26 @@ p {
           & > img {
             margin: 0 auto;
             display: block;
-            width: 100%;
+            width: 80%;
             position: relative;
-            &::before {
-              display: block;
-              content: '';
-              position: absolute;
-              width: 100px;
-              height: 50px;
-              right: 0;
-              top: -40px;
-              background-color: #dedede;
+            @include media(xl) {
+              width: 100%;
             }
+            // &::before {
+            //   display: block;
+            //   content: '';
+            //   position: absolute;
+            //   width: 100px;
+            //   height: 50px;
+            //   right: 0;
+            //   top: -40px;
+            //   background-color: #dedede;
+            // }
             & + p.lead {
-              margin-top: 20px;
+              margin-top: 30px;
+              @include media(l) {
+                margin-top: 20px;
+              }
             }
           }
           & > h3 {
@@ -894,7 +900,7 @@ p {
               margin-right: 55px;
               box-shadow: 15px 15px 0px 3px rgba(0, 0, 0, 0.08) ;
               max-width: 350px;
-              @include media(m) {
+              @include media(l) {
                 float: none;
                 margin-right: 0;
                 width: 100%;
@@ -902,7 +908,6 @@ p {
               }
               & + div {
                 overflow: hidden;
-                //padding: 20px 0;
               }
             }
             .img_fr {
@@ -911,7 +916,7 @@ p {
               margin-left: 40px;
               box-shadow: 15px 15px 0px 3px rgba(0, 0, 0, 0.08) ;
               max-width: 350px;
-              @include media(m) {
+              @include media(l) {
                 float: none;
                 margin-left: 0;
                 width: 100%;
@@ -1246,7 +1251,7 @@ footer {
     p {
       font-size: 0.8rem;
       line-height: 1.4;
-      @include media(m) {
+      @include media(xl) {
         line-height: 1.6;
       }
     }
@@ -1260,7 +1265,7 @@ footer {
       }
     }
   }
-  @include media(m) {
+  @include media(xl) {
     margin-left: 0;
     width: 100%;
     padding: 20px;
