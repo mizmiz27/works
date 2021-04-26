@@ -78,3 +78,24 @@ $(function(){
   });  
 
 });
+
+
+//ドロワーメニュー
+$(function() {
+  $('#menu_btn').on('click', function() {
+    if($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $('#header nav').removeClass('open');
+    } else {
+      $(this).addClass('active');
+      $('#header nav').addClass('open');
+    }
+  });
+
+  $('#header nav ul li a').on('click', function() {
+    if($('#header nav').hasClass('open')) {
+      $('#header nav').removeClass('open');
+      $('#menu_btn').removeClass('active');
+    }
+  });
+});
