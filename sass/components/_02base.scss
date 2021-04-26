@@ -56,7 +56,7 @@ body {
     left: 0;
   }
   @include media(l) {
-    width: 95%;
+    
   }
 }
 
@@ -339,6 +339,9 @@ main {
       }
       li {
         width: 21%;
+        @include media(l) {
+          width: 30%;
+        }
         @include media(m) {
           width: 47%;
         }
