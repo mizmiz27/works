@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>株式会社スフィアシステムデザイン｜SEIVICE</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/base.css">
+<!--[if lt IE 9]>
+<script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv-printshiv.min.js"></script>
+
+<script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+<!--[if lt IE 8]>
+<![endif]-->
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K65JFS4');</script>
+<!-- End Google Tag Manager -->
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+ $('a img.hover').hover(function(){
+  $(this).attr('src',$(this).attr('src').replace(/^(.+)(\.[a-z]+)$/,'$1_on$2'));
+   },function(){
+    $(this).attr('src',$(this).attr('src').replace(/^(.+)_on(\.[a-z]+)$/,'$1$2'));
+ });
+});
+
+$(function(){
+	$('#menu').on('click',function(){
+		$('nav').slideToggle(300);
+	});
+	
+	$('nav li a').on('click',function(){
+		var w = $(window).width();
+		var x = 767;
+		if (w <= x){
+		$('nav').hide();
+		}
+		$(window).on('resize',function(){
+		var w = $(window).width();
+		var x = 767;
+		if (w > x){
+		$('nav').show();
+		}
+		});
+	});
+	
+	/*コンテンツ内2つ目のリストのfloatをクリア*/
+	$('#service ul li:nth-child(odd)').css('margin-right','106px');
+});
+</script>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K65JFS4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+	<div class="inner clearfix">
+	<h1><a href="index.html">スフィアシステムデザイン"</a></h1>
+	<div id="rgt"><img src="img/sp/btn_menu.png" alt="menu" id="menu"></div>
+	
+	<nav>
+		<ul>
+			<li><a href="concept.html"><img src="img/nav_concept.png" width="70" height="11" alt="CONCEPT" class="hover"></a></li>
+			<li><img src="img/nav_service_on.png" width="61" height="11" alt="SERVICE" class="hover"></li>
+			<li><a href="history.html"><img src="img/nav_history.png" width="65" height="11" alt="HISTORY" class="hover"></a></li>
+			<li><a href="company.html"><img src="img/nav_company.png" width="77" height="11" alt="COMPANY" class="hover"></a></li>
+			<li>
+				<ul>
+					<li><a href="company.html#access"><img src="img/nav_access.png" width="44" height="9" alt="ACCESS" class="hover"></a></li>
+					<li><a href="company.html#contact"><img src="img/nav_contact.png" width="55" height="9" alt="CONTACT" class="hover"></a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	</div>
+</header>
+<div id="service" class="bg">
+	<main>
+		<h2><img src="img/heading/h_service.png" alt="SERVICE"></h2>
+		<ul class="clearfix">
+			<li><div><img src="img/service/icon_01.png" id="icon01">
+					<p>大手医療メーカー様の医療従事者向け<br>
+							webサイトの運用・管理・コンテンツ製作</p></div>
+			</li>
+			<li><div><img src="img/service/icon_03.png" id="icon03">
+					<p>大手流通様とゲームソフトメーカー様を絡めた<br>
+					BtoC向けのキャンペーン販促</p></div>
+			</li>
+			<li style="clear: left;"><div><img src="img/service/icon_02.png" id="icon02">
+					<p>大手流通様とメーカー様を絡めた<br>
+					BtoC向けのキャンペーン販促</p></div>
+			</li>
+			<li><div><img src="img/service/icon_05.png" id="icon05">
+					<p>大手IT企業様のBtoB向け<br>
+					ブランディングサイトの製作</p></div>
+			</li>
+			<li><div><img src="img/service/icon_04.png" id="icon04">
+					<p>BtoB、BtoCに向けた<br>
+					展示会ブースの企画・設営</p></div>
+			</li>
+			<li><a href="movie/demo_reel.html" target="_blank" style="color: #000;"><div><img src="img/service/icon_06.png" id="icon06">
+					<p>ドローンを使用した撮<span class="ls_minus5px">影</span>（4Kカメラ動<span class="ls_minus3px">画・</span>静止画<span class="ls_minus5px">）、</span><br>
+					VR360度カメラでの動画撮影の<span class="ls_minus2px">ディ</span>レク<span class="ls_minus2px">ショ</span><span class="ls_minus3px">ン・</span>制作</p></div></a>
+			</li>
+		</ul>
+		<p>その他の業務<br>
+		メールマガジン 企画・運用／グラフィックス全般</p>
+	</main>
+
+	<footer>
+		<p><small>©1998-2018 SPHERE SYSTEM DESIGN</small></p>
+	</footer>
+</div>
+<!--[if lte IE 8]><script src="js/bgCoverIE8.js"></script><![endif]-->
+</body>
+</html>

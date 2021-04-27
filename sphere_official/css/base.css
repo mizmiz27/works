@@ -1,0 +1,1401 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	font-size: 100%:
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+	-webkit-text-size-adjust: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* clearfix */
+.clearfix {
+	*zoom: 0;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+p {
+	font-size: 14px;
+}
+
+
+/*ヘッダー*/
+
+header {
+	position: absolute;
+	position: fixed;
+	height: 80px;
+	background-color: #ffffff;
+	width: 100%;
+	z-index: 10;
+}
+
+header .inner {
+	width: 900px;
+	margin: 24px auto 0;
+	box-sizing: border-box;
+	position: relative;
+	height: 32px;
+}
+
+header .inner h1 {
+	text-indent: 100%;
+	width: 358px;
+	*float: left;/*IE7用*/
+}
+
+header .inner h1 a {
+	width: 240px;
+	height: 32px;
+	float: left;
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: -9999px\9;/*IE10以下*/
+	color: transparent;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+selector:not(:target) {
+	text-indent: -9999px; /* IE10（IE11にも適用） */
+}
+}
+
+header .inner #rgt {
+	display: none;
+}
+
+nav {
+	height: 32px;
+}
+
+nav ul {
+	float: right;
+	height: 32px;
+	*width: 650px;/*IE7用*/
+}
+
+nav ul li{
+	margin-right: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	height: 15px;
+	*float: left;/*IE7用*/
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li:last-child {
+	vertical-align: top;
+	height: 32px;
+}
+
+nav ul li img {
+	*margin-top: 10px;/*IE7用*/
+}
+
+nav ul li ul {
+	float: none;
+	*width: 54px;/*IE7用*/
+}
+
+nav ul li ul li {
+	float: none;
+	display: block;
+	height: 16px;
+	margin-right: 0;
+}
+
+nav ul li ul li:last-child {
+	vertical-align: top;
+	height: 9px;
+}
+
+nav ul li ul li img {
+	vertical-align: top;
+	*margin-top: 0;/*IE7用*/
+}
+
+nav ul li ul li:last-child img {
+	vertical-align: middle;
+}
+
+nav ul li img[alt="CONCEPT"] {
+	max-width: 70px;
+}
+
+nav ul li img[alt="SERVICE"] {
+	max-width: 59px;
+}
+
+nav ul li img[alt="HISTORY"] {
+	max-width: 64px;
+}
+
+nav ul li img[alt="COMPANY"] {
+	max-width: 77px;
+}
+
+nav ul li img[alt="ACCESS"] {
+	max-width: 43px;
+}
+
+nav ul li img[alt="CONTACT"] {
+	max-width: 54px;
+}
+
+
+/*共通*/
+
+.bg {
+	background-repeat: no-repeat;
+	margin: 0 auto 0;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+main {
+	position: relative;
+	text-align: center;
+	padding-top: 120px;
+	display: block;
+}
+
+main img {
+	vertical-align: bottom;
+}
+
+footer {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position: absolute\9;/*IE8以下*/
+	left: 0\9;/*IE8以下*/
+}
+
+#footer:not(:target){/*IE9以上*/
+	position: relative\9;
+}
+
+footer p small {
+	font-size: 10px;
+}
+
+
+/*トップページ*/
+
+#top {
+	background-image: url(../img/bg_top.jpg);
+	background-position: top 80px left;
+	min-height: 600px;
+}
+
+#top h2.pc {
+	width: 50%;
+	margin: 0;
+	position: absolute;
+	left: 5%;
+	top: 120%;
+	display: block;
+	text-align: left;
+}
+
+@media screen and (min-width: 1200px) {
+#top h2.pc {
+	left: 15%;
+	top: 150%;
+}
+}
+
+#top h2 img {
+	width: 100%;
+	max-width: 415px;
+}
+
+#top h2.sp {
+	display: none;
+}
+
+#top footer {
+	text-align: center;
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+}
+
+#top footer p small {
+	color: #ffffff;
+}
+
+/*コンセプトページ*/
+
+#concept {
+	background-image: url(../img/bg_concept.jpg);
+	/*height: 521px;*/
+	height: 100%;
+	min-height: 521px;
+	background-position: top 80px center;
+	overflow: hidden;
+	min-height: 960px;
+}
+
+#concept h2 {
+	font-weight: bold;
+	font-size: 0.8125em;
+	padding-top: 40px;
+}
+
+#concept h2 img {
+	width: 16.71875%;
+	max-width: 107px;
+}
+
+#concept h3 {
+	font-size: 52px;
+	font-weight: bold;
+	line-height: 1.4;
+	margin-top: 80px;
+}
+
+#concept main p {
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+#concept main p#sp {
+	display: none;
+}
+
+#concept main .sp {
+	display: none;
+}
+
+#concept footer {
+	text-align: center;
+	padding-top: 10%;
+}
+
+
+/*サービスページ*/
+
+#service {
+	background-image: url(../img/bg_service.jpg);
+	background-position: top 80px center;
+	text-align: center;
+	overflow: hidden;
+	min-height: 960px;
+}
+
+#service h2 {
+	font-weight: bold;
+	font-size: 0.8125em;
+	text-align: center;
+	padding-top: 40px;
+}
+
+#service h2 img {
+	width: 14.375%;
+	max-width: 92px;
+}
+
+
+#service ul {
+	list-style: none;
+	width: 666px;
+	margin: 44px auto 0;
+	*text-align: left;/*IE7用*/
+}
+
+#service ul li {
+	list-style: none;
+	font-size: 12px;
+	text-align: center;
+	width: 280px;
+	float: left;
+	margin-top: 28px;
+}
+
+#service ul li:first-child {
+	margin: 0;
+}
+
+#service ul li:nth-child(2) {
+	margin-top: 0;
+}
+
+#service ul li:nth-child(odd) {
+	margin-right: 106px;
+}
+
+#service ul li div {
+	width: 280px;
+	height: 128px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow:0 0 2px 1px #b5b5b5;
+	-moz-box-shadow:0 0 2px 1px #b5b5b5;
+	-webkit-box-shadow:0 0 2px 1px #b5b5b5;
+	position: relative;
+	border: solid 1px #b5b5b5\9;/*IE8以下*/
+}
+
+#service ul li div:not(:target){/*IE9以上*/
+	border: none\9;
+}
+
+#service ul li div img {
+	vertical-align: bottom;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	*position: relative;/*IE7用*/
+}
+
+#service ul li div img#icon01 {
+	/*width:74px;*/
+	width: 26.4285714%;
+	/*height: 66.763px;*/
+	height: auto;
+	top: 10px;
+}
+
+#service ul li div img#icon02 {
+	/*width:237.794px;*/
+	width: 86.25%;
+	/*height: 49.939px;*/
+	height: auto;
+	top: 17px;
+}
+
+#service ul li div img#icon03 {
+	/*width:247.87px;*/
+	width: 89.8214285%;
+	/*height: 58.054px;*/
+	height: auto;
+	top: 17px;
+}
+
+#service ul li div img#icon04 {
+	/*width:75.625px;*/
+	width: 27.5%;
+	/*height: 56.518px;*/
+	height: auto;
+	top: 16px;
+}
+
+#service ul li div img#icon05 {
+	/*width:74px;*/
+	width: 26.4285714%;
+	/*height: 67.538px;*/
+	height: auto;
+	top: 10px;
+}
+
+#service ul li div img#icon06 {
+	/*width:247.5px;*/
+	width: 88.3928571%;
+	/*height: 32.5px;*/
+	height: auto;
+	top: 10px;
+}
+
+#service ul li p {
+	font-size: 12px;
+	margin-top: 10px;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+}
+
+#service ul li:last-child p {
+	letter-spacing: -0.3px;
+}
+
+#service ul li p .ls_minus5px {
+	letter-spacing: -5px;
+}
+
+#service ul li p .ls_minus3px {
+	letter-spacing: -3px;
+}
+
+#service ul li p .ls_minus2px {
+	letter-spacing: -2px;
+}
+
+#service main p {
+	margin-top: 38px;
+	font-size: 12px;
+}
+
+#service footer {
+	text-align: center;
+	padding-top: 10%;
+}
+
+#service footer p {
+	font-size: 12px;
+}
+
+/*ヒストリーページ*/
+
+#history {
+	background-image: url(../img/bg_history.jpg);
+	background-position: top 80px left;
+	min-height: 900px;
+	overflow: hidden;
+}
+
+#history h2 {
+	padding-top: 40px;
+	font-weight: bold;
+	font-size: 0.8125em;
+	text-align: center;
+}
+
+#history h2 img {
+	width: 15.3125%;
+	max-width: 98px;
+}
+
+#history ul {
+	width: 500px;
+	margin: 42px auto 0;
+	list-style: none;
+	font-size: 12px;
+	line-height: 1.2;
+}
+
+#history ul li:first-child {
+	margin-top: 0;
+}
+
+#history ul li {
+	font-size: 14px;
+	line-height: 1.4;
+	margin-top: 22px;
+	text-align: left;
+}
+
+#history footer {
+	text-align: center;
+	padding-top: 10%;
+}
+
+
+/*カンパニーページ*/
+
+#company {
+	background-image: url(../img/bg_company.jpg);
+	height: auto;
+	background-attachment: fixed;
+	overflow: hidden;
+	background-size: cover;
+}
+
+#company #company_detail h2 {
+	font-weight: bold;
+	font-size: 0.8125em;
+	text-align: center;
+	padding-top: 40px;
+}
+
+#company #company_detail h2 img {
+	width: 18.28125%;
+	max-width: 117px;
+}
+
+
+#company #company_detail p {
+	text-align: center;
+}
+
+#company #company_detail table {
+	margin: 38px auto 0;
+	font-size: 14px;
+	width: 360px;
+	line-height: 1.9;
+}
+
+#company #company_detail table th {
+	width: 30%;
+	font-weight: normal;
+	text-align: left;
+}
+
+#company #access {
+	margin-top: -22px;
+	padding-top: 100px;
+}
+
+#company #access h2 img {
+	width: 13.75%;
+	max-width: 88px;
+}
+
+#company table td {
+	text-align: left;
+	padding-bottom: 3px;
+}
+
+#company #map {
+	margin: 43px auto 0;
+	width: 832px;
+}
+
+#company #map .ggmap {
+	position: relative;
+	height: 330px;
+	overflow: hidden;
+	border: solid 5px #ffffff;
+	margin-top: 12px;
+}
+ 
+#company #map .ggmap iframe,
+#company #map .ggmap object,
+#company #map .ggmap embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#company #contact {
+	margin: 75px auto 0;
+}
+
+#company #contact h2 img {
+	width: 16.71875%;
+	max-width: 107px;
+}
+
+#company #contact p {
+	margin-top: 42px;
+}
+
+#company #contact address {
+	margin-top: 14px;
+}
+
+#company footer {
+	margin: 86px 0 3.125%;
+}
+
+#company #contact address a {
+	font-weight: bold;
+	font-size: 14px;
+	color: #036EB7;
+	font-style: normal;
+}
+
+p#policy {
+	margin-top: 40px;
+}
+
+/*モーダルウインドウ*/
+
+a#modal-open {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#modal-content{
+	width:90%;
+	height: 80%;
+	max-width: 800px;
+	max-height: 800px;
+	margin:0 auto;
+	padding:20px;
+	border:2px solid #aaa;
+	background:#fff;
+	z-index:21;
+	position:fixed;
+	display: none;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+#modal-content::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 7px;
+}
+
+#modal-content::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background-color: rgba(0,0,0,.5);
+	box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+#modal-overlay{
+	z-index:20;
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:120%;
+	background-color:rgba(0,0,0,0.75);
+}
+
+.modal-p{
+	margin-top:1em;
+}
+
+.modal-p:first-child{
+	margin-top:0;
+}
+
+.button-link{
+	color:#036EB7;
+	text-decoration:underline;
+}
+ 
+.button-link:hover{
+	cursor:pointer;
+}
+
+#modal-content h3 {
+	font-size: 14px;
+	margin: 20px 0 0;
+}
+
+#modal-content h3:first-child {
+	margin-top: 0;
+}
+
+#modal-content h3 + p {
+	padding:0.5em 1.3em;
+}
+
+#modal-content ul {
+	margin: 0;
+	padding: 0.5em 0.7em;
+	list-style: none;
+}
+
+#modal-content ul li {
+	font-size: 14px;
+	line-height: 1.4;
+	margin-top: 5px;
+	padding-left: 2.6em;
+	text-indent: -2.6em;
+	text-align: left;
+}
+
+#modal-content ul + p {
+	margin-top: 20px;
+	text-align:right;
+}
+
+#modal-content p:last-child {
+	text-align:center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 767px) {
+
+header {
+	height: auto;
+}
+
+header .inner {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	padding-top: 7.8125%;
+	position: fixed;
+	background-color: #ffffff;
+	z-index: 10;
+	top: 0;
+	height: auto;
+}
+
+header .inner h1 {
+	width: 58.125%;
+	margin-left: 7.1875%;
+	margin-bottom: 5%;
+	display: block;
+	line-height: 1;
+	float: left;
+}
+
+header .inner h1 a {
+	width: 100%;
+	height: auto;
+	float: none;
+	background-image: url(../img/sp/logo.png);
+	background-size: contain;
+	background-position: left 0 top 0;
+	min-width: 186px;
+	display: block;
+}
+
+header .inner h1 a:after {
+	content:"";
+	display: block;
+	padding-top:15.4838%;
+	height: 0;
+}
+
+header .inner #rgt {
+	float: right;
+	width: 8.75%;
+	/*max-width: 56px;*/
+	height: 6.25%;
+	/*padding-top: 1.25%;*/
+	margin-right: 6.25%;
+	display: block;
+}
+
+header .inner img#menu {
+	/*width: 8.75%;*/
+	max-width: 56px;
+	vertical-align: middle;
+	width: 100%;
+	height: auto;
+	margin-top: 16.96%;
+	display: block;
+}
+
+nav {
+	height: auto;
+	display: none;
+	clear: both;
+}
+
+nav ul {
+	float: none;
+	height: auto;
+	width: 100%;
+	background-color: #ffffff;
+}
+
+nav ul li{
+	margin-right: 0;
+	display: block;
+	vertical-align: middle;
+	height: auto;
+	width: 50%;
+	float: left;
+	border-top: solid 1px #9a9a9a;
+	border-right: solid 1px #c9c9c9;
+	background-color: #ffffff;
+	height: 72px;
+	line-height: 72px;
+	text-align: center;
+}
+
+nav ul li:nth-child(even) {
+	border-right: none;
+}
+
+nav ul li:last-child {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	border-right: none;
+	border-top: none;
+}
+
+nav ul li a {
+	background-size: 40%;
+	display: block;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+nav ul li img {
+	margin: 0 auto;
+	display: block;
+	height: auto;
+	display: inline;
+}
+
+nav ul li img[alt="CONCEPT"] {
+	width: 43.75%;
+	max-width: 84px;
+	background-color: #ffffff;
+}
+
+nav ul li img[alt="SERVICE"] {
+	width: 38.1875%;
+	max-width: 71px;
+	background-color: #ffffff;
+}
+
+nav ul li img[alt="HISTORY"] {
+	width: 40%;
+	max-width: 76px;
+	background-color: #ffffff;
+}
+
+nav ul li img[alt="COMPANY"] {
+	width: 47.8125%;
+	max-width: 92px;
+	background-color: #ffffff;
+}
+
+nav ul li img[alt="ACCESS"] {
+	width: 33.75%;
+	max-width: 51px;
+	background-color: #ffffff;
+}
+
+nav ul li img[alt="CONTACT"] {
+	width: 27.1875%;
+	max-width: 64px;
+	background-color: #ffffff;
+}
+
+nav ul li ul li {
+	float: left;
+	height: auto;
+}
+
+nav ul li ul li img {
+	vertical-align: middle;
+}
+
+nav ul li ul li a {
+	background-position: 50%;
+	background-size: 25%;
+	background-color: #ffffff;
+}
+
+nav ul li ul li:last-child {
+	vertical-align: top;
+	height: auto;
+	width: 50%;
+	border-top: solid 1px #9a9a9a;
+	/*padding: 6.25% 0;*/
+	background-color: #ffffff;
+}
+
+nav ul li ul li:last-child a {
+	background-position: 50%;
+}
+
+
+/*共通*/
+
+.bg {
+	width: 100%;
+	margin: 26.5625% 0 0;
+	position: relative;
+	background-attachment: inherit;
+}
+
+
+main, 
+footer {
+	margin: 0;
+	width: 100%;
+}
+
+main {
+	padding-top: 0;
+}
+
+/*トップページ*/
+
+#top:after {
+	content:"";
+	display: block;
+	padding-top:153.125%;
+	
+}
+
+#top {
+	background-image: url(../img/sp/bg_top.jpg);
+	background-position: top 0 center;
+	height: auto;
+}
+
+#top h2.sp {
+	width: 82%;
+	padding: 12% 0 0 7%;
+	display: block;
+	text-align: left;
+}
+
+#top h2 img {
+	width: 100%;
+}
+
+#top h2.pc {
+	display: none;
+}
+
+#top footer {
+	text-align: center;
+	position: absolute;
+	bottom: 3%;
+	left: 0;
+	right: 0;
+}
+
+/*コンセプトページ*/
+
+#concept {
+	background-image: url(../img/sp/bg_concept.jpg);
+	background-position: top 0 center;
+	height: auto;
+	min-height: inherit;
+}
+
+#concept:after {
+	content:"";
+	display: block;
+	padding-top:153.125%;
+}
+
+#concept main {
+	position: absolute;
+}
+
+#concept h2 {
+	padding-top: 8.5%;
+}
+
+#concept h2 img {
+	width: 23.125%;
+	max-width: 148px;
+}
+
+#concept main p {
+	margin-top: 9.84375%;
+}
+
+#concept main h3 {
+	font-size: 22px;
+	margin-top: 24%;
+	padding: 0 10px;
+}
+
+#concept main p#pc {
+	display: none;
+}
+
+#concept main .pc {
+	display: none;
+}
+
+#concept main .sp {
+	display: block;
+}
+
+#concept main .sp img {
+	width: 90%;
+}
+
+#concept main p#sp {
+	display: block;
+	line-height: 1.8;
+}
+
+#concept footer {
+	text-align: center;
+	position: absolute;
+	bottom: 3%;
+	left: 0;
+	right: 0;
+}
+
+/*サービスページ*/
+
+#service {
+	background-image: none;
+	overflow: inherit;
+}
+
+#service main {
+	height: auto;
+}
+
+#service::before {
+	background-image: url(../img/sp/bg_service.jpg);
+	background-position: top 0 center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	position: fixed;
+	top: 11%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#service h2 {
+	padding-top: 7.8%;
+}
+
+#service h2 img {
+	width: 20.15625%;
+	max-width: 129px;
+}
+
+#service main p {
+	font-weight: bold;
+	margin-top: 7.1875%;
+}
+
+#service h3 {
+	font-size: 2.25em;
+	font-weight: bold;
+	line-height: 1.4;
+	margin-top: 5%;
+}
+
+#service ul {
+	width: 87.5%;
+	margin: 7.85% auto 0;
+}
+
+#service ul.clearfix::after {
+	display: none;
+}
+
+#service ul li {
+	list-style: none;
+	font-size: 12px;
+	text-align: center;
+	width: 100%;
+	float: none;
+	margin-top: 3.92857142%;
+}
+
+#service ul li:first-child {
+	margin: 0;
+}
+
+#service ul li:nth-child(2) {
+	clear: left;
+	margin-top: 3.92857142%;
+}
+
+#service ul li:nth-child(even) {
+	margin-right: 0;
+}
+
+#service ul li div {
+	width: 100%;
+	height: auto;
+	background-color: #ffffff;
+	border-radius: 3px;
+	position: relative;
+	margin: 0 auto;
+}
+
+#service ul li div::after {
+	padding-top: 45.7142%;
+	content:"";
+	display: block;
+}
+
+#service ul li div img {
+	vertical-align: bottom;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#service ul li div img#icon01 {
+	top: -40%;
+	padding-top: 6%;
+}
+
+#service ul li div img#icon02 {
+	top: -40%;
+	padding-top: 7.14285714%;
+}
+
+#service ul li div img#icon03 {
+	top: -40%;
+	padding-top: 7.14285714%;
+}
+
+#service ul li div img#icon04 {
+	top: -40%;
+	padding-top: 5.71428571%;
+}
+
+#service ul li div img#icon05 {
+	top: -40%;
+	padding-top: 6%;
+}
+
+#service ul li div img#icon06 {
+	top: -40%;
+	padding-top: 7.14285714%;
+}
+
+#service ul li p {
+	bottom: 8%;
+}
+
+#service footer {
+	padding: 17.8125% 0 5%;
+	margin-top: 0;
+	position: relative;
+	bottom: 0;
+}
+
+/*ヒストリーページ*/
+
+#history {
+	background-image: url(../img/sp/bg_history.jpg);
+	background-position: top 0 center;
+	height: auto;
+	min-height: inherit;
+}
+
+#history:after {
+	content:"";
+	display: block;
+	padding-top:153.125%;
+	
+}
+
+#history main {
+	position: absolute;
+}
+
+#history h2 {
+	padding-top: 8.5%;
+}
+
+#history h2 img {
+	width: 21.40625%;
+	max-width: 137px;
+}
+
+#history ul {
+	width: 87.5%;
+	margin: 8.57142857% auto 0;
+	list-style: none;
+	font-size: 12px;
+	line-height: 1.2;
+}
+
+#history ul li {
+	font-size: 12px;
+	line-height: 1.4;
+	margin-top: 3%;
+	text-align: left;
+}
+
+#history footer {
+	text-align: center;
+	position: absolute;
+	bottom: 3%;
+	left: 0;
+	right: 0;
+}
+
+/*カンパニーページ*/
+#company {
+	background-image: none;
+}
+
+#company::before {
+	background-image: url(../img/sp/bg_company.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	position: fixed;
+	top: 11%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#company #company_detail h2 {
+	padding-top: 7.8125%;
+}
+
+#company #company_detail h2 img {
+	width: 25.625%;
+	max-width: 164px;
+}
+
+#company #company_detail table {
+	width: 87.5%;
+	margin-top: 8.392857142%;
+	font-size: 12px;
+}
+
+#company #access {
+	margin-top: -20%;
+	padding-top: 20%;
+}
+
+#company #access h2 {
+	padding-top: 20%;
+}
+
+#company #access h2 img {
+	width: 19.0625%;
+	max-width: 122px;
+}
+
+#company #contact h2 img {
+	width: 23.125%;
+	max-width: 148px;
+}
+
+#company #map {
+	width: 87.5%;
+	margin-top: 8.392857142%;
+}
+
+#company #map .ggmap {
+	margin-top: 5%;
+	border: none;
+	height: auto;
+	
+}
+
+#company #map .ggmap::after {
+	padding-top: 62.14285714%;
+	content: "";
+	display: block;
+}
+
+#company #contact {
+	margin-top: 15%;
+}
+
+#company #contact p {
+	margin-top: 8.57142857%;
+}
+
+#company #contact address {
+	margin-top: 5.35714285%;
+}
+
+#company footer {
+	margin: 16.71875% 5 3125%;
+}
+
+}
+
+
+@media screen and (max-width: 479px) {
+
+p {
+	font-size: 12px;
+}
+
+nav ul li{
+	height: 52px;
+	line-height: 52px;
+}
+
+nav ul li img[alt="CONCEPT"] {
+	width: 43.75%;
+	max-width: 70px;
+	background-color: #ffffff;
+}
+
+nav ul li img[alt="SERVICE"] {
+	width: 38.1875%;
+	max-width: 59px;
+	background-color: #ffffff;
+}
+
+nav ul li img[alt="HISTORY"] {
+	width: 40%;
+	max-width: 64px;
+	background-color: #ffffff;
+}
+
+nav ul li img[alt="COMPANY"] {
+	width: 47.8125%;
+	max-width: 77px;
+	background-color: #ffffff;
+}
+
+nav ul li img[alt="ACCESS"] {
+	width: 27.1875%;
+	max-width: 43px;
+	background-color: #ffffff;
+}
+
+nav ul li img[alt="CONTACT"] {
+	width: 33.75%;
+	max-width: 54px;
+	background-color: #ffffff;
+}
+
+#service ul li div img#icon01 {
+	top: -40%;
+	padding-top: 4.10714285%;
+}
+
+#service ul li div img#icon05 {
+	top: -40%;
+	padding-top: 3.92857142%;
+}
+
+#service ul li p {
+	bottom: 3.928571428%;
+}
+
+/*モーダルウインドウ*/
+
+#modal-content h3 {
+	font-size: 12px;
+}
+
+#modal-content ul {
+	padding: 0.5em;
+}
+
+#modal-content ul li {
+	font-size: 12px;
+}
+
+}

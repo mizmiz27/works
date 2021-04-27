@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>株式会社スフィアシステムデザイン｜CONCEPT</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/base.css">
+<!--[if lt IE 9]>
+<script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv-printshiv.min.js"></script>
+
+<script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+<!--[if lt IE 8]>
+<![endif]-->
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K65JFS4');</script>
+<!-- End Google Tag Manager -->
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+ $('a img.hover').hover(function(){
+  $(this).attr('src',$(this).attr('src').replace(/^(.+)(\.[a-z]+)$/,'$1_on$2'));
+   },function(){
+    $(this).attr('src',$(this).attr('src').replace(/^(.+)_on(\.[a-z]+)$/,'$1$2'));
+ });
+});
+
+$(function(){
+	$('#menu').on('click',function(){
+		$('nav').slideToggle(300);
+	});
+	
+	$('nav li a').on('click',function(){
+		var w = $(window).width();
+		var x = 767;
+		if (w <= x){
+		$('nav').hide();
+		}
+		$(window).on('resize',function(){
+		var w = $(window).width();
+		var x = 767;
+		if (w > x){
+		$('nav').show();
+		}
+		});
+	});
+});
+</script>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K65JFS4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+	<div class="inner clearfix">
+	<h1><a href="index.html">スフィアシステムデザイン"</a></h1>
+	<div id="rgt"><img src="img/sp/btn_menu.png" alt="menu" id="menu"></div>
+	
+	<nav>
+		<ul>
+			<li><img src="img/nav_concept_on.png" width="70" height="11" alt="CONCEPT" class="hover"></li>
+			<li><a href="service.html"><img src="img/nav_service.png" width="61" height="11" alt="SERVICE" class="hover"></a></li>
+			<li><a href="history.html"><img src="img/nav_history.png" width="65" height="11" alt="HISTORY" class="hover"></a></li>
+			<li><a href="company.html"><img src="img/nav_company.png" width="77" height="11" alt="COMPANY" class="hover"></a></li>
+			<li>
+				<ul>
+					<li><a href="company.html#access"><img src="img/nav_access.png" width="44" height="9" alt="ACCESS" class="hover"></a></li>
+					<li><a href="company.html#contact"><img src="img/nav_contact.png" width="55" height="9" alt="CONTACT" class="hover"></a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	</div>
+</header>
+<div id="concept" class="bg">
+	<main>
+		<h2><img src="img/heading/h_concept.png" alt="CONCEPT"></h2>
+		<h3 class="pc"><img src="img/concept_title.png"></h3>
+		<p class="pc"><img src="img/concept_txt.png"></p>
+		
+		<h3 class="sp"><img src="img/sp/concept_title.png"></h3>
+		<p class="sp"><img src="img/sp/concept_txt.png"></p>
+
+	</main>
+	<footer>
+		<p><small>©1998-2018 SPHERE SYSTEM DESIGN</small></p>
+	</footer>
+</div>
+<!--[if lte IE 8]><script src="js/bgCoverIE8.js"></script><![endif]-->
+</body>
+</html>
