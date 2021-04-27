@@ -5,6 +5,7 @@ $breakpoints: (
   l:"only screen and (max-width: 991px)",
   xl:"only screen and (max-width: 1199px)",
   xxl:"only screen and (max-width: 1259px)",
+  xxxl:"only screen and (min-width: 1600px)",
 );
 
 @mixin media($breakpoint) {
@@ -229,7 +230,7 @@ p {
 #main {
   width: calc(100% - 270px);
   margin-left: 270px;
-  max-width: 1200px;
+  // max-width: 1200px;
   @include media(xl) {
     margin-left: 0;
     margin-top: 60px;
@@ -262,6 +263,9 @@ p {
       position: relative;
       opacity: 0;
       animation: fadeIn2 4s ease 0s 1 forwards;
+      @include media(xxxl) {
+        padding-bottom: calc(100%*1020/1700);
+      }
       @include media(m) {
         //height: 100% !important;
       }
@@ -419,6 +423,11 @@ p {
           width: 95%;
           clear: both;
           margin-top: 80px;
+          @include media(xxxl) {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+          }
           h2.num {
             position: relative;
             border-bottom: solid 1px #333;
@@ -1238,7 +1247,7 @@ footer {
   margin-left: 250px;
   margin-top:  80px;
   padding:  20px 0;
-  max-width: 1200px;
+  // max-width: 1200px;
   background-color:  #dbdbdb;
   text-align:  center;
   .footer_logo {
