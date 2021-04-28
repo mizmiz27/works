@@ -216,6 +216,9 @@ p {
           position: relative;
           padding-left: 0.5rem;
           margin-left: 10px;
+          @include media(m) {
+            padding: 0.5rem 0;
+          }
           a {
             color: #fff;
             cursor: pointer;
