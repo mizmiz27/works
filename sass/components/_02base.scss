@@ -402,6 +402,12 @@ main {
               &.sanyo {
                 transform: translate(-52%, -50%) scale(1.2);
               }
+              &.amn {
+                transform: translate(-152%, -40%) scale(3.0);
+                top: 50%;
+                left: 80%;
+                object-fit: contain;
+              }
             }
           }
           &:hover {
