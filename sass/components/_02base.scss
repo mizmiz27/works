@@ -90,7 +90,7 @@ header {
     height: 90px;
   }
   a.logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1.2;
     display: inline-block;
     cursor: pointer;
@@ -98,7 +98,7 @@ header {
       flex-grow: 1;
     }
     span {
-      font-size: 0.9rem;
+      font-size: 1rem;
       display: block;
       text-align: center;
       @include media(m) {
