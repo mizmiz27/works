@@ -91,6 +91,9 @@ header {
     }
     nav ul li a {
       color: #000;
+      @include media(xl) {
+        color: #fff;
+      }
     }
   }
   &.slide {
