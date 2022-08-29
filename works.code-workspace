@@ -1,14 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "mink_cafe"
-		},
-		{
-			"path": "musashino_dental"
-		},
-		{
-			"path": "../test"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    }
+  ]
 }
