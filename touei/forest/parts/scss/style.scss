@@ -1,0 +1,226 @@
+@import "_mixin.scss";
+
+/* ------------------------------------------------------
+   header
+------------------------------------------------------ */
+.trigger {
+  box-sizing: content-box;
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------------------------
+   footer
+------------------------------------------------------ */
+footer {
+  padding-top: calc(25 / 375 * 100vw);
+  padding-bottom: calc(13 / 375 * 100vw);
+  background-color: #222;
+  color: $white;
+
+  .main-logo {
+    display: block;
+    width: calc(140 / 375 * 100vw);
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .sns-logo {
+    display: flex;
+    justify-content: space-between;
+    width: calc(78 / 375 * 100vw);
+    margin: calc(15 / 375 * 100vw) auto 0;
+
+    figure {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    a {
+      padding: 0;
+
+      &.instagram {
+        display: block;
+        width: calc(34 / 375 * 100vw);
+      }
+
+      &.facebook {
+        display: block;
+        width: calc(18 / 375 * 100vw);
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: calc(18 / 375 * 100vw);
+
+    small {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 400;
+      font-size: calc(13 / 375 * 100vw);
+      letter-spacing: 0.01em;
+    }
+  }
+}
+
+/* ------------------------------------------------------
+   common
+------------------------------------------------------ */
+// body {
+//   overflow: visible;
+// }
+.sp-only {
+  display: block;
+}
+
+.pc-only {
+  display: none;
+}
+
+.p-forest {
+  position: relative;
+
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  dl,
+  address {
+    font-family: 'Zen Old Mincho', serif;
+    font-weight: 900;
+  }
+
+  .design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.7;
+    display: none;
+  }
+
+  .logo {
+    position: absolute;
+    z-index: 2;
+    width: vw(236);
+    top: vw(22);
+    left: vw(40);
+
+    @include media(m) {
+      width: calc(178 / 1440 * 100vw);
+      top: calc(18 / 1440 * 100vw);
+      left: calc(33 / 1440 * 100vw);
+    }
+  }
+
+  .fadeup {
+    opacity: 0;
+    transform: translateY(calc(30 / 375 * 100vw));
+    // transition: transform 1s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.7s;
+    transition-property: opacity, transform;
+    transition-duration: 0.7s, 1s;
+    transition-timing-function: linear, cubic-bezier(0.33, 1, 0.68, 1);
+
+    &.animated {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* ------------------------------------------------------
+   pc
+------------------------------------------------------ */
+@include media(m) {
+
+  /* ------------------------------------------------------
+   footer
+------------------------------------------------------ */
+  footer {
+    padding-top: calc(62 / 1440 * 100vw);
+    padding-bottom: calc(71 / 1440 * 100vw);
+    position: relative;
+
+    .main-logo {
+      width: calc(274 / 1440 * 100vw);
+      @include abs();
+      margin-top: calc(153 / 1440 * 100vw);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .sns-logo {
+      width: calc(146 / 1440 * 100vw);
+      margin-top: 0;
+
+      a {
+        &.instagram {
+          width: calc(42 / 1440 * 100vw);
+        }
+
+        &.facebook {
+          display: block;
+          width: calc(23 / 1440 * 100vw);
+        }
+      }
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: calc(137 / 1440 * 100vw);
+
+      small {
+        font-size: calc(14 / 1440 * 100vw);
+        margin-left: calc(10 / 1440 * 100vw);
+      }
+    }
+  }
+
+  /* ------------------------------------------------------
+   common
+------------------------------------------------------ */
+  .p-forest {
+    .fadeup {
+      transform: translateY(calc(30 / 1440 * 100vw));
+    }
+  }
+
+  /* ------------------------------------------------------
+   opening
+------------------------------------------------------ */
+  #splash {
+    #splash-logo {
+      svg {
+        width: calc(126 / 1440 * 100vw);
+      }
+    }
+  }
+
+  .sp-only {
+    display: none;
+  }
+
+  .pc-only {
+    display: block;
+  }
+}

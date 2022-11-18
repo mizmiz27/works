@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+// ==========================================================================
+//	案件のベースとなる値の定義
+// ==========================================================================
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+Antique:wght@500&family=Zen+Old+Mincho:wght@400;700;900&display=swap');
+
+// color
+// -----------------------------------------------------------------
+$white: #fff;
+$black: #000;
+$darkblue: #005167;
+$paleblue: #b6cacc;
+$darkgreen: #234646;
+$green: #53a290;
+$green-hov: #3c8171;
+$palegreen: #e9efec;
+
+$akiruno-font-color: #005167;
+$akiruno-bg-color: #e6ebec;
+$ome-font-color: #365b3a;
+$ome-bg-color: #ebede2;
+$ometomioka-font-color: #284e35;
+$ometomioka-bg-color: #eaf0e7;
+
+
+// transition
+// -----------------------------------------------------------------
+$transition: .5s cubic-bezier(.55,.14,.52,.91);
+
+// animation
+// -----------------------------------------------------------------
+.js-fadein {
+	opacity: 0;
+	&.-fadeinr{
+		transform: translateX(30px);
+	}
+	&.-fadeinl{
+		transform: translateX(-30px);
+	}
+	&.-fadeinb{
+		transform: translateY(30px);
+	}
+	&.is-show {
+		opacity: 1;
+		transition-duration: 0.7s;
+		transform: translateX(0);
+		&.-fadeinr,&.-fadeinl{
+			transform: translateX(0);
+		}
+		&.-fadeinb{
+			transform: translateY(0);
+		}
+	}
+}
+// vw
+// -----------------------------------------------------------------
+@function vw($val) {
+	@return $val / 750 * 100vw;
+}
+
+// Media Query
+// -----------------------------------------------------------------
+$breakpoints: (
+	xl : "only screen and (min-width: 1401px)",
+	l : "only screen and (min-width: 1201px)",
+	m : "only screen and (min-width: 769px)",
+	s : "only screen and (min-width: 481px)"
+);
+@mixin media($breakpoint) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+// absolute要素
+@mixin abs {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// activityのsvg（木のアイコン）
+@mixin activity-bnr-svg($color01, $color02) {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.736 28.77"><path fill="%23#{$color01}" d="M27.852,28.483l2.869.278-5.509-8.987L28,20.3l-5.426-7.785,2.375.537L20.372,5.914,15.8,13.051l2.375-.537L12.746,20.3l2.786-.525-5.509,8.987,2.869-.278L8.5,34.684H32.24Z" transform="translate(-8.504 -5.914)" /></svg>'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.736 28.77"><path fill="%23#{$color02}" d="M27.852,28.483l2.869.278-5.509-8.987L28,20.3l-5.426-7.785,2.375.537L20.372,5.914,15.8,13.051l2.375-.537L12.746,20.3l2.786-.525-5.509,8.987,2.869-.278L8.5,34.684H32.24Z" transform="translate(-8.504 -5.914)" /></svg>');
+}
