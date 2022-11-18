@@ -92,10 +92,3 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-// $(window).on('load',function(){
-//   $("#splash-logo").delay(3000).fadeOut('slow');
-//   $("#splash").delay(3000).fadeOut(800, function(){
-//   $('.wrapper').addClass('appear');
-//   });
-// });

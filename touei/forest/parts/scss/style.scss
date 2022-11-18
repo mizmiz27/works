@@ -17,6 +17,7 @@
   }
 }
 
+
 /* ------------------------------------------------------
    footer
 ------------------------------------------------------ */
@@ -81,9 +82,9 @@ footer {
 /* ------------------------------------------------------
    common
 ------------------------------------------------------ */
-// body {
-//   overflow: visible;
-// }
+body {
+  overflow: visible;
+}
 .sp-only {
   display: block;
 }
@@ -93,7 +94,7 @@ footer {
 }
 
 .p-forest {
-  position: relative;
+  // position: relative;
 
   a,
   p,
@@ -121,7 +122,7 @@ footer {
 
   .logo {
     position: absolute;
-    z-index: 2;
+    z-index: 200;
     width: vw(236);
     top: vw(22);
     left: vw(40);

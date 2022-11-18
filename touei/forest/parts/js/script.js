@@ -34,7 +34,14 @@ $(function () {
       }
     });
   }
+
+  window.addEventListener("DOMContentLoaded", () => {
   imageSwitch();
+  });
+
+  window.addEventListener('resize', () => {
+  imageSwitch();
+  });
 
   // 動的なリサイズは操作後0.2秒経ってから処理を実行する。
   var resizeTimer;

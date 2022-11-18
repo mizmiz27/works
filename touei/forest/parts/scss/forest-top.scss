@@ -32,6 +32,7 @@
   color: $white;
 
   // display: none;
+  
   #splash-logo {
     position: absolute;
     top: 50%;
@@ -111,9 +112,13 @@
   }
 }
 
+table {
+  border-spacing: 0;
+}
+
 #forest-top {
   opacity: 0;
-  position: relative;
+  // position: relative;
 
   @at-root .wrapper.appear #forest-top {
     animation-name: PageAnimeAppear;
@@ -134,7 +139,7 @@
   }
 
   .panel-section {
-    position: relative;
+    // position: relative;
 
     .elem {
       @include abs();
@@ -144,6 +149,8 @@
       align-items: center;
       color: $white;
       text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
 
       h1 {
         font-size: calc(45 / 375 * 100vw);
@@ -229,7 +236,7 @@
 
     &.kv {
       width: 100vw;
-      height: calc(667 / 375 * 100vw);
+      // height: calc(667 / 375 * 100vw);
 
       .kv-video {
         position: absolute;
@@ -241,10 +248,12 @@
         min-width: 100%;
         opacity: 0;
         transition: opacity $transition;
+        width: auto;
+        height: 100%;
       }
 
       .elem {
-        margin-top: calc(158 / 375 * 100vw);
+        // margin-top: calc(158 / 375 * 100vw);
 
         .logo-mark {
           width: calc(85 / 375 * 100vw);
@@ -291,12 +300,12 @@
 
     &.reason {
       background-repeat: no-repeat;
-      background-position: center top;
+      background-position: center;
       background-size: cover;
       width: 100vw;
 
       .elem {
-        position: relative;
+        // position: relative;
 
         figure {
           display: block;
@@ -337,8 +346,8 @@
 
       &.reason01 {
         background-image: url('../img/top/reason01-bg_sp.jpg');
-        height: calc(548 / 375 * 100vw);
-        padding-top: calc(186 / 375 * 100vw);
+        // height: calc(548 / 375 * 100vw);
+        // padding-top: calc(186 / 375 * 100vw);
 
         .elem {
           .icon {
@@ -352,8 +361,8 @@
 
       &.reason02 {
         background-image: url('../img/top/reason02-bg_sp.jpg');
-        min-height: calc(592 / 375 * 100vw);
-        padding-top: calc(186 / 375 * 100vw);
+        // min-height: calc(592 / 375 * 100vw);
+        // padding-top: calc(186 / 375 * 100vw);
 
         .elem {
           .icon {
@@ -421,7 +430,9 @@
         }
 
         &.open {
-          height: calc(1218 / 375 * 100vw);
+          // height: calc(1218 / 375 * 100vw);
+          padding-top: calc(120 / 375 * 100vw);
+          padding-bottom: calc(60 / 375 * 100vw);
 
           @at-root #forest-top .panel-section.reason.reason02.open .elem .explanation h3 {
 
@@ -431,13 +442,19 @@
               margin-top: calc(4 / 375 * 100vw);
             }
           }
+
+          .elem {
+            position: relative;
+            top: 0;
+            transform: none;
+          }
         }
       }
 
       &.reason03 {
         background-image: url('../img/top/reason03-bg_sp.jpg');
-        min-height: calc(546 / 375 * 100vw);
-        padding-top: calc(178 / 375 * 100vw);
+        // min-height: calc(546 / 375 * 100vw);
+        // padding-top: calc(178 / 375 * 100vw);
 
         .elem {
           .icon {
@@ -1335,6 +1352,14 @@
    pc
 ------------------------------------------------------ */
 @include media(m) {
+  #splash {
+    #splash-logo {
+      svg {
+        width: calc(126 / 1440 * 100vw);
+      }
+    }
+  }
+
   #forest-top {
     .panel-section {
       .elem {
@@ -1376,10 +1401,14 @@
       }
 
       &.kv {
-        height: calc(1073 / 1440 * 100vw);
+        // height: calc(1073 / 1440 * 100vw);
+
+        .kv-video {
+          height: auto;
+        }
 
         .elem {
-          margin-top: calc(256 / 1440 * 100%);
+          // margin-top: calc(256 / 1440 * 100%);
           margin-left: calc(-3 / 1440 * 100%);
 
           .logo-mark {
@@ -1443,8 +1472,8 @@
 
         &.reason01 {
           background-image: url('../img/top/reason01-bg_pc.jpg');
-          height: calc(1000 / 1440 * 100vw);
-          padding-top: calc(388 / 1440 * 100vw);
+          // height: calc(1000 / 1440 * 100vw);
+          // padding-top: calc(388 / 1440 * 100vw);
 
           .elem {
             .icon {
@@ -1457,8 +1486,10 @@
 
         &.reason02 {
           background-image: url('../img/top/reason02-bg_pc.jpg');
-          min-height: calc(900 / 1440 * 100vw);
-          padding-top: calc(310 / 1440 * 100vw);
+          // min-height: calc(900 / 1440 * 100vw);
+          // padding-top: calc(310 / 1440 * 100vw);
+          padding-top: calc(120 / 1440 * 100vw);
+            padding-bottom: calc(60 / 1440 * 100vw);
 
           .elem {
             .icon {
@@ -1518,7 +1549,9 @@
           }
 
           &.open {
-            height: calc(1226 / 1440 * 100vw);
+            // height: calc(1226 / 1440 * 100vw);
+            padding-top: calc(120 / 1440 * 100vw);
+            padding-bottom: calc(60 / 1440 * 100vw);
 
             @at-root #forest-top .panel-section.reason.reason02.open .elem .explanation h3 {
               &::after {
@@ -1530,8 +1563,8 @@
 
         &.reason03 {
           background-image: url('../img/top/reason03-bg_pc.jpg');
-          min-height: calc(998 / 1440 * 100vw);
-          padding-top: calc(375 / 1440 * 100vw);
+          // min-height: calc(998 / 1440 * 100vw);
+          // padding-top: calc(375 / 1440 * 100vw);
 
           .elem {
             .icon {

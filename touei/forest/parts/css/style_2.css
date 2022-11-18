@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+Antique:wght@500&family=Zen+Old+Mincho:wght@400;700;900&display=swap");
+.js-fadein {
+  opacity: 0;
+}
+.js-fadein.-fadeinr {
+  transform: translateX(30px);
+}
+.js-fadein.-fadeinl {
+  transform: translateX(-30px);
+}
+.js-fadein.-fadeinb {
+  transform: translateY(30px);
+}
+.js-fadein.is-show {
+  opacity: 1;
+  transition-duration: 0.7s;
+  transform: translateX(0);
+}
+.js-fadein.is-show.-fadeinr, .js-fadein.is-show.-fadeinl {
+  transform: translateX(0);
+}
+.js-fadein.is-show.-fadeinb {
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------
+   header
+------------------------------------------------------ */
+.trigger {
+  box-sizing: content-box;
+}
+
+@-webkit-keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ------------------------------------------------------
+   footer
+------------------------------------------------------ */
+footer {
+  padding-top: 6.6666666667vw;
+  padding-bottom: 3.4666666667vw;
+  background-color: #222;
+  color: #fff;
+}
+footer .main-logo {
+  display: block;
+  width: 37.3333333333vw;
+  margin: 0 auto;
+}
+footer .main-logo img {
+  width: 100%;
+}
+footer .sns-logo {
+  display: flex;
+  justify-content: space-between;
+  width: 20.8vw;
+  margin: 4vw auto 0;
+}
+footer .sns-logo figure {
+  width: 100%;
+}
+footer .sns-logo figure img {
+  width: 100%;
+}
+footer .sns-logo a {
+  padding: 0;
+}
+footer .sns-logo a.instagram {
+  display: block;
+  width: 9.0666666667vw;
+}
+footer .sns-logo a.facebook {
+  display: block;
+  width: 4.8vw;
+}
+footer .copyright {
+  text-align: center;
+  margin-top: 4.8vw;
+}
+footer .copyright small {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 3.4666666667vw;
+  letter-spacing: 0.01em;
+}
+
+/* ------------------------------------------------------
+   common
+------------------------------------------------------ */
+body {
+  overflow: visible;
+}
+
+.sp-only {
+  display: block;
+}
+
+.pc-only {
+  display: none;
+}
+
+.p-forest a,
+.p-forest p,
+.p-forest h1,
+.p-forest h2,
+.p-forest h3,
+.p-forest h4,
+.p-forest h5,
+.p-forest h6,
+.p-forest ul,
+.p-forest dl,
+.p-forest address {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 900;
+}
+.p-forest .design {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0.7;
+  display: none;
+}
+.p-forest .logo {
+  position: absolute;
+  z-index: 200;
+  width: 31.4666666667vw;
+  top: 2.9333333333vw;
+  left: 5.3333333333vw;
+}
+@media only screen and (min-width: 769px) {
+  .p-forest .logo {
+    width: 12.3611111111vw;
+    top: 1.25vw;
+    left: 2.2916666667vw;
+  }
+}
+.p-forest .fadeup {
+  opacity: 0;
+  transform: translateY(8vw);
+  transition-property: opacity, transform;
+  transition-duration: 0.7s, 1s;
+  transition-timing-function: linear, cubic-bezier(0.33, 1, 0.68, 1);
+}
+.p-forest .fadeup.animated {
+  opacity: 1;
+  transform: none;
+}
+
+/* ------------------------------------------------------
+   pc
+------------------------------------------------------ */
+@media only screen and (min-width: 769px) {
+  /* ------------------------------------------------------
+     footer
+  ------------------------------------------------------ */
+  footer {
+    padding-top: 4.3055555556vw;
+    padding-bottom: 4.9305555556vw;
+    position: relative;
+  }
+  footer .main-logo {
+    width: 19.0277777778vw;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10.625vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  footer .sns-logo {
+    width: 10.1388888889vw;
+    margin-top: 0;
+  }
+  footer .sns-logo a.instagram {
+    width: 2.9166666667vw;
+  }
+  footer .sns-logo a.facebook {
+    display: block;
+    width: 1.5972222222vw;
+  }
+  footer .copyright {
+    text-align: center;
+    margin-top: 9.5138888889vw;
+  }
+  footer .copyright small {
+    font-size: 0.9722222222vw;
+    margin-left: 0.6944444444vw;
+  }
+  /* ------------------------------------------------------
+     common
+  ------------------------------------------------------ */
+  .p-forest .fadeup {
+    transform: translateY(2.0833333333vw);
+  }
+  /* ------------------------------------------------------
+     opening
+  ------------------------------------------------------ */
+  #splash #splash-logo svg {
+    width: 8.75vw;
+  }
+  .sp-only {
+    display: none;
+  }
+  .pc-only {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style_2.css.map */
