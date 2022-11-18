@@ -1,0 +1,43 @@
+<svg id="木マーク3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="46" viewBox="0 0 80 46">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_105" data-name="長方形 105" width="80" height="46" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="長方形_104" data-name="長方形 104" width="80.001" height="46" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="長方形_101" data-name="長方形 101" width="34.128" height="41.288" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect id="長方形_102" data-name="長方形 102" width="20.959" height="25.356" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_880" data-name="グループ 880" clip-path="url(#clip-path)">
+    <g id="グループ_879" data-name="グループ 879" transform="translate(0 0)">
+      <g id="グループ_878" data-name="グループ 878" clip-path="url(#clip-path-2)">
+        <g id="グループ_871" data-name="グループ 871" transform="translate(22.936 0)" opacity="0.85">
+          <g id="グループ_870" data-name="グループ 870" transform="translate(0 0)">
+            <g id="グループ_869" data-name="グループ 869" clip-path="url(#clip-path-3)">
+              <path id="パス_513" data-name="パス 513" d="M31.759,32.39l4.126.4-7.92-12.9,4,.755-7.8-11.17,3.41.767L21,0,14.428,10.241l3.416-.767-7.8,11.17,4-.755-7.92,12.9,4.126-.4-6.308,8.9H38.067Z" transform="translate(-3.941 -0.001)" fill="#fff"/>
+            </g>
+          </g>
+        </g>
+        <g id="グループ_874" data-name="グループ 874" transform="translate(59.041 20.644)" opacity="0.85">
+          <g id="グループ_873" data-name="グループ 873">
+            <g id="グループ_872" data-name="グループ 872" clip-path="url(#clip-path-4)">
+              <path id="パス_514" data-name="パス 514" d="M27.231,23.443l2.531.244L24.9,15.77l2.462.459L22.57,9.369l2.1.476L20.626,3.554,16.587,9.845l2.1-.476-4.789,6.86,2.462-.459-4.865,7.917,2.531-.244-3.876,5.466H31.107Z" transform="translate(-10.147 -3.553)" fill="#fff"/>
+            </g>
+          </g>
+        </g>
+        <g id="グループ_877" data-name="グループ 877" transform="translate(0 20.644)" opacity="0.85">
+          <g id="グループ_876" data-name="グループ 876">
+            <g id="グループ_875" data-name="グループ 875" clip-path="url(#clip-path-4)">
+              <path id="パス_515" data-name="パス 515" d="M17.086,23.443l2.531.244L14.752,15.77l2.462.459-4.789-6.86,2.1.476L10.481,3.554,6.442,9.845l2.1-.476-4.789,6.86,2.462-.459L1.344,23.687l2.531-.244L0,28.909H20.962Z" transform="translate(-0.002 -3.553)" fill="#fff"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

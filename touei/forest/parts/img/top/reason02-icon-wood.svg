@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="46" viewBox="0 0 57 46">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_100" data-name="長方形 100" width="57" height="46" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="長方形_99" data-name="長方形 99" width="56.998" height="46" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="長方形_97" data-name="長方形 97" width="34.049" height="41.288" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect id="長方形_98" data-name="長方形 98" width="20.91" height="25.356" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="木マーク" transform="translate(-392.329 -630.891)">
+    <g id="木マーク2" transform="translate(392.329 605.125)">
+      <g id="グループ_868" data-name="グループ 868" transform="translate(0 25.766)" clip-path="url(#clip-path)">
+        <g id="グループ_867" data-name="グループ 867" transform="translate(0 0)">
+          <g id="グループ_866" data-name="グループ 866" clip-path="url(#clip-path-2)">
+            <g id="グループ_862" data-name="グループ 862" transform="translate(0 0)" opacity="0.85">
+              <g id="グループ_861" data-name="グループ 861" transform="translate(0 0)">
+                <g id="グループ_860" data-name="グループ 860" clip-path="url(#clip-path-3)">
+                  <path id="パス_511" data-name="パス 511" d="M27.753,32.39l4.116.4-7.9-12.9,3.995.755-7.78-11.17,3.4.767L17.024,0,10.463,10.241l3.408-.767L6.085,20.644l3.995-.755-7.9,12.9,4.117-.4L0,41.289H34.047Z" transform="translate(0.001 -0.001)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+            <g id="グループ_865" data-name="グループ 865" transform="translate(36.09 20.644)" opacity="0.85">
+              <g id="グループ_864" data-name="グループ 864">
+                <g id="グループ_863" data-name="グループ 863" clip-path="url(#clip-path-4)">
+                  <path id="パス_512" data-name="パス 512" d="M23.262,23.443l2.526.244L20.934,15.77l2.456.459-4.778-6.86,2.09.476L16.672,3.554,12.643,9.845l2.09-.476-4.778,6.86,2.456-.459L7.557,23.687l2.526-.244L6.215,28.909H27.129Z" transform="translate(-6.218 -3.553)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
