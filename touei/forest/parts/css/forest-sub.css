@@ -186,7 +186,33 @@
 }
 .gallery .swiper-container .swiper-button-next,
 .gallery .swiper-container .swiper-button-prev {
-  display: none;
+  top: 0;
+  margin-top: 26.9333333333vw;
+  transform: translateY(-50%);
+  --swiper-navigation-color: white;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0px 0px 2px rgb(0, 0, 0));
+  width: 5.3333333333vw;
+}
+.gallery .swiper-container .swiper-button-next:after,
+.gallery .swiper-container .swiper-button-prev:after {
+  font-size: 4.2666666667vw;
+  font-weight: 900;
+}
+.gallery .swiper-container .swiper-button-prev {
+  left: 0;
+  right: auto;
+  margin-left: 6.4vw;
+}
+.gallery .swiper-container .swiper-button-next {
+  right: 0;
+  left: auto;
+  margin-right: 4.8vw;
+}
+.gallery .swiper-container .swiper-button-next.swiper-button-disabled,
+.gallery .swiper-container .swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
 }
 
 .promotion {
@@ -1315,7 +1341,7 @@
   }
   .gallery {
     padding-top: 3.8888888889vw;
-    padding-bottom: 5.2777777778vw;
+    padding-bottom: 1.8055555556vw;
   }
   .gallery h2 {
     font-size: 3.2638888889vw;
@@ -1323,50 +1349,40 @@
   }
   .gallery .swiper-container {
     margin-top: 3.3333333333vw;
-    padding: 0 17.5694444444vw 5.9027777778vw;
+    padding: 0 17.5694444444vw 7.2916666667vw;
   }
   .gallery .swiper-container .swiper-wrapper .swiper-slide {
-    width: 64.8611111111vw;
+    width: 55.5555555556vw;
   }
   .gallery .swiper-container .swiper-wrapper .swiper-slide figure {
     display: block;
-    height: 43.1944444444vw;
+    height: 34.7222222222vw;
   }
   .gallery .swiper-container .swiper-wrapper .swiper-slide p {
     font-size: 1.3888888889vw;
-    margin-top: 2.5694444444vw;
+    margin-top: 1.3888888889vw;
   }
   .gallery .swiper-container .swiper-pagination {
     display: block;
-    bottom: 0.6944444444vw;
+    position: relative;
+    width: auto;
+    margin-top: 2.0833333333vw;
   }
   .gallery .swiper-container .swiper-button-next,
 .gallery .swiper-container .swiper-button-prev {
-    display: flex;
-    top: auto;
-    bottom: 0;
-    margin-bottom: 0.1388888889vw;
-    --swiper-navigation-color: #689da2;
-    height: auto;
+    margin-top: 17.3611111111vw;
+    width: 1.3888888889vw;
+    filter: drop-shadow(0px 0px 0.2777777778vw rgba(0, 0, 0, 0.5));
   }
   .gallery .swiper-container .swiper-button-next:after,
 .gallery .swiper-container .swiper-button-prev:after {
-    font-size: 2.7777777778vw;
-    font-weight: 400;
+    font-size: 2.0833333333vw;
   }
   .gallery .swiper-container .swiper-button-prev {
-    left: 0;
-    right: auto;
-    margin-left: 30.7638888889vw;
+    margin-left: 19.0972222222vw;
   }
   .gallery .swiper-container .swiper-button-next {
-    right: 0;
-    left: auto;
-    margin-right: 30.7638888889vw;
-  }
-  .gallery .swiper-container .swiper-button-next.swiper-button-disabled,
-.gallery .swiper-container .swiper-button-prev.swiper-button-disabled {
-    opacity: 0;
+    margin-right: 19.0972222222vw;
   }
   .gallery .swiper-container .swiper-pagination-bullet {
     width: 0.9722222222vw;
@@ -1466,7 +1482,7 @@
   }
   #akiruno .infographic {
     padding: 2.5vw 9.7222222222vw 11.1111111111vw;
-    height: 102.0833333333vw;
+    height: 92.5vw;
   }
   #akiruno .infographic .map .place .line {
     width: 3.125vw;
@@ -1482,181 +1498,181 @@
     margin-top: 7.3611111111vw;
   }
   #akiruno .infographic .item-list .item-mountain {
-    width: 26.8055555556vw;
-    height: 19.0277777778vw;
-    margin-top: -1.25vw;
-    margin-left: 3.6805555556vw;
+    width: 23.9583333333vw;
+    height: 17.3611111111vw;
+    margin-top: -1.0416666667vw;
+    margin-left: 7.6388888889vw;
   }
   #akiruno .infographic .item-list .item-mountain p {
-    padding-top: 9.4444444444vw;
-    padding-left: 6.875vw;
+    padding-top: 8.4722222222vw;
+    padding-left: 5.9722222222vw;
   }
   #akiruno .infographic .item-list .item-mountain p .title {
-    font-size: 2.6388888889vw;
+    font-size: 2.3611111111vw;
     padding-left: 0.0694444444vw;
   }
   #akiruno .infographic .item-list .item-mountain p .num {
-    font-size: 5.4166666667vw;
+    font-size: 4.7916666667vw;
     padding-top: 0.1388888889vw;
   }
   #akiruno .infographic .item-list .item-mountain p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #akiruno .infographic .item-list .item-tree {
     width: 15.4166666667vw;
     height: 9.9305555556vw;
-    margin-top: -1.8055555556vw;
-    margin-left: 36.3888888889vw;
-    background-size: 35.1351351351% auto;
+    margin-top: -1.5277777778vw;
+    margin-left: 36.8055555556vw;
+    background-size: 31.5315315315% auto;
   }
   #akiruno .infographic .item-list .item-tree p {
     padding-top: 0.4166666667vw;
-    padding-left: 7.2916666667vw;
+    padding-left: 6.3888888889vw;
   }
   #akiruno .infographic .item-list .item-tree p .title {
-    font-size: 2.0138888889vw;
+    font-size: 1.7361111111vw;
     padding-left: 0.2083333333vw;
     padding-bottom: 0.6944444444vw;
   }
   #akiruno .infographic .item-list .item-tree p .num {
-    font-size: 5.4861111111vw;
+    font-size: 4.8611111111vw;
   }
   #akiruno .infographic .item-list .item-tree p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #akiruno .infographic .item-list .item-grass {
     width: 15.4166666667vw;
     height: 9.8611111111vw;
-    margin-top: 8.4722222222vw;
-    margin-left: 36.3888888889vw;
-    background-size: 32.4324324324% auto;
+    margin-top: 7.6388888889vw;
+    margin-left: 36.8055555556vw;
+    background-size: 28.8288288288% auto;
   }
   #akiruno .infographic .item-list .item-grass p {
-    padding-top: 0.2777777778vw;
-    padding-left: 6.25vw;
+    padding-top: 1.3888888889vw;
+    padding-left: 5.5555555556vw;
   }
   #akiruno .infographic .item-list .item-grass p .title {
-    font-size: 2.0138888889vw;
+    font-size: 1.7361111111vw;
     padding-bottom: 0.6944444444vw;
   }
   #akiruno .infographic .item-list .item-grass p .num {
-    font-size: 5.4861111111vw;
+    font-size: 4.8611111111vw;
     padding-left: 0.1388888889vw;
   }
   #akiruno .infographic .item-list .item-grass p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #akiruno .infographic .item-list .item-participant {
-    width: 19.1666666667vw;
-    height: 18.4722222222vw;
-    margin-top: -0.7638888889vw;
-    margin-left: 57.7777777778vw;
+    width: 17.0138888889vw;
+    height: 16.4583333333vw;
+    margin-top: -0.625vw;
+    margin-left: 55.9722222222vw;
   }
   #akiruno .infographic .item-list .item-participant p {
-    padding-top: 7.1527777778vw;
-    padding-left: 3.8888888889vw;
+    padding-top: 6.25vw;
+    padding-left: 3.4722222222vw;
   }
   #akiruno .infographic .item-list .item-participant p .title {
-    font-size: 2.0138888889vw;
+    font-size: 1.7361111111vw;
     margin-left: -1.1111111111vw;
     margin-bottom: 0.3472222222vw;
   }
   #akiruno .infographic .item-list .item-participant p .num {
-    font-size: 5vw;
+    font-size: 4.4444444444vw;
   }
   #akiruno .infographic .item-list .item-participant p .unit {
-    font-size: 2.6388888889vw;
+    font-size: 2.3611111111vw;
   }
   #akiruno .infographic .item-list .item-conferment {
-    width: 20.6944444444vw;
-    margin-top: 21.8055555556vw;
-    margin-left: 13.4027777778vw;
+    width: 18.4722222222vw;
+    margin-top: 19.5833333333vw;
+    margin-left: 16.1111111111vw;
   }
   #akiruno .infographic .item-list .item-co2 {
-    width: 22.9166666667vw;
+    width: 20.4861111111vw;
     height: 17.4305555556vw;
-    margin-top: 25.6944444444vw;
-    margin-left: 43.75vw;
+    margin-top: 23.125vw;
+    margin-left: 43.3333333333vw;
   }
   #akiruno .infographic .item-list .item-co2 p {
-    padding-top: 5.2083333333vw;
-    padding-left: 2.8472222222vw;
+    padding-top: 4.5833333333vw;
+    padding-left: 2.4305555556vw;
   }
   #akiruno .infographic .item-list .item-co2 p .title {
-    font-size: 1.8055555556vw;
+    font-size: 1.5277777778vw;
     margin-left: -0.3472222222vw;
   }
   #akiruno .infographic .item-list .item-co2 p .num {
-    font-size: 4.6527777778vw;
+    font-size: 4.0972222222vw;
     padding-top: 0.1388888889vw;
     padding-left: 0.3472222222vw;
   }
   #akiruno .infographic .item-list .item-co2 p .unit {
-    font-size: 3.6111111111vw;
+    font-size: 3.1944444444vw;
   }
   #akiruno .infographic .item-list .planting {
-    margin-top: 50.8333333333vw;
+    margin-top: 44.9305555556vw;
   }
   #akiruno .infographic .item-list .planting h2 {
-    font-size: 3.125vw;
+    font-size: 2.7777777778vw;
   }
   #akiruno .infographic .item-list .planting h2::before, #akiruno .infographic .item-list .planting h2::after {
-    width: 26.1111111111vw;
+    width: 23.3333333333vw;
     top: 50%;
   }
   #akiruno .infographic .item-list .planting h2::before {
-    margin-left: 0;
+    margin-left: 4.1666666667vw;
   }
   #akiruno .infographic .item-list .planting h2::after {
     left: auto;
     right: 0;
-    margin-right: 0;
+    margin-right: 4.1666666667vw;
   }
   #akiruno .infographic .item-list .planting .item-forest01 {
-    width: 30.2777777778vw;
-    height: 21.3194444444vw;
-    margin-top: 5.5555555556vw;
-    margin-left: 5.4861111111vw;
+    width: 27.0833333333vw;
+    height: 18.9583333333vw;
+    margin-top: 4.8611111111vw;
+    margin-left: 9.0277777778vw;
   }
   #akiruno .infographic .item-list .planting .item-forest01 p {
-    padding-top: 6.4583333333vw;
-    padding-left: 4.7916666667vw;
+    padding-top: 5.7638888889vw;
+    padding-left: 4.0972222222vw;
   }
   #akiruno .infographic .item-list .planting .item-forest01 p .title {
-    font-size: 1.8055555556vw;
+    font-size: 1.5277777778vw;
     margin-left: -1.6666666667vw;
     margin-bottom: 0.5555555556vw;
   }
   #akiruno .infographic .item-list .planting .item-forest01 p .num {
-    font-size: 5.1388888889vw;
+    font-size: 4.5138888889vw;
     padding-top: 0;
     padding-left: 2.3611111111vw;
   }
   #akiruno .infographic .item-list .planting .item-forest01 p .unit {
-    font-size: 2.8472222222vw;
+    font-size: 2.5vw;
   }
   #akiruno .infographic .item-list .planting .item-forest02 {
-    width: 30.9027777778vw;
-    height: 20.7638888889vw;
-    margin-top: 6.25vw;
-    margin-left: 42.7083333333vw;
+    width: 27.5694444444vw;
+    height: 18.4722222222vw;
+    margin-top: 5.5555555556vw;
+    margin-left: 42.3611111111vw;
   }
   #akiruno .infographic .item-list .planting .item-forest02 p {
-    padding-top: 4.7222222222vw;
-    padding-left: 1.9444444444vw;
+    padding-top: 4.1666666667vw;
+    padding-left: 1.3194444444vw;
   }
   #akiruno .infographic .item-list .planting .item-forest02 p .title {
-    font-size: 1.8055555556vw;
-    margin-left: -5vw;
+    font-size: 1.5277777778vw;
+    margin-left: -4.1666666667vw;
     margin-bottom: 0.6944444444vw;
   }
   #akiruno .infographic .item-list .planting .item-forest02 p .num {
-    font-size: 5.1388888889vw;
+    font-size: 4.5138888889vw;
     padding-top: 0;
     padding-left: 5.5555555556vw;
   }
   #akiruno .infographic .item-list .planting .item-forest02 p .unit {
-    font-size: 2.8472222222vw;
+    font-size: 2.5vw;
   }
   #akiruno .infographic .item-list .item01.fadeup,
 #akiruno .infographic .item-list .item02.fadeup,
@@ -1668,7 +1684,7 @@
   }
   #ome .infographic {
     padding: 3.0555555556vw 10.4166666667vw 11.1111111111vw;
-    height: 128.8888888889vw;
+    height: 114.2361111111vw;
   }
   #ome .infographic .map .place .line {
     width: 4.9305555556vw;
@@ -1687,230 +1703,231 @@
     margin-top: 7.3611111111vw;
   }
   #ome .infographic .item-list .item-mountain {
-    width: 26.8055555556vw;
-    height: 19.0277777778vw;
-    margin-top: -2.2222222222vw;
-    margin-left: -1.3888888889vw;
+    width: 23.9583333333vw;
+    height: 17.3611111111vw;
+    margin-top: -3.125vw;
+    margin-left: 2.7777777778vw;
   }
   #ome .infographic .item-list .item-mountain p {
-    padding-top: 9.4444444444vw;
-    padding-left: 6.875vw;
+    padding-top: 8.125vw;
+    padding-left: 6.6666666667vw;
   }
   #ome .infographic .item-list .item-mountain p .title {
-    font-size: 2.6388888889vw;
+    font-size: 2.3611111111vw;
     padding-left: 0.0694444444vw;
   }
   #ome .infographic .item-list .item-mountain p .num {
-    font-size: 5.4166666667vw;
+    font-size: 4.7916666667vw;
     padding-top: 0.1388888889vw;
   }
   #ome .infographic .item-list .item-mountain p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #ome .infographic .item-list .item-tree {
     width: 15.4166666667vw;
     height: 9.9305555556vw;
-    margin-top: -3.5416666667vw;
-    margin-left: 28.3333333333vw;
-    background-size: 35.1351351351% auto;
+    margin-top: -3.6805555556vw;
+    margin-left: 29.8611111111vw;
+    background-size: 30.6306306306% auto;
   }
   #ome .infographic .item-list .item-tree p {
     padding-top: 0.4166666667vw;
     padding-left: 6.25vw;
   }
   #ome .infographic .item-list .item-tree p .title {
-    font-size: 2.0138888889vw;
-    padding-left: 0;
+    font-size: 1.7361111111vw;
+    padding-left: 0.2083333333vw;
     padding-bottom: 0.6944444444vw;
   }
   #ome .infographic .item-list .item-tree p .num {
-    font-size: 5.4861111111vw;
+    font-size: 4.8611111111vw;
   }
   #ome .infographic .item-list .item-tree p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #ome .infographic .item-list .item-grass {
     width: 15.4166666667vw;
     height: 9.8611111111vw;
-    margin-top: 7.2916666667vw;
-    margin-left: 28.2638888889vw;
-    background-size: 32.4324324324% auto;
+    margin-top: 5.6944444444vw;
+    margin-left: 29.8611111111vw;
+    background-size: 27.9279279279% auto;
   }
   #ome .infographic .item-list .item-grass p {
-    padding-top: 1.4583333333vw;
-    padding-left: 6.4583333333vw;
+    padding-top: 0.9722222222vw;
+    padding-left: 6.6666666667vw;
   }
   #ome .infographic .item-list .item-grass p .title {
-    font-size: 2.0138888889vw;
+    font-size: 1.7361111111vw;
     padding-bottom: 0.6944444444vw;
+    margin-left: -1.3888888889vw;
   }
   #ome .infographic .item-list .item-grass p .num {
-    font-size: 5.4861111111vw;
+    font-size: 4.8611111111vw;
     padding-left: 0;
   }
   #ome .infographic .item-list .item-grass p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #ome .infographic .item-list .item-branch {
     width: 15.4166666667vw;
     height: 9.8611111111vw;
-    margin-top: 8.0555555556vw;
-    margin-left: 44.0277777778vw;
-    background-size: 44.1441441441% auto;
+    margin-top: 6.0416666667vw;
+    margin-left: 43.75vw;
+    background-size: 40.0900900901% auto;
   }
   #ome .infographic .item-list .item-branch p {
     padding-top: 2.9166666667vw;
-    padding-left: 8.0555555556vw;
+    padding-left: 7.1527777778vw;
   }
   #ome .infographic .item-list .item-branch p .title {
-    font-size: 2.0138888889vw;
+    font-size: 1.7361111111vw;
     margin-bottom: -0.3472222222vw;
     line-height: 0.7586206897;
   }
   #ome .infographic .item-list .item-branch p .title > span {
-    font-size: 1.25vw;
+    font-size: 1.1111111111vw;
     margin-left: -0.6944444444vw;
   }
   #ome .infographic .item-list .item-branch p .num {
-    font-size: 5.4861111111vw;
+    font-size: 4.7916666667vw;
     padding-left: 0;
   }
   #ome .infographic .item-list .item-branch p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #ome .infographic .item-list .item-participant {
-    width: 19.1666666667vw;
+    width: 17.0138888889vw;
     height: 18.4722222222vw;
-    margin-top: -1.7361111111vw;
-    margin-left: 61.4583333333vw;
+    margin-top: -2.8472222222vw;
+    margin-left: 59.3055555556vw;
   }
   #ome .infographic .item-list .item-participant p {
-    padding-top: 7.1527777778vw;
-    padding-left: 3.8888888889vw;
+    padding-top: 6.3888888889vw;
+    padding-left: 3.4722222222vw;
   }
   #ome .infographic .item-list .item-participant p .title {
-    font-size: 2.0138888889vw;
+    font-size: 1.7361111111vw;
     margin-left: -1.1111111111vw;
     margin-bottom: 0.3472222222vw;
   }
   #ome .infographic .item-list .item-participant p .num {
-    font-size: 5vw;
+    font-size: 4.4444444444vw;
   }
   #ome .infographic .item-list .item-participant p .unit {
-    font-size: 2.6388888889vw;
+    font-size: 2.3611111111vw;
   }
   #ome .infographic .item-list .item-conferment {
-    width: 20.6944444444vw;
-    margin-top: 21.875vw;
-    margin-left: 13.1944444444vw;
+    width: 18.4722222222vw;
+    margin-top: 17.2916666667vw;
+    margin-left: 15.5555555556vw;
   }
   #ome .infographic .item-list .item-co2 {
-    width: 22.9166666667vw;
+    width: 20.4861111111vw;
     height: 17.4305555556vw;
-    margin-top: 25.9027777778vw;
-    margin-left: 43.0555555556vw;
+    margin-top: 20.9027777778vw;
+    margin-left: 42.6388888889vw;
   }
   #ome .infographic .item-list .item-co2 p {
-    padding-top: 5.2083333333vw;
+    padding-top: 4.5833333333vw;
     padding-left: 3.6805555556vw;
   }
   #ome .infographic .item-list .item-co2 p .title {
-    font-size: 1.8055555556vw;
-    margin-left: -0.3472222222vw;
+    font-size: 1.5277777778vw;
+    margin-left: -0.7638888889vw;
+    margin-bottom: 0.1388888889vw;
   }
   #ome .infographic .item-list .item-co2 p .num {
-    font-size: 4.6527777778vw;
-    padding-top: 0.1388888889vw;
+    font-size: 4.0972222222vw;
     padding-left: 0.3472222222vw;
   }
   #ome .infographic .item-list .item-co2 p .unit {
-    font-size: 3.6111111111vw;
+    font-size: 3.1944444444vw;
   }
   #ome .infographic .item-list .planting {
-    margin-top: 50.8333333333vw;
+    margin-top: 42.6388888889vw;
   }
   #ome .infographic .item-list .planting h2 {
-    font-size: 3.125vw;
+    font-size: 2.7777777778vw;
   }
   #ome .infographic .item-list .planting h2::before, #ome .infographic .item-list .planting h2::after {
-    width: 26.1111111111vw;
+    width: 23.3333333333vw;
     top: 50%;
   }
   #ome .infographic .item-list .planting h2::before {
-    margin-left: 0;
+    margin-left: 4.1666666667vw;
   }
   #ome .infographic .item-list .planting h2::after {
     left: auto;
     right: 0;
-    margin-right: 0;
+    margin-right: 4.1666666667vw;
   }
   #ome .infographic .item-list .planting .item-forest01 {
-    width: 30.2777777778vw;
-    height: 21.3194444444vw;
-    margin-top: 5.625vw;
-    margin-left: 4.9305555556vw;
+    width: 27.0833333333vw;
+    height: 18.9583333333vw;
+    margin-top: 4.8611111111vw;
+    margin-left: 9.0277777778vw;
   }
   #ome .infographic .item-list .planting .item-forest01 p {
-    padding-top: 6.4583333333vw;
-    padding-left: 5.625vw;
+    padding-top: 5.6944444444vw;
+    padding-left: 4.4444444444vw;
   }
   #ome .infographic .item-list .planting .item-forest01 p .title {
-    font-size: 1.8055555556vw;
+    font-size: 1.5277777778vw;
     margin-left: -1.7361111111vw;
     margin-bottom: 0.625vw;
   }
   #ome .infographic .item-list .planting .item-forest01 p .num {
-    font-size: 5.1388888889vw;
+    font-size: 4.5138888889vw;
     padding-top: 0;
     padding-left: 2.3611111111vw;
   }
   #ome .infographic .item-list .planting .item-forest01 p .unit {
-    font-size: 2.8472222222vw;
+    font-size: 2.5vw;
   }
   #ome .infographic .item-list .planting .item-forest02 {
-    width: 30.9027777778vw;
-    height: 20.7638888889vw;
-    margin-top: 6.25vw;
-    margin-left: 42.0138888889vw;
+    width: 27.5694444444vw;
+    height: 18.4722222222vw;
+    margin-top: 5.4166666667vw;
+    margin-left: 42.5vw;
   }
   #ome .infographic .item-list .planting .item-forest02 p {
-    padding-top: 6.25vw;
-    padding-left: 4.8611111111vw;
+    padding-top: 4.3055555556vw;
+    padding-left: 3.1944444444vw;
   }
   #ome .infographic .item-list .planting .item-forest02 p .title {
-    font-size: 1.8055555556vw;
+    font-size: 1.5277777778vw;
     margin-left: -4.1666666667vw;
-    margin-bottom: 0.3472222222vw;
+    margin-bottom: 0.6944444444vw;
   }
   #ome .infographic .item-list .planting .item-forest02 p .num {
-    font-size: 5.1388888889vw;
+    font-size: 4.5138888889vw;
     padding-top: 0;
     padding-left: 5.5555555556vw;
   }
   #ome .infographic .item-list .planting .item-forest02 p .unit {
-    font-size: 2.8472222222vw;
+    font-size: 2.5vw;
   }
   #ome .infographic .item-list .planting .item-forest03 {
-    width: 28.75vw;
-    height: 21.25vw;
-    margin-top: 30vw;
-    margin-left: 25.3472222222vw;
+    width: 25.4861111111vw;
+    height: 18.9583333333vw;
+    margin-top: 26.5277777778vw;
+    margin-left: 27.4305555556vw;
   }
   #ome .infographic .item-list .planting .item-forest03 p {
-    padding-top: 6.4583333333vw;
-    padding-left: 6.1111111111vw;
+    padding-top: 5.9722222222vw;
+    padding-left: 10.2777777778vw;
   }
   #ome .infographic .item-list .planting .item-forest03 p .title {
-    font-size: 1.8055555556vw;
-    margin-left: 0;
+    font-size: 1.5277777778vw;
+    margin-left: -4.8vw;
     margin-bottom: 0.2777777778vw;
   }
   #ome .infographic .item-list .planting .item-forest03 p .num {
-    font-size: 5.4166666667vw;
-    margin-left: -2.6666666667vw;
+    font-size: 4.7916666667vw;
+    margin-left: -5.0666666667vw;
   }
   #ome .infographic .item-list .planting .item-forest03 p .unit {
-    font-size: 3.125vw;
+    font-size: 2.7777777778vw;
   }
   #ome .infographic .item-list .item01.fadeup,
 #ome .infographic .item-list .item02.fadeup,
@@ -1922,7 +1939,7 @@
   }
   #ometomioka .infographic {
     padding: 2.9166666667vw 9.7222222222vw 11.1111111111vw;
-    height: 77.6388888889vw;
+    height: 69.0972222222vw;
   }
   #ometomioka .infographic .map .place .line {
     width: 2.4305555556vw;
@@ -1941,131 +1958,132 @@
     margin-top: 7.3611111111vw;
   }
   #ometomioka .infographic .item-list .item-mountain {
-    width: 26.8055555556vw;
-    height: 19.0277777778vw;
-    margin-top: -3.3333333333vw;
-    margin-left: 3.4722222222vw;
+    width: 23.9583333333vw;
+    height: 17.3611111111vw;
+    margin-top: -4.0277777778vw;
+    margin-left: 7.3611111111vw;
   }
   #ometomioka .infographic .item-list .item-mountain p {
-    padding-top: 9.6527777778vw;
-    padding-left: 8.3333333333vw;
+    padding-top: 8.6805555556vw;
+    padding-left: 7.5vw;
   }
   #ometomioka .infographic .item-list .item-mountain p .title {
-    font-size: 2.6388888889vw;
+    font-size: 2.3611111111vw;
     padding-left: 0.0694444444vw;
     padding-bottom: 0;
     margin-bottom: -0.2777777778vw;
   }
   #ometomioka .infographic .item-list .item-mountain p .num {
-    font-size: 5.4166666667vw;
+    font-size: 4.7916666667vw;
     padding-left: 0;
   }
   #ometomioka .infographic .item-list .item-mountain p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #ometomioka .infographic .item-list .item-tree {
     width: 16.6666666667vw;
     height: 15.5555555556vw;
-    margin-top: 0;
-    margin-left: 36.25vw;
-    background-size: 52.0833333333% auto;
+    margin-top: -0.9722222222vw;
+    margin-left: 36.5277777778vw;
+    background-size: 46.25% auto;
   }
   #ometomioka .infographic .item-list .item-tree p {
-    padding-top: 3.3333333333vw;
-    padding-left: 10vw;
+    padding-top: 3.0555555556vw;
+    padding-left: 9.0972222222vw;
   }
   #ometomioka .infographic .item-list .item-tree p .title {
-    font-size: 2.6388888889vw;
+    font-size: 2.3611111111vw;
     padding-left: 0.0694444444vw;
     padding-bottom: 0.9722222222vw;
   }
   #ometomioka .infographic .item-list .item-tree p .num {
-    font-size: 5.4166666667vw;
+    font-size: 4.7916666667vw;
   }
   #ometomioka .infographic .item-list .item-tree p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #ometomioka .infographic .item-list .item-participant {
-    width: 19.1666666667vw;
-    height: 18.4722222222vw;
-    margin-top: -2.9166666667vw;
-    margin-left: 57.9861111111vw;
+    width: 17.0138888889vw;
+    height: 16.4583333333vw;
+    margin-top: -3.6111111111vw;
+    margin-left: 56.1805555556vw;
   }
   #ometomioka .infographic .item-list .item-participant p {
-    padding-top: 7.1527777778vw;
-    padding-left: 5.4861111111vw;
+    padding-top: 6.3888888889vw;
+    padding-left: 4.8611111111vw;
   }
   #ometomioka .infographic .item-list .item-participant p .title {
-    font-size: 2.0138888889vw;
+    font-size: 1.7361111111vw;
     margin-left: -1.1111111111vw;
     margin-bottom: 0.4166666667vw;
   }
   #ometomioka .infographic .item-list .item-participant p .num {
-    font-size: 5vw;
+    font-size: 4.4444444444vw;
   }
   #ometomioka .infographic .item-list .item-participant p .unit {
-    font-size: 2.6388888889vw;
+    font-size: 2.3611111111vw;
   }
   #ometomioka .infographic .item-list .planting {
-    margin-top: 23.2638888889vw;
+    margin-top: 19.0972222222vw;
   }
   #ometomioka .infographic .item-list .planting h2 {
-    font-size: 3.125vw;
+    font-size: 2.7777777778vw;
   }
   #ometomioka .infographic .item-list .planting h2::before, #ometomioka .infographic .item-list .planting h2::after {
-    width: 26.1111111111vw;
+    width: 23.3333333333vw;
     top: 50%;
   }
   #ometomioka .infographic .item-list .planting h2::before {
-    margin-left: 0;
+    margin-left: 4.1666666667vw;
   }
   #ometomioka .infographic .item-list .planting h2::after {
     left: auto;
     right: 0;
-    margin-right: 0;
+    margin-right: 4.1666666667vw;
   }
   #ometomioka .infographic .item-list .planting .item-forest01 {
-    width: 30.6944444444vw;
-    height: 21.5972222222vw;
-    margin-top: 5.9722222222vw;
-    margin-left: 5.2083333333vw;
+    width: 27.4305555556vw;
+    height: 19.3055555556vw;
+    margin-top: 4.8611111111vw;
+    margin-left: 8.8194444444vw;
   }
   #ometomioka .infographic .item-list .planting .item-forest01 p {
-    padding-top: 6.9444444444vw;
-    padding-left: 10vw;
+    padding-top: 5.8333333333vw;
+    padding-left: 8.4027777778vw;
   }
   #ometomioka .infographic .item-list .planting .item-forest01 p .title {
-    font-size: 1.6666666667vw;
-    margin-left: -1.6666666667vw;
+    font-size: 1.4583333333vw;
+    margin-left: -0.5555555556vw;
     margin-bottom: 0.5555555556vw;
   }
   #ometomioka .infographic .item-list .planting .item-forest01 p .num {
-    font-size: 5.1388888889vw;
+    font-size: 4.5138888889vw;
+    margin-left: -0.3472222222vw;
   }
   #ometomioka .infographic .item-list .planting .item-forest01 p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #ometomioka .infographic .item-list .planting .item-forest02 {
-    width: 28.4722222222vw;
+    width: 25.8333333333vw;
     height: 21.1111111111vw;
-    margin-top: 6.25vw;
-    margin-left: 45.5555555556vw;
+    margin-top: 5vw;
+    margin-left: 44.4444444444vw;
   }
   #ometomioka .infographic .item-list .planting .item-forest02 p {
-    padding-top: 6.5277777778vw;
+    padding-top: 5.9027777778vw;
     padding-left: 6.9444444444vw;
   }
   #ometomioka .infographic .item-list .planting .item-forest02 p .title {
-    font-size: 1.6666666667vw;
-    margin-left: -1.25vw;
+    font-size: 1.4583333333vw;
+    margin-left: -1.5277777778vw;
     margin-bottom: 0.6944444444vw;
   }
   #ometomioka .infographic .item-list .planting .item-forest02 p .num {
-    font-size: 5.1388888889vw;
-    margin-left: -0.5555555556vw;
+    font-size: 4.5138888889vw;
+    margin-left: -0.4166666667vw;
   }
   #ometomioka .infographic .item-list .planting .item-forest02 p .unit {
-    font-size: 2.9861111111vw;
+    font-size: 2.6388888889vw;
   }
   #ometomioka .infographic .item-list .item01.fadeup,
 #ometomioka .infographic .item-list .item02.fadeup,

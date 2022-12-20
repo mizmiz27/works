@@ -62,7 +62,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*アニメーション前のパスの指定*/
   /*アニメーション後に.doneというクラス名が付与された時のパスの指定*/
 }
 #splash #splash-logo svg {
@@ -72,22 +71,15 @@
 }
 #splash #splash-logo svg path {
   fill-opacity: 0;
-  /*最初は透過0で見えない状態*/
   transition: fill-opacity 0.5s;
-  /*カラーがつく際のアニメーション0.5秒で変化*/
   fill: none;
-  /*塗りがない状態*/
   stroke: #fff;
-  /*線の色*/
   stroke-width: 1;
 }
 #splash #splash-logo svg.done path {
   fill: #fff;
-  /*塗りの色*/
   fill-opacity: 1;
-  /*透過1で見える状態*/
   stroke: none;
-  /*線の色なし*/
 }
 
 .splashbg {
@@ -150,9 +142,61 @@
     transform: scaleX(0);
   }
 }
+table {
+  border-spacing: 0;
+}
+
+/* ------------------------------------------------------
+   コンテンツ部分
+------------------------------------------------------ */
+#pp-nav {
+  display: none;
+}
+
+.pp-fadeup {
+  opacity: 0;
+  transform: translateY(8vw);
+  transition-property: opacity, transform;
+  transition-duration: 0.7s, 1s;
+  transition-timing-function: linear, cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: 0.5s, 0.5s;
+}
+
+.section.active .pp-fadeup {
+  opacity: 1;
+  transform: none;
+}
+
+.pp-fade-to-left {
+  opacity: 0;
+  transform: translateX(8vw);
+  transition-property: opacity, transform;
+  transition-duration: 0.7s, 1s;
+  transition-timing-function: linear, cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: 0.8s, 0.8s;
+}
+
+.section.active .pp-fade-to-left {
+  opacity: 1;
+  transform: none;
+}
+
+.pp-fade-to-right {
+  opacity: 0;
+  transform: translateX(-8vw);
+  transition-property: opacity, transform;
+  transition-duration: 0.7s, 1s;
+  transition-timing-function: linear, cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: 0.8s, 0.8s;
+}
+
+.section.active .pp-fade-to-right {
+  opacity: 1;
+  transform: none;
+}
+
 #forest-top {
   opacity: 0;
-  position: relative;
   /* モーダル */
   /* モーダル背景のオーバーレイ部分 */
   /* モーダルのコンテンツ */
@@ -191,9 +235,6 @@
     opacity: 1;
   }
 }
-#forest-top .panel-section {
-  position: relative;
-}
 #forest-top .panel-section .elem {
   display: block;
   position: absolute;
@@ -205,6 +246,8 @@
   align-items: center;
   color: #fff;
   text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #forest-top .panel-section .elem h1 {
   font-size: 12vw;
@@ -222,6 +265,7 @@
   font-weight: 900;
   margin-top: 8.5333333333vw;
   position: relative;
+  filter: drop-shadow(0 0 0.5333333333vw rgba(0, 0, 0, 0.5));
 }
 #forest-top .panel-section .elem .scrolldown .cp_arrow {
   display: block;
@@ -306,7 +350,7 @@
 }
 #forest-top .panel-section.kv {
   width: 100vw;
-  height: 177.8666666667vw;
+  overflow-x: hidden;
 }
 #forest-top .panel-section.kv .kv-video {
   position: absolute;
@@ -318,12 +362,26 @@
   min-width: 100%;
   opacity: 0;
   transition: opacity 0.5s cubic-bezier(0.55, 0.14, 0.52, 0.91);
+  width: auto;
+  height: 100%;
+  filter: brightness(120%) saturate(130%);
 }
-#forest-top .panel-section.kv .elem {
-  margin-top: 42.1333333333vw;
+#forest-top .panel-section.kv .fadeup-box {
+  opacity: 0;
+  transform: translateY(8vw);
+  transition-property: opacity, transform;
+  transition-duration: 0.7s, 1s;
+  transition-timing-function: linear, cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: 5s, 5s;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #forest-top .panel-section.kv .elem .logo-mark {
   width: 22.6666666667vw;
+  filter: drop-shadow(0 0 0.5333333333vw rgba(0, 0, 0, 0.5));
 }
 #forest-top .panel-section.kv .elem h1 {
   margin-top: 5.8666666667vw;
@@ -332,6 +390,7 @@
   line-height: 1.35;
   font-weight: 700;
   position: relative;
+  filter: drop-shadow(0 0 0.5333333333vw rgba(0, 0, 0, 0.5));
 }
 #forest-top .panel-section.kv .elem h1:after {
   content: "";
@@ -344,6 +403,11 @@
   background-color: #fff;
   margin-top: 28.8vw;
   margin-left: 20.8vw;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-delay: 5.7s;
 }
 #forest-top .panel-section.kv .elem h1 span {
   display: block;
@@ -354,18 +418,23 @@
   margin-top: 12.8vw;
   margin-left: 0.8vw;
   letter-spacing: 0.4vw;
+  filter: drop-shadow(0 0 0.5333333333vw rgba(0, 0, 0, 0.5));
 }
 #forest-top .panel-section.kv.animated .kv-video {
   opacity: 1;
 }
+#forest-top .panel-section.kv.animated .fadeup-box {
+  opacity: 1;
+  transform: none;
+}
+#forest-top .panel-section.kv.animated .elem h1:after {
+  transform: scale(1, 1);
+}
 #forest-top .panel-section.reason {
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   background-size: cover;
   width: 100vw;
-}
-#forest-top .panel-section.reason .elem {
-  position: relative;
 }
 #forest-top .panel-section.reason .elem figure {
   display: block;
@@ -389,7 +458,14 @@
   top: auto;
   bottom: 0;
   margin-bottom: -1.8666666667vw;
+  transition: all 0.5s 1.2s;
+  transform: scale(0, 1);
+  transform-origin: center top;
 }
+#forest-top .panel-section.reason.active .elem h2:before {
+  transform: scale(1, 1);
+}
+
 #forest-top .panel-section.reason .elem h2 span {
   font-size: 3.4666666667vw;
   display: block;
@@ -403,8 +479,6 @@
 }
 #forest-top .panel-section.reason.reason01 {
   background-image: url("../img/top/reason01-bg_sp.jpg");
-  height: 146.1333333333vw;
-  padding-top: 49.6vw;
 }
 #forest-top .panel-section.reason.reason01 .elem .icon {
   display: block;
@@ -417,8 +491,6 @@
 }
 #forest-top .panel-section.reason.reason02 {
   background-image: url("../img/top/reason02-bg_sp.jpg");
-  min-height: 157.8666666667vw;
-  padding-top: 49.6vw;
 }
 #forest-top .panel-section.reason.reason02 .elem .icon {
   display: block;
@@ -482,17 +554,21 @@
   margin-top: 5.3333333333vw;
 }
 #forest-top .panel-section.reason.reason02.open {
-  height: 324.8vw;
+  padding-top: 32vw;
+  padding-bottom: 16vw;
 }
 #forest-top .panel-section.reason.reason02.open .elem .explanation h3::after {
   transform: translateY(-50%) rotate(-45deg);
   margin-top: 1.0666666667vw;
 }
 
+#forest-top .panel-section.reason.reason02.open .elem {
+  position: relative;
+  top: 0;
+  transform: none;
+}
 #forest-top .panel-section.reason.reason03 {
   background-image: url("../img/top/reason03-bg_sp.jpg");
-  min-height: 145.6vw;
-  padding-top: 47.4666666667vw;
 }
 #forest-top .panel-section.reason.reason03 .elem .icon {
   display: block;
@@ -516,13 +592,13 @@
   left: 0;
   width: 40.8vw;
 }
-#forest-top .sdgs .illust:first-of-type {
+#forest-top .sdgs .illust.illust01 {
   margin-top: 3.2vw;
   left: auto;
   right: 0;
   margin-right: -5.0666666667vw;
 }
-#forest-top .sdgs .illust:last-of-type {
+#forest-top .sdgs .illust.illust02 {
   top: auto;
   bottom: 0;
   margin-bottom: 25.8666666667vw;
@@ -560,7 +636,7 @@
   align-items: center;
   position: relative;
   border: solid 2px #53a290;
-  transition: color 0.3s, background-color 0.7s, border-color 0.7s;
+  transition: color 0.3s, background-color 0.7s, border-color 0.7s, opacity 0.7s 0.5s, transform 0.7s cubic-bezier(0.33, 1, 0.68, 1) 0.5s;
 }
 #forest-top .sdgs .btn span {
   display: inline-block;
@@ -1117,12 +1193,18 @@
   width: 100%;
   margin-top: 8vw;
 }
+#forest-top .bnr-area .link-bnr a figure {
+  transition: 0.4s;
+}
+#forest-top .bnr-area .link-bnr a:hover figure {
+  filter: brightness(50%);
+}
 #forest-top .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 4.5333333333vw;
   display: flex;
   align-items: center;
@@ -1130,7 +1212,6 @@
   transition: opacity 0.3s;
   pointer-events: none;
   opacity: 0;
-  z-index: -1;
   background-color: rgba(0, 0, 0, 0.7);
 }
 #forest-top .modal.is-active {
@@ -1145,7 +1226,10 @@
 }
 #forest-top .swiper {
   width: 100%;
-  height: 138.6666666667vw;
+  height: 128vw;
+  max-height: 75vh;
+}
+#forest-top .swiper-wrapper {
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -1166,14 +1250,16 @@
 }
 #forest-top .modal__content h2 {
   color: #fff;
-  background-color: #53a290;
+  background-color: rgba(0, 0, 0, 0.5);
   font-family: "Noto Sans JP", sans-serif;
   font-size: 4.2666666667vw;
   font-weight: 500;
   line-height: 1.625;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 2.6666666667vw 5.8666666667vw;
+  padding: 2.6666666667vw 4vw;
+  position: absolute;
+  width: 100%;
 }
 #forest-top .modal__content h2 span {
   display: inline-block;
@@ -1264,6 +1350,18 @@
    pc
 ------------------------------------------------------ */
 @media only screen and (min-width: 769px) {
+  #splash #splash-logo svg {
+    width: 8.75vw;
+  }
+  .pp-fadeup {
+    transform: translateY(2.0833333333vw);
+  }
+  .pp-fade-to-left {
+    transform: translateX(2.0833333333vw);
+  }
+  .pp-fade-to-right {
+    transform: translateX(-2.0833333333vw);
+  }
   #forest-top {
     /* モーダル */
     /* モーダルを閉じるボタン */
@@ -1283,6 +1381,7 @@
   #forest-top .panel-section .elem .scrolldown {
     font-size: 1.5277777778vw;
     margin-top: 4.7222222222vw;
+    filter: drop-shadow(0 0 0.1388888889vw rgba(0, 0, 0, 0.5));
   }
   #forest-top .panel-section .elem .scrolldown .cp_arrow {
     width: 1.25vw;
@@ -1300,21 +1399,25 @@
     letter-spacing: 0.15vw;
     margin-left: 0.6944444444vw;
   }
-  #forest-top .panel-section.kv {
-    height: 74.5138888889vw;
+  #forest-top .panel-section.kv .kv-video {
+    height: auto;
+  }
+  #forest-top .panel-section.kv .fadeup-box {
+    transform: translateY(2.0833333333vw);
   }
   #forest-top .panel-section.kv .elem {
-    margin-top: 17.7777777778%;
     margin-left: -0.2083333333%;
   }
   #forest-top .panel-section.kv .elem .logo-mark {
     width: 8.75%;
+    filter: drop-shadow(0 0 0.1388888889vw rgba(0, 0, 0, 0.5));
   }
   #forest-top .panel-section.kv .elem h1 {
     margin-top: 1.5277777778%;
     margin-left: 0.6944444444%;
     line-height: 1.15;
     letter-spacing: 0.7vw;
+    filter: drop-shadow(0 0 0.1388888889vw rgba(0, 0, 0, 0.5));
   }
   #forest-top .panel-section.kv .elem h1:after {
     width: 4.7916666667vw;
@@ -1330,6 +1433,7 @@
     margin-top: 7.9861111111%;
     margin-left: 0.2083333333%;
     letter-spacing: 0.14vw;
+    filter: drop-shadow(0 0 0.1388888889vw rgba(0, 0, 0, 0.5));
   }
   #forest-top .panel-section.reason .elem h2 {
     letter-spacing: 0.42vw;
@@ -1338,8 +1442,11 @@
   #forest-top .panel-section.reason .elem h2:before {
     width: 105%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0, 1);
     margin-bottom: -0.625vw;
+  }
+  #forest-top .panel-section.reason.active .elem h2:before {
+    transform: translateX(-50%) scale(1, 1);
   }
   #forest-top .panel-section.reason .elem h2 span {
     font-size: 1.4583333333vw;
@@ -1354,8 +1461,6 @@
   }
   #forest-top .panel-section.reason.reason01 {
     background-image: url("../img/top/reason01-bg_pc.jpg");
-    height: 69.4444444444vw;
-    padding-top: 26.9444444444vw;
   }
   #forest-top .panel-section.reason.reason01 .elem .icon {
     width: 4.2361111111vw;
@@ -1364,8 +1469,8 @@
   }
   #forest-top .panel-section.reason.reason02 {
     background-image: url("../img/top/reason02-bg_pc.jpg");
-    min-height: 62.5vw;
-    padding-top: 21.5277777778vw;
+    padding-top: 8.3333333333vw;
+    padding-bottom: 4.1666666667vw;
   }
   #forest-top .panel-section.reason.reason02 .elem .icon {
     width: 6.5277777778vw;
@@ -1412,15 +1517,14 @@
     margin-top: 1.0416666667vw;
   }
   #forest-top .panel-section.reason.reason02.open {
-    height: 85.1388888889vw;
+    padding-top: 8.3333333333vw;
+    padding-bottom: 4.1666666667vw;
   }
   #forest-top .panel-section.reason.reason02.open .elem .explanation h3::after {
     margin-top: 0.2777777778vw;
   }
   #forest-top .panel-section.reason.reason03 {
     background-image: url("../img/top/reason03-bg_pc.jpg");
-    min-height: 69.3055555556vw;
-    padding-top: 26.0416666667vw;
   }
   #forest-top .panel-section.reason.reason03 .elem .icon {
     width: 8.5416666667vw;
@@ -1431,16 +1535,17 @@
     margin-bottom: 3.8888888889vw;
   }
   #forest-top .sdgs {
-    padding: 9.7916666667vw 0 15.3472222222vw;
+    padding: 9.7916666667vw 0 0;
+    height: 52.7777777778vw;
   }
   #forest-top .sdgs .illust {
     width: 21.3888888889vw;
   }
-  #forest-top .sdgs .illust:first-of-type {
+  #forest-top .sdgs .illust.illust01 {
     margin-top: 5.9027777778vw;
     margin-right: -2.0138888889vw;
   }
-  #forest-top .sdgs .illust:last-of-type {
+  #forest-top .sdgs .illust.illust02 {
     margin-bottom: 7.6388888889vw;
     margin-left: -1.7361111111vw;
   }
@@ -1560,6 +1665,12 @@
   #forest-top .activity .container .bnr-list .bnr:not(:first-of-type) {
     margin-top: 0;
   }
+  #forest-top .activity .container .bnr-list .bnr:nth-of-type(2) {
+    transition-delay: 0.2s, 0.2s;
+  }
+  #forest-top .activity .container .bnr-list .bnr:nth-of-type(3) {
+    transition-delay: 0.4s, 0.4s;
+  }
   #forest-top .gallery {
     padding-top: 7.5694444444vw;
     padding-bottom: 7.3611111111vw;
@@ -1673,6 +1784,12 @@
     margin-top: 0;
     margin-left: 3.8888888889vw;
   }
+  #forest-top .voice .container ul li:nth-child(2), #forest-top .voice .container ul li:nth-child(5) {
+    transition-delay: 0.2s, 0.2s;
+  }
+  #forest-top .voice .container ul li:nth-child(3), #forest-top .voice .container ul li:nth-child(6) {
+    transition-delay: 0.4s, 0.4s;
+  }
   #forest-top .voice .container ul li:nth-child(4) {
     margin-left: 3.0555555556vw;
   }
@@ -1716,6 +1833,12 @@
   #forest-top .certification ul li:not(:first-child) {
     margin-top: 0;
   }
+  #forest-top .certification ul li:nth-child(2) {
+    transition-delay: 0.2s, 0.2s;
+  }
+  #forest-top .certification ul li:nth-child(3) {
+    transition-delay: 0.4s, 0.4s;
+  }
   #forest-top .bnr-area {
     padding: 5.5555555556vw 9.7222222222vw 10.0694444444vw;
   }
@@ -1755,6 +1878,7 @@
   #forest-top .bnr-area .sdgs-bnr .right-content {
     width: 30.9027777778vw;
     margin-top: 0;
+    transition-delay: 0.2s, 0.2s;
   }
   #forest-top .bnr-area .sdgs-bnr .right-content .box figure {
     width: 5.4166666667vw;
@@ -1780,9 +1904,14 @@
   }
   #forest-top .bnr-area .link-bnr a:nth-of-type(2) {
     width: 19.4444444444vw;
+    transition-delay: 0.2s, 0.2s;
+  }
+  #forest-top .bnr-area .link-bnr a:nth-of-type(3) {
+    transition-delay: 0.4s, 0.4s;
   }
   #forest-top .bnr-area .link-bnr a:last-of-type {
     width: 19.3055555556vw;
+    transition-delay: 0.6s, 0.6s;
   }
   #forest-top .modal {
     padding: 12.3611111111vw 34.7222222222vw;
@@ -1792,14 +1921,14 @@
     width: auto;
   }
   #forest-top .modal__content h2 {
-    font-size: 1.4583333333vw;
+    font-size: 1.3888888889vw;
     line-height: 1.8571428571;
-    padding: 1.1111111111vw 2.2222222222vw;
+    padding: 0.6944444444vw 1.6666666667vw;
   }
   #forest-top .modal__content figure figcaption {
     font-size: 1.1111111111vw;
     line-height: 1.625;
-    padding: 1.0416666667vw 2.0833333333vw;
+    padding: 1.0416666667vw 1.6666666667vw;
   }
   #forest-top .modal__close-btn {
     width: 2.7777777778vw;
