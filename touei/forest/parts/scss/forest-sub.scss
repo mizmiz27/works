@@ -171,9 +171,38 @@
     }
 
     .swiper-button-next,
-    .swiper-button-prev {
-      display: none;
-    }
+      .swiper-button-prev {
+        top: 0;
+        margin-top: calc(101 / 375 * 100vw);
+        transform: translateY(-50%);
+        --swiper-navigation-color: white;
+        height: auto;
+        display: block;
+        filter: drop-shadow(0px 0px 2px rgba(0,0,0,1));
+        width: calc(20 / 375 * 100vw);
+
+        &:after {
+          font-size: calc(16 / 375 * 100vw);
+          font-weight: 900;
+        }
+      }
+
+      .swiper-button-prev {
+        left: 0;
+        right: auto;
+        margin-left: calc(24 / 375 * 100vw);
+      }
+
+      .swiper-button-next {
+        right: 0;
+        left: auto;
+        margin-right: calc(18 / 375 * 100vw);
+      }
+
+      .swiper-button-next.swiper-button-disabled,
+      .swiper-button-prev.swiper-button-disabled {
+        opacity: 0;
+      }
   }
 }
 
@@ -733,7 +762,6 @@
 
           p {
             padding-top: calc(27 / 375 * 100vw);
-            // padding-left: calc(22 / 375 * 100vw);
             text-align: center;
 
             .title {
@@ -869,7 +897,6 @@
         background-size: calc(30 / 76 * 100%) auto;
 
         p {
-          // padding-top: calc(6 / 375 * 100vw);
           padding-left: calc(39 / 375 * 100vw);
           color: $ome-font-color;
 
@@ -900,7 +927,6 @@
         background-size: calc(29 / 96 * 100%) auto;
 
         p {
-          // padding-top: calc(4 / 375 * 100vw);
           padding-left: calc(38 / 375 * 100vw);
           color: $ome-font-color;
 
@@ -932,7 +958,6 @@
         background-size: calc(41 / 106 * 100%) auto;
 
         p {
-          // padding-top: calc(4 / 375 * 100vw);
           padding-left: calc(38 / 375 * 100vw);
           color: $ome-font-color;
 
@@ -1034,7 +1059,6 @@
           letter-spacing: 0.11em;
           position: relative;
 
-          // color: $darkblue;
           &::before,
           &::after {
             content: '';
@@ -1135,7 +1159,6 @@
 
             .num {
               font-size: calc(28 / 375 * 100vw);
-              // padding-left: calc(15 /375 * 100vw);
             }
 
             .unit {
@@ -1530,7 +1553,7 @@
 
   .gallery {
     padding-top: calc(56 / 1440 * 100vw);
-    padding-bottom: calc(76 / 1440 * 100vw);
+    padding-bottom: calc(26 / 1440 * 100vw);
 
     h2 {
       font-size: calc(47 / 1440 * 100vw);
@@ -1539,66 +1562,53 @@
 
     .swiper-container {
       margin-top: calc(48 / 1440 * 100vw);
-      padding: 0 calc(253 / 1440 * 100vw) calc(85 / 1440 * 100vw);
+      padding: 0 calc(253 / 1440 * 100vw) calc(105 / 1440 * 100vw);
 
-      // padding: 0 calc(253 / 1440 * 100vw) calc(100 / 1440 * 100vw);
       .swiper-wrapper {
         .swiper-slide {
-          width: calc(934 / 1440 * 100vw);
+          width: calc(800 / 1440 * 100vw);
 
           figure {
             display: block;
-            height: calc(622 / 1440 * 100vw);
+            height: calc(500 / 1440 * 100vw);
           }
 
           p {
             font-size: calc(20 / 1440 * 100vw);
-            margin-top: calc(37 / 1440 * 100vw);
+            margin-top: calc(20 / 1440 * 100vw);
           }
         }
       }
 
       .swiper-pagination {
         display: block;
-        bottom: calc(10 / 1440 * 100vw);
+        position: relative;
+        width: auto;
+        margin-top: calc(30 / 1440 * 100vw);
       }
 
       .swiper-button-next,
       .swiper-button-prev {
-        display: flex;
-        top: auto;
-        bottom: 0;
-        margin-bottom: calc(2 / 1440 * 100vw);
-        --swiper-navigation-color: #689da2;
-        height: auto;
+        margin-top: calc(250 / 1440 * 100vw);
+        width: calc(20 / 1440 * 100vw);
+        filter: drop-shadow(0px 0px calc(4 / 1440 * 100vw) rgba(0,0,0,0.5));
 
         &:after {
-          font-size: calc(40 / 1440 * 100vw);
-          font-weight: 400;
+          font-size: calc(30 / 1440 * 100vw);
         }
       }
 
       .swiper-button-prev {
-        left: 0;
-        right: auto;
-        margin-left: calc(443 / 1440 * 100vw);
+        margin-left: calc(275 / 1440 * 100vw);
       }
 
       .swiper-button-next {
-        right: 0;
-        left: auto;
-        margin-right: calc(443 / 1440 * 100vw);
-      }
-
-      .swiper-button-next.swiper-button-disabled,
-      .swiper-button-prev.swiper-button-disabled {
-        opacity: 0;
+        margin-right: calc(275 / 1440 * 100vw);
       }
 
       .swiper-pagination-bullet {
         width: calc(14 / 1440 * 100vw);
         height: calc(14 / 1440 * 100vw);
-        // display: inline-block;
         background: #b9b9b9;
         margin: 0 calc(8 / 1440 * 100vw);
       }
@@ -1718,7 +1728,7 @@
 
     .infographic {
       padding: calc(36 / 1440 * 100vw) calc(140 / 1440 * 100vw) calc(160 / 1440 * 100vw);
-      height: calc(1470 / 1440 * 100vw);
+      height: calc(1332 / 1440 * 100vw);
 
       .map {
         .place {
@@ -1740,27 +1750,27 @@
         margin-top: calc(106 / 1440 * 100vw);
 
         .item-mountain {
-          width: calc(386 / 1440 * 100vw);
-          height: calc(274 / 1440 * 100vw);
-          margin-top: calc(-18 / 1440 * 100vw);
-          margin-left: calc(53 / 1440 * 100vw);
+          width: calc(345 / 1440 * 100vw);
+          height: calc(250 / 1440 * 100vw);
+          margin-top: calc(-15 / 1440 * 100vw);
+          margin-left: calc(110 / 1440 * 100vw);
 
           p {
-            padding-top: calc(136 / 1440 * 100vw);
-            padding-left: calc(99 / 1440 * 100vw);
+            padding-top: calc(122 / 1440 * 100vw);
+            padding-left: calc(86 / 1440 * 100vw);
 
             .title {
-              font-size: calc(38 / 1440 * 100vw);
+              font-size: calc(34 / 1440 * 100vw);
               padding-left: calc(1 /1440 * 100vw);
             }
 
             .num {
-              font-size: calc(78 / 1440 * 100vw);
+              font-size: calc(69 / 1440 * 100vw);
               padding-top: calc(2 /1440 * 100vw);
             }
 
             .unit {
-              font-size: calc(43 / 1440 * 100vw);
+              font-size: calc(38 / 1440 * 100vw);
             }
           }
         }
@@ -1768,75 +1778,22 @@
         .item-tree {
           width: calc(222 / 1440 * 100vw);
           height: calc(143 / 1440 * 100vw);
-          margin-top: calc(-26 / 1440 * 100vw);
-          margin-left: calc(524 / 1440 * 100vw);
-          background-size: calc(78/ 222 * 100%) auto;
+          margin-top: calc(-22 / 1440 * 100vw);
+          margin-left: calc(530 / 1440 * 100vw);
+          background-size: calc(70/ 222 * 100%) auto;
 
           p {
             padding-top: calc(6 / 1440 * 100vw);
-            padding-left: calc(105 / 1440 * 100vw);
+            padding-left: calc(92 / 1440 * 100vw);
 
             .title {
-              font-size: calc(29 / 1440 * 100vw);
+              font-size: calc(25 / 1440 * 100vw);
               padding-left: calc(3 / 1440 * 100vw);
               padding-bottom: calc(10 / 1440 * 100vw);
             }
 
             .num {
-              font-size: calc(79 / 1440 * 100vw);
-            }
-
-            .unit {
-              font-size: calc(43 / 1440 * 100vw);
-            }
-          }
-        }
-
-        .item-grass {
-          width: calc(222 / 1440 * 100vw);
-          height: calc(142 / 1440 * 100vw);
-          margin-top: calc(122 / 1440 * 100vw);
-          margin-left: calc(524 / 1440 * 100vw);
-          background-size: calc(72 / 222 * 100%) auto;
-
-          p {
-            padding-top: calc(4 / 1440 * 100vw);
-            padding-left: calc(90 / 1440 * 100vw);
-
-            .title {
-              font-size: calc(29 / 1440 * 100vw);
-              padding-bottom: calc(10 / 1440 * 100vw);
-            }
-
-            .num {
-              font-size: calc(79 / 1440 * 100vw);
-              padding-left: calc(2 / 1440 * 100vw);
-            }
-
-            .unit {
-              font-size: calc(43 / 1440 * 100vw);
-            }
-          }
-        }
-
-        .item-participant {
-          width: calc(276 / 1440 * 100vw);
-          height: calc(266 / 1440 * 100vw);
-          margin-top: calc(-11 / 1440 * 100vw);
-          margin-left: calc(832 / 1440 * 100vw);
-
-          p {
-            padding-top: calc(103 / 1440 * 100vw);
-            padding-left: calc(56 / 1440 * 100vw);
-
-            .title {
-              font-size: calc(29 / 1440 * 100vw);
-              margin-left: calc(-16 /1440 * 100vw);
-              margin-bottom: calc(5 /1440 * 100vw);
-            }
-
-            .num {
-              font-size: calc(72 / 1440 * 100vw);
+              font-size: calc(70 / 1440 * 100vw);
             }
 
             .unit {
@@ -1845,114 +1802,167 @@
           }
         }
 
+        .item-grass {
+          width: calc(222 / 1440 * 100vw);
+          height: calc(142 / 1440 * 100vw);
+          margin-top: calc(110 / 1440 * 100vw);
+          margin-left: calc(530 / 1440 * 100vw);
+          background-size: calc(64 / 222 * 100%) auto;
+
+          p {
+            padding-top: calc(20 / 1440 * 100vw);
+            padding-left: calc(80 / 1440 * 100vw);
+
+            .title {
+              font-size: calc(25 / 1440 * 100vw);
+              padding-bottom: calc(10 / 1440 * 100vw);
+            }
+
+            .num {
+              font-size: calc(70 / 1440 * 100vw);
+              padding-left: calc(2 / 1440 * 100vw);
+            }
+
+            .unit {
+              font-size: calc(38 / 1440 * 100vw);
+            }
+          }
+        }
+
+        .item-participant {
+          width: calc(245 / 1440 * 100vw);
+          height: calc(237 / 1440 * 100vw);
+          margin-top: calc(-9 / 1440 * 100vw);
+          margin-left: calc(806 / 1440 * 100vw);
+
+          p {
+            padding-top: calc(90 / 1440 * 100vw);
+            padding-left: calc(50 / 1440 * 100vw);
+
+            .title {
+              font-size: calc(25 / 1440 * 100vw);
+              margin-left: calc(-16 /1440 * 100vw);
+              margin-bottom: calc(5 /1440 * 100vw);
+            }
+
+            .num {
+              font-size: calc(64 / 1440 * 100vw);
+            }
+
+            .unit {
+              font-size: calc(34 / 1440 * 100vw);
+            }
+          }
+        }
+
         .item-conferment {
-          width: calc(298 / 1440 * 100vw);
-          margin-top: calc(314 / 1440 * 100vw);
-          margin-left: calc(193 / 1440 * 100vw);
+          width: calc(266 / 1440 * 100vw);
+          margin-top: calc(282 / 1440 * 100vw);
+          margin-left: calc(232 / 1440 * 100vw);
         }
 
         .item-co2 {
-          width: calc(330 / 1440 * 100vw);
+          width: calc(295 / 1440 * 100vw);
           height: calc(251 / 1440 * 100vw);
-          margin-top: calc(370 / 1440 * 100vw);
-          margin-left: calc(630 / 1440 * 100vw);
+          margin-top: calc(333 / 1440 * 100vw);
+          margin-left: calc(624 / 1440 * 100vw);
 
           p {
-            padding-top: calc(75 / 1440 * 100vw);
-            padding-left: calc(41 / 1440 * 100vw);
+            padding-top: calc(66 / 1440 * 100vw);
+            padding-left: calc(35 / 1440 * 100vw);
 
             .title {
-              font-size: calc(26 / 1440 * 100vw);
+              font-size: calc(22 / 1440 * 100vw);
               margin-left: calc(-5 / 1440 * 100vw);
             }
 
             .num {
-              font-size: calc(67 / 1440 * 100vw);
+              font-size: calc(59 / 1440 * 100vw);
               padding-top: calc(2 /1440 * 100vw);
               padding-left: calc(5 /1440 * 100vw);
             }
 
             .unit {
-              font-size: calc(52 / 1440 * 100vw);
+              font-size: calc(46 / 1440 * 100vw);
             }
           }
         }
 
         .planting {
-          margin-top: calc(732 / 1440 * 100vw);
+          margin-top: calc(647 / 1440 * 100vw);
 
           h2 {
-            font-size: calc(45 / 1440 * 100vw);
+            font-size: calc(40 / 1440 * 100vw);
 
             &::before,
             &::after {
-              width: calc(376 / 1440 * 100vw);
+              width: calc(336 / 1440 * 100vw);
               top: 50%;
             }
 
             &::before {
-              margin-left: 0;
+              margin-left: calc(60 / 1440 * 100vw);
             }
 
             &::after {
               left: auto;
               right: 0;
-              margin-right: 0;
+              margin-right: calc(60 / 1440 * 100vw);
             }
           }
 
           .item-forest01 {
-            width: calc(436 / 1440 * 100vw);
-            height: calc(307 / 1440 * 100vw);
-            margin-top: calc(80 / 1440 * 100vw);
-            margin-left: calc(79 / 1440 * 100vw);
+            width: calc(390 / 1440 * 100vw);
+            height: calc(273 / 1440 * 100vw);
+            margin-top: calc(70 / 1440 * 100vw);
+            margin-left: calc(130 / 1440 * 100vw);
 
             p {
-              padding-top: calc(93 / 1440 * 100vw);
-              padding-left: calc(69 / 1440 * 100vw);
+              padding-top: calc(83 / 1440 * 100vw);
+              padding-left: calc(59 / 1440 * 100vw);
 
               .title {
-                font-size: calc(26 / 1440 * 100vw);
+                font-size: calc(22 / 1440 * 100vw);
                 margin-left: calc(-24 / 1440 * 100vw);
                 margin-bottom: calc(8 / 1440 * 100vw);
               }
 
               .num {
-                font-size: calc(74 / 1440 * 100vw);
+                font-size: calc(65 / 1440 * 100vw);
                 padding-top: 0;
                 padding-left: calc(34 /1440 * 100vw);
               }
 
               .unit {
-                font-size: calc(41 / 1440 * 100vw);
+                font-size: calc(36 / 1440 * 100vw);
               }
             }
           }
 
           .item-forest02 {
-            width: calc(445 / 1440 * 100vw);
-            height: calc(299 / 1440 * 100vw);
-            margin-top: calc(90 / 1440 * 100vw);
-            margin-left: calc(615 / 1440 * 100vw);
+            width: calc(397 / 1440 * 100vw);
+            height: calc(266 / 1440 * 100vw);
+            margin-top: calc(80 / 1440 * 100vw);
+            margin-left: calc(610 / 1440 * 100vw);
 
             p {
-              padding-top: calc(68 / 1440 * 100vw);
-              padding-left: calc(28 / 1440 * 100vw);
+              padding-top: calc(60 / 1440 * 100vw);
+              padding-left: calc(19 / 1440 * 100vw);
 
               .title {
-                font-size: calc(26 / 1440 * 100vw);
-                margin-left: calc(-72 / 1440 * 100vw);
+                font-size: calc(22 / 1440 * 100vw);
+                margin-left: calc(-60 / 1440 * 100vw);
                 margin-bottom: calc(10 / 1440 * 100vw);
               }
 
               .num {
-                font-size: calc(74 / 1440 * 100vw);
+                font-size: calc(65 / 1440 * 100vw);
                 padding-top: 0;
                 padding-left: calc(80 /1440 * 100vw);
               }
 
               .unit {
-                font-size: calc(41 / 1440 * 100vw);
+                font-size: calc(36 / 1440 * 100vw);
               }
             }
           }
@@ -1974,7 +1984,7 @@
 
     .infographic {
       padding: calc(44 / 1440 * 100vw) calc(150 / 1440 * 100vw) calc(160 / 1440 * 100vw);
-      height: calc(1856 / 1440 * 100vw);
+      height: calc(1645 / 1440 * 100vw);
 
       .map {
         .place {
@@ -2000,27 +2010,27 @@
         margin-top: calc(106 / 1440 * 100vw);
 
         .item-mountain {
-          width: calc(386 / 1440 * 100vw);
-          height: calc(274 / 1440 * 100vw);
-          margin-top: calc(-32 / 1440 * 100vw);
-          margin-left: calc(-20 / 1440 * 100vw);
+          width: calc(345 / 1440 * 100vw);
+          height: calc(250 / 1440 * 100vw);
+          margin-top: calc(-45 / 1440 * 100vw);
+          margin-left: calc(40 / 1440 * 100vw);
 
           p {
-            padding-top: calc(136 / 1440 * 100vw);
-            padding-left: calc(99 / 1440 * 100vw);
+            padding-top: calc(117 / 1440 * 100vw);
+            padding-left: calc(96 / 1440 * 100vw);
 
             .title {
-              font-size: calc(38 / 1440 * 100vw);
+              font-size: calc(34 / 1440 * 100vw);
               padding-left: calc(1 /1440 * 100vw);
             }
 
             .num {
-              font-size: calc(78 / 1440 * 100vw);
+              font-size: calc(69 / 1440 * 100vw);
               padding-top: calc(2 /1440 * 100vw);
             }
 
             .unit {
-              font-size: calc(43 / 1440 * 100vw);
+              font-size: calc(38 / 1440 * 100vw);
             }
           }
         }
@@ -2028,108 +2038,22 @@
         .item-tree {
           width: calc(222 / 1440 * 100vw);
           height: calc(143 / 1440 * 100vw);
-          margin-top: calc(-51 / 1440 * 100vw);
-          margin-left: calc(408 / 1440 * 100vw);
-          background-size: calc(78/ 222 * 100%) auto;
+          margin-top: calc(-53 / 1440 * 100vw);
+          margin-left: calc(430 / 1440 * 100vw);
+          background-size: calc(68/ 222 * 100%) auto;
 
           p {
             padding-top: calc(6 / 1440 * 100vw);
             padding-left: calc(90 / 1440 * 100vw);
 
             .title {
-              font-size: calc(29 / 1440 * 100vw);
-              padding-left: 0;
+              font-size: calc(25 / 1440 * 100vw);
+              padding-left: calc(3 / 1440 * 100vw);
               padding-bottom: calc(10 / 1440 * 100vw);
             }
 
             .num {
-              font-size: calc(79 / 1440 * 100vw);
-            }
-
-            .unit {
-              font-size: calc(43 / 1440 * 100vw);
-            }
-          }
-        }
-
-        .item-grass {
-          width: calc(222 / 1440 * 100vw);
-          height: calc(142 / 1440 * 100vw);
-          margin-top: calc(105 / 1440 * 100vw);
-          margin-left: calc(407 / 1440 * 100vw);
-          background-size: calc(72 / 222 * 100%) auto;
-
-          p {
-            padding-top: calc(21 / 1440 * 100vw);
-            padding-left: calc(93 / 1440 * 100vw);
-
-            .title {
-              font-size: calc(29 / 1440 * 100vw);
-              padding-bottom: calc(10 / 1440 * 100vw);
-            }
-
-            .num {
-              font-size: calc(79 / 1440 * 100vw);
-              padding-left: 0;
-            }
-
-            .unit {
-              font-size: calc(43 / 1440 * 100vw);
-            }
-          }
-        }
-
-        .item-branch {
-          width: calc(222 / 1440 * 100vw);
-          height: calc(142 / 1440 * 100vw);
-          margin-top: calc(116 / 1440 * 100vw);
-          margin-left: calc(634 / 1440 * 100vw);
-          background-size: calc(98 / 222 * 100%) auto;
-
-          p {
-            padding-top: calc(42 / 1440 * 100vw);
-            padding-left: calc(116 / 1440 * 100vw);
-
-            .title {
-              font-size: calc(29 / 1440 * 100vw);
-              margin-bottom: calc(-5 / 1440 * 100vw);
-              line-height: calc(22 / 29);
-
-              >span {
-                font-size: calc(18 / 1440 * 100vw);
-                margin-left: calc(-10 / 1440 * 100vw);
-              }
-            }
-
-            .num {
-              font-size: calc(79 / 1440 * 100vw);
-              padding-left: 0;
-            }
-
-            .unit {
-              font-size: calc(43 / 1440 * 100vw);
-            }
-          }
-        }
-
-        .item-participant {
-          width: calc(276 / 1440 * 100vw);
-          height: calc(266 / 1440 * 100vw);
-          margin-top: calc(-25 / 1440 * 100vw);
-          margin-left: calc(885 / 1440 * 100vw);
-
-          p {
-            padding-top: calc(103 / 1440 * 100vw);
-            padding-left: calc(56 / 1440 * 100vw);
-
-            .title {
-              font-size: calc(29 / 1440 * 100vw);
-              margin-left: calc(-16 /1440 * 100vw);
-              margin-bottom: calc(5 /1440 * 100vw);
-            }
-
-            .num {
-              font-size: calc(72 / 1440 * 100vw);
+              font-size: calc(70 / 1440 * 100vw);
             }
 
             .unit {
@@ -2138,143 +2062,228 @@
           }
         }
 
-        .item-conferment {
-          width: calc(298 / 1440 * 100vw);
-          margin-top: calc(315 / 1440 * 100vw);
-          margin-left: calc(190 / 1440 * 100vw);
-        }
-
-        .item-co2 {
-          width: calc(330 / 1440 * 100vw);
-          height: calc(251 / 1440 * 100vw);
-          margin-top: calc(373 / 1440 * 100vw);
-          margin-left: calc(620 / 1440 * 100vw);
+        .item-grass {
+          width: calc(222 / 1440 * 100vw);
+          height: calc(142 / 1440 * 100vw);
+          margin-top: calc(82 / 1440 * 100vw);
+          margin-left: calc(430 / 1440 * 100vw);
+          background-size: calc(62 / 222 * 100%) auto;
 
           p {
-            padding-top: calc(75 / 1440 * 100vw);
-            padding-left: calc(53 / 1440 * 100vw);
+            padding-top: calc(14 / 1440 * 100vw);
+            padding-left: calc(96 / 1440 * 100vw);
 
             .title {
-              font-size: calc(26 / 1440 * 100vw);
-              margin-left: calc(-5 / 1440 * 100vw);
+              font-size: calc(25 / 1440 * 100vw);
+              padding-bottom: calc(10 / 1440 * 100vw);
+              margin-left: calc(-20 / 1440 * 100vw);
             }
 
             .num {
-              font-size: calc(67 / 1440 * 100vw);
-              padding-top: calc(2 /1440 * 100vw);
+              font-size: calc(70 / 1440 * 100vw);
+              padding-left: 0;
+            }
+
+            .unit {
+              font-size: calc(38 / 1440 * 100vw);
+            }
+          }
+        }
+
+        .item-branch {
+          width: calc(222 / 1440 * 100vw);
+          height: calc(142 / 1440 * 100vw);
+          margin-top: calc(87 / 1440 * 100vw);
+          margin-left: calc(630 / 1440 * 100vw);
+          background-size: calc(89 / 222 * 100%) auto;
+
+          p {
+            padding-top: calc(42 / 1440 * 100vw);
+            padding-left: calc(103 / 1440 * 100vw);
+
+            .title {
+              font-size: calc(25 / 1440 * 100vw);
+              margin-bottom: calc(-5 / 1440 * 100vw);
+              line-height: calc(22 / 29);
+
+              >span {
+                font-size: calc(16 / 1440 * 100vw);
+                margin-left: calc(-10 / 1440 * 100vw);
+              }
+            }
+
+            .num {
+              font-size: calc(69 / 1440 * 100vw);
+              padding-left: 0;
+            }
+
+            .unit {
+              font-size: calc(38 / 1440 * 100vw);
+            }
+          }
+        }
+
+        .item-participant {
+          width: calc(245 / 1440 * 100vw);
+          height: calc(266 / 1440 * 100vw);
+          margin-top: calc(-41 / 1440 * 100vw);
+          margin-left: calc(854 / 1440 * 100vw);
+
+          p {
+            padding-top: calc(92 / 1440 * 100vw);
+            padding-left: calc(50 / 1440 * 100vw);
+
+            .title {
+              font-size: calc(25 / 1440 * 100vw);
+              margin-left: calc(-16 /1440 * 100vw);
+              margin-bottom: calc(5 /1440 * 100vw);
+            }
+
+            .num {
+              font-size: calc(64 / 1440 * 100vw);
+            }
+
+            .unit {
+              font-size: calc(34 / 1440 * 100vw);
+            }
+          }
+        }
+
+        .item-conferment {
+          width: calc(266 / 1440 * 100vw);
+          margin-top: calc(249 / 1440 * 100vw);
+          margin-left: calc(224 / 1440 * 100vw);
+        }
+
+        .item-co2 {
+          width: calc(295 / 1440 * 100vw);
+          height: calc(251 / 1440 * 100vw);
+          margin-top: calc(301 / 1440 * 100vw);
+          margin-left: calc(614 / 1440 * 100vw);
+
+          p {
+            padding-top: calc(66 / 1440 * 100vw);
+            padding-left: calc(53 / 1440 * 100vw);
+
+            .title {
+              font-size: calc(22 / 1440 * 100vw);
+              margin-left: calc(-11 / 1440 * 100vw);
+              margin-bottom: calc(2 / 1440 * 100vw);
+            }
+
+            .num {
+              font-size: calc(59 / 1440 * 100vw);
               padding-left: calc(5 /1440 * 100vw);
             }
 
             .unit {
-              font-size: calc(52 / 1440 * 100vw);
+              font-size: calc(46 / 1440 * 100vw);
             }
           }
         }
 
         .planting {
-          margin-top: calc(732 / 1440 * 100vw);
+          margin-top: calc(614 / 1440 * 100vw);
 
           h2 {
-            font-size: calc(45 / 1440 * 100vw);
+            font-size: calc(40 / 1440 * 100vw);
 
             &::before,
             &::after {
-              width: calc(376 / 1440 * 100vw);
+              width: calc(336 / 1440 * 100vw);
               top: 50%;
             }
 
             &::before {
-              margin-left: 0;
+              margin-left: calc(60 / 1440 * 100vw);
             }
 
             &::after {
               left: auto;
               right: 0;
-              margin-right: 0;
+              margin-right: calc(60 / 1440 * 100vw);
             }
           }
 
           .item-forest01 {
-            width: calc(436 / 1440 * 100vw);
-            height: calc(307 / 1440 * 100vw);
-            margin-top: calc(81 / 1440 * 100vw);
-            margin-left: calc(71 / 1440 * 100vw);
+            width: calc(390 / 1440 * 100vw);
+            height: calc(273 / 1440 * 100vw);
+            margin-top: calc(70 / 1440 * 100vw);
+            margin-left: calc(130 / 1440 * 100vw);
 
             p {
-              padding-top: calc(93 / 1440 * 100vw);
-              padding-left: calc(81 / 1440 * 100vw);
+              padding-top: calc(82 / 1440 * 100vw);
+              padding-left: calc(64 / 1440 * 100vw);
 
               .title {
-                font-size: calc(26 / 1440 * 100vw);
+                font-size: calc(22 / 1440 * 100vw);
                 margin-left: calc(-25 / 1440 * 100vw);
                 margin-bottom: calc(9 / 1440 * 100vw);
               }
 
               .num {
-                font-size: calc(74 / 1440 * 100vw);
+                font-size: calc(65 / 1440 * 100vw);
                 padding-top: 0;
                 padding-left: calc(34 /1440 * 100vw);
               }
 
               .unit {
-                font-size: calc(41 / 1440 * 100vw);
+                font-size: calc(36 / 1440 * 100vw);
               }
             }
           }
 
           .item-forest02 {
-            width: calc(445 / 1440 * 100vw);
-            height: calc(299 / 1440 * 100vw);
-            margin-top: calc(90 / 1440 * 100vw);
-            margin-left: calc(605 / 1440 * 100vw);
+            width: calc(397 / 1440 * 100vw);
+            height: calc(266 / 1440 * 100vw);
+            margin-top: calc(78 / 1440 * 100vw);
+            margin-left: calc(612 / 1440 * 100vw);
 
             p {
-              padding-top: calc(90 / 1440 * 100vw);
-              padding-left: calc(70 / 1440 * 100vw);
+              padding-top: calc(62 / 1440 * 100vw);
+              padding-left: calc(46 / 1440 * 100vw);
 
               .title {
-                font-size: calc(26 / 1440 * 100vw);
+                font-size: calc(22 / 1440 * 100vw);
                 margin-left: calc(-60 / 1440 * 100vw);
-                margin-bottom: calc(5 / 1440 * 100vw);
+                margin-bottom: calc(10 / 1440 * 100vw);
               }
 
               .num {
-                font-size: calc(74 / 1440 * 100vw);
+                font-size: calc(65 / 1440 * 100vw);
                 padding-top: 0;
                 padding-left: calc(80 /1440 * 100vw);
               }
 
               .unit {
-                font-size: calc(41 / 1440 * 100vw);
+                font-size: calc(36 / 1440 * 100vw);
               }
             }
           }
 
           .item-forest03 {
-            width: calc(414 / 1440 * 100vw);
-            height: calc(306 / 1440 * 100vw);
-            margin-top: calc(432 / 1440 * 100vw);
-            margin-left: calc(365 / 1440 * 100vw);
+            width: calc(367 / 1440 * 100vw);
+            height: calc(273 / 1440 * 100vw);
+            margin-top: calc(382 / 1440 * 100vw);
+            margin-left: calc(395 / 1440 * 100vw);
 
             p {
-              padding-top: calc(93 / 1440 * 100vw);
-              padding-left: calc(88 / 1440 * 100vw);
+              padding-top: calc(86 / 1440 * 100vw);
+              padding-left: calc(148 / 1440 * 100vw);
 
               .title {
-                font-size: calc(26 / 1440 * 100vw);
-                margin-left: 0;
+                font-size: calc(22 / 1440 * 100vw);
+                margin-left: calc(-18 / 375 * 100vw);
                 margin-bottom: calc(4 / 1440 * 100vw);
               }
 
               .num {
-                font-size: calc(78 / 1440 * 100vw);
-                // padding-top: 0;
-                // padding-left: 0;
-                margin-left: calc(-10 / 375 * 100vw);
+                font-size: calc(69 / 1440 * 100vw);
+                margin-left: calc(-19 / 375 * 100vw);
               }
 
               .unit {
-                font-size: calc(45 / 1440 * 100vw);
+                font-size: calc(40 / 1440 * 100vw);
               }
             }
           }
@@ -2296,7 +2305,7 @@
 
     .infographic {
       padding: calc(42 / 1440 * 100vw) calc(140 / 1440 * 100vw) calc(160 / 1440 * 100vw);
-      height: calc(1118 / 1440 * 100vw);
+      height: calc(995 / 1440 * 100vw);
 
       .map {
         .place {
@@ -2322,29 +2331,29 @@
         margin-top: calc(106 / 1440 * 100vw);
 
         .item-mountain {
-          width: calc(386 / 1440 * 100vw);
-          height: calc(274 / 1440 * 100vw);
-          margin-top: calc(-48 / 1440 * 100vw);
-          margin-left: calc(50 / 1440 * 100vw);
+          width: calc(345 / 1440 * 100vw);
+          height: calc(250 / 1440 * 100vw);
+          margin-top: calc(-58 / 1440 * 100vw);
+          margin-left: calc(106 / 1440 * 100vw);
 
           p {
-            padding-top: calc(139 / 1440 * 100vw);
-            padding-left: calc(120 / 1440 * 100vw);
+            padding-top: calc(125 / 1440 * 100vw);
+            padding-left: calc(108 / 1440 * 100vw);
             
             .title {
-              font-size: calc(38 / 1440 * 100vw);
+              font-size: calc(34 / 1440 * 100vw);
               padding-left: calc(1 /1440 * 100vw);
               padding-bottom: 0;
               margin-bottom: calc(-4 / 1440 * 100vw);
             }
 
             .num {
-              font-size: calc(78 / 1440 * 100vw);
+              font-size: calc(69 / 1440 * 100vw);
               padding-left: 0;
             }
 
             .unit {
-              font-size: calc(43 / 1440 * 100vw);
+              font-size: calc(38 / 1440 * 100vw);
             }
           }
         }
@@ -2352,48 +2361,22 @@
         .item-tree {
           width: calc(240 / 1440 * 100vw);
           height: calc(224 / 1440 * 100vw);
-          margin-top: 0;
-          margin-left: calc(522 / 1440 * 100vw);
-          background-size: calc(125/ 240 * 100%) auto;
+          margin-top: calc(-14 / 1440 * 100vw);
+          margin-left: calc(526 / 1440 * 100vw);
+          background-size: calc(111/ 240 * 100%) auto;
 
           p {
-            padding-top: calc(48 / 1440 * 100vw);
-            padding-left: calc(144 / 1440 * 100vw);
+            padding-top: calc(44 / 1440 * 100vw);
+            padding-left: calc(131 / 1440 * 100vw);
 
             .title {
-              font-size: calc(38 / 1440 * 100vw);
+              font-size: calc(34 / 1440 * 100vw);
               padding-left: calc(1 / 1440 * 100vw);
               padding-bottom: calc(14 / 1440 * 100vw);
             }
 
             .num {
-              font-size: calc(78 / 1440 * 100vw);
-            }
-
-            .unit {
-              font-size: calc(43 / 1440 * 100vw);
-            }
-          }
-        }
-
-        .item-participant {
-          width: calc(276 / 1440 * 100vw);
-          height: calc(266 / 1440 * 100vw);
-          margin-top: calc(-42 / 1440 * 100vw);
-          margin-left: calc(835 / 1440 * 100vw);
-
-          p {
-            padding-top: calc(103 / 1440 * 100vw);
-            padding-left: calc(79 / 1440 * 100vw);
-
-            .title {
-              font-size: calc(29 / 1440 * 100vw);
-              margin-left: calc(-16 /1440 * 100vw);
-              margin-bottom: calc(6 /1440 * 100vw);
-            }
-
-            .num {
-              font-size: calc(72 / 1440 * 100vw);
+              font-size: calc(69 / 1440 * 100vw);
             }
 
             .unit {
@@ -2402,78 +2385,105 @@
           }
         }
 
+        .item-participant {
+          width: calc(245 / 1440 * 100vw);
+          height: calc(237 / 1440 * 100vw);
+          margin-top: calc(-52 / 1440 * 100vw);
+          margin-left: calc(809 / 1440 * 100vw);
+
+          p {
+            padding-top: calc(92 / 1440 * 100vw);
+            padding-left: calc(70 / 1440 * 100vw);
+
+            .title {
+              font-size: calc(25 / 1440 * 100vw);
+              margin-left: calc(-16 /1440 * 100vw);
+              margin-bottom: calc(6 /1440 * 100vw);
+            }
+
+            .num {
+              font-size: calc(64 / 1440 * 100vw);
+            }
+
+            .unit {
+              font-size: calc(34 / 1440 * 100vw);
+            }
+          }
+        }
+
         .planting {
-          margin-top: calc(335 / 1440 * 100vw);
+          margin-top: calc(275 / 1440 * 100vw);
 
           h2 {
-            font-size: calc(45 / 1440 * 100vw);
+            font-size: calc(40 / 1440 * 100vw);
 
             &::before,
             &::after {
-              width: calc(376 / 1440 * 100vw);
+              width: calc(336 / 1440 * 100vw);
               top: 50%;
             }
 
             &::before {
-              margin-left: 0;
+              margin-left: calc(60 / 1440 * 100vw);
             }
 
             &::after {
               left: auto;
               right: 0;
-              margin-right: 0;
+              margin-right: calc(60 / 1440 * 100vw);
             }
           }
 
           .item-forest01 {
-            width: calc(442 / 1440 * 100vw);
-            height: calc(311 / 1440 * 100vw);
-            margin-top: calc(86 / 1440 * 100vw);
-            margin-left: calc(75 / 1440 * 100vw);
+            width: calc(395 / 1440 * 100vw);
+            height: calc(278 / 1440 * 100vw);
+            margin-top: calc(70 / 1440 * 100vw);
+            margin-left: calc(127 / 1440 * 100vw);
 
             p {
-              padding-top: calc(100 / 1440 * 100vw);
-              padding-left: calc(144 / 1440 * 100vw);
+              padding-top: calc(84 / 1440 * 100vw);
+              padding-left: calc(121 / 1440 * 100vw);
 
               .title {
-                font-size: calc(24 / 1440 * 100vw);
-                margin-left: calc(-24 / 1440 * 100vw);
+                font-size: calc(21 / 1440 * 100vw);
+                margin-left: calc(-8 / 1440 * 100vw);
                 margin-bottom: calc(8 / 1440 * 100vw);
               }
-
+              
               .num {
-                font-size: calc(74 / 1440 * 100vw);
+                font-size: calc(65 / 1440 * 100vw);
+                margin-left: calc(-5 / 1440 * 100vw);
               }
 
               .unit {
-                font-size: calc(43 / 1440 * 100vw);
+                font-size: calc(38 / 1440 * 100vw);
               }
             }
           }
 
           .item-forest02 {
-            width: calc(410 / 1440 * 100vw);
+            width: calc(372 / 1440 * 100vw);
             height: calc(304 / 1440 * 100vw);
-            margin-top: calc(90 / 1440 * 100vw);
-            margin-left: calc(656 / 1440 * 100vw);
+            margin-top: calc(72 / 1440 * 100vw);
+            margin-left: calc(640 / 1440 * 100vw);
 
             p {
-              padding-top: calc(94 / 1440 * 100vw);
+              padding-top: calc(85 / 1440 * 100vw);
               padding-left: calc(100 / 1440 * 100vw);
 
               .title {
-                font-size: calc(24 / 1440 * 100vw);
-                margin-left: calc(-18 / 1440 * 100vw);
+                font-size: calc(21 / 1440 * 100vw);
+                margin-left: calc(-22 / 1440 * 100vw);
                 margin-bottom: calc(10 / 1440 * 100vw);
               }
 
               .num {
-                font-size: calc(74 / 1440 * 100vw);
-                margin-left: calc(-8 / 1440 * 100vw);
+                font-size: calc(65 / 1440 * 100vw);
+                margin-left: calc(-6 / 1440 * 100vw);
               }
 
               .unit {
-                font-size: calc(43 / 1440 * 100vw);
+                font-size: calc(38 / 1440 * 100vw);
               }
             }
           }

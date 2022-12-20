@@ -28,6 +28,10 @@ $ometomioka-bg-color: #eaf0e7;
 // -----------------------------------------------------------------
 $transition: .5s cubic-bezier(.55,.14,.52,.91);
 
+// drop-shadow
+$drop-shadow-sp: drop-shadow(0 0 calc(2 / 375 * 100vw) rgba(0, 0, 0, 0.5));
+$drop-shadow-pc: drop-shadow(0 0 calc(2 / 1440 * 100vw) rgba(0, 0, 0, 0.5));
+
 // animation
 // -----------------------------------------------------------------
 .js-fadein {
@@ -62,7 +66,7 @@ $transition: .5s cubic-bezier(.55,.14,.52,.91);
 // Media Query
 // -----------------------------------------------------------------
 $breakpoints: (
-	xl : "only screen and (min-width: 1401px)",
+	xl : "only screen and (min-width: 1441px)",
 	l : "only screen and (min-width: 1201px)",
 	m : "only screen and (min-width: 769px)",
 	s : "only screen and (min-width: 481px)"

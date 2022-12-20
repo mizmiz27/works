@@ -13,13 +13,10 @@ new Vivus('op-logo',
 
 $(document).ready(function () {
   $('#pagepiling').pagepiling({
-    // menu: '#menu',
     anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
-    // sectionsColor: ['#283455', '#d35e71', '#000', '#283455', '#d35e71'],
-    // navigation: {
-    //   'position': 'left',
-    //   'tooltips': ['その1', 'その2', 'その3']
-    // }
+    navigation: {
+      'position': 'left',
+    },
   });
 });
 
@@ -32,15 +29,16 @@ $(function() {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-  $("#splash-logo").delay(4000).fadeOut('slow');
-  $("#splash").delay(4000).fadeOut(800, function(){
-  $('.wrapper').addClass('appear');
-  });
-
   const modal = document.getElementById("modal");
   const openModalBtns = document.querySelectorAll(".js-open-modal");
   const closeModalBtns = document.querySelectorAll(".js-close-modal");
   const trigger = document.querySelector(".trigger");
+
+  // 対応するスライド番号をセット（クリックしたときにモーダルで開く画像が何番目か）
+  openModalBtns.forEach((openModalBtn, index) => {
+    openModalBtn.dataset.slideIndex = index + 1;
+  });
+
 
   // Swiperの設定
   const swiper = new Swiper(".swiper", {
@@ -92,3 +90,11 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+$(window).on('load',function(){
+    $("#splash-logo").delay(3000).fadeOut('slow');
+    $("#splash").delay(3000).fadeOut(800, function(){
+    $('.wrapper').addClass('appear');
+    });
+  });

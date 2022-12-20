@@ -79,10 +79,12 @@ $(function () {
 // intersection observer
 const targets = document.querySelectorAll(".target");
 const fadeups = document.querySelectorAll(".fadeup");
+const fadeToLefts = document.querySelectorAll(".fade-to-left");
+const fadeToRights = document.querySelectorAll(".fade-to-right");
 
 const options = {
   root: null,
-  rootMargin: '-40% 0px -20% 0px',
+  rootMargin: '0px 0px -20% 0px',
   threshold: 0,
 };
 
@@ -92,6 +94,12 @@ targets.forEach((target) => {
 });
 fadeups.forEach((fadeup) => {
   observer.observe(fadeup);
+});
+fadeToLefts.forEach((fadeToLeft) => {
+  observer.observe(fadeToLeft);
+});
+fadeToRights.forEach((fadeToRight) => {
+  observer.observe(fadeToRight);
 });
 
 function onAnimated(entries, observer) {

@@ -3,6 +3,7 @@
 const swiper = new Swiper('.swiper-container', {
   // loop: true,
   slidesPerView: 'auto',
+  slidesPerView: '1',
   spaceBetween: '3.2%',
   navigation: {
     nextEl: '.swiper-button-next',
@@ -14,11 +15,12 @@ const swiper = new Swiper('.swiper-container', {
   },
   breakpoints: {
     799: {
-      spaceBetween: 30,
+      spaceBetween: '40%',
       allowTouchMove: false,
 		},
     1440: {
-      spaceBetween: 50,
+      spaceBetween: '55%',
+      // spaceBetween: '40%',
       allowTouchMove: false,
 		},
   },

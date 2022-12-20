@@ -31,8 +31,6 @@
   text-align: center;
   color: $white;
 
-  // display: none;
-  
   #splash-logo {
     position: absolute;
     top: 50%;
@@ -45,27 +43,19 @@
       height: auto;
     }
 
-    /*アニメーション前のパスの指定*/
     svg path {
       fill-opacity: 0;
-      /*最初は透過0で見えない状態*/
       transition: fill-opacity .5s;
-      /*カラーがつく際のアニメーション0.5秒で変化*/
       fill: none;
-      /*塗りがない状態*/
       stroke: $white;
-      /*線の色*/
       stroke-width: 1;
     }
 
     /*アニメーション後に.doneというクラス名が付与された時のパスの指定*/
     svg.done path {
       fill: $white;
-      /*塗りの色*/
       fill-opacity: 1;
-      /*透過1で見える状態*/
       stroke: none;
-      /*線の色なし*/
     }
   }
 }
@@ -116,9 +106,57 @@ table {
   border-spacing: 0;
 }
 
+/* ------------------------------------------------------
+   コンテンツ部分
+------------------------------------------------------ */
+#pp-nav {
+  display: none;
+}
+
+.pp-fadeup {
+  opacity: 0;
+  transform: translateY(calc(30 / 375 * 100vw));
+  transition-property: opacity, transform;
+  transition-duration: 0.7s, 1s;
+  transition-timing-function: linear, cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: 0.5s, 0.5s;
+}
+
+.section.active .pp-fadeup {
+  opacity: 1;
+  transform: none;
+}
+
+.pp-fade-to-left {
+  opacity: 0;
+  transform: translateX(calc(30 / 375 * 100vw));
+  transition-property: opacity, transform;
+  transition-duration: 0.7s, 1s;
+  transition-timing-function: linear, cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: 0.8s, 0.8s;
+}
+
+.section.active .pp-fade-to-left {
+  opacity: 1;
+  transform: none;
+}
+
+.pp-fade-to-right {
+  opacity: 0;
+  transform: translateX(calc(-30 / 375 * 100vw));
+  transition-property: opacity, transform;
+  transition-duration: 0.7s, 1s;
+  transition-timing-function: linear, cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: 0.8s, 0.8s;
+}
+
+.section.active .pp-fade-to-right {
+  opacity: 1;
+  transform: none;
+}
+
 #forest-top {
   opacity: 0;
-  // position: relative;
 
   @at-root .wrapper.appear #forest-top {
     animation-name: PageAnimeAppear;
@@ -139,7 +177,6 @@ table {
   }
 
   .panel-section {
-    // position: relative;
 
     .elem {
       @include abs();
@@ -171,6 +208,7 @@ table {
         font-weight: 900;
         margin-top: calc(32 / 375 * 100vw);
         position: relative;
+        filter: $drop-shadow-sp;
 
         .cp_arrow {
           @include abs();
@@ -236,7 +274,7 @@ table {
 
     &.kv {
       width: 100vw;
-      // height: calc(667 / 375 * 100vw);
+      overflow-x: hidden;
 
       .kv-video {
         position: absolute;
@@ -250,13 +288,28 @@ table {
         transition: opacity $transition;
         width: auto;
         height: 100%;
+        filter: brightness(120%) saturate(130%);
+      }
+
+      .fadeup-box {
+        opacity: 0;
+        transform: translateY(calc(30 / 375 * 100vw));
+        transition-property: opacity, transform;
+        transition-duration: 0.7s, 1s;
+        transition-timing-function: linear, cubic-bezier(0.33, 1, 0.68, 1);
+        transition-delay: 5s, 5s;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       .elem {
-        // margin-top: calc(158 / 375 * 100vw);
 
         .logo-mark {
           width: calc(85 / 375 * 100vw);
+          filter: $drop-shadow-sp;
         }
 
         h1 {
@@ -266,6 +319,7 @@ table {
           line-height: 1.35;
           font-weight: 700;
           position: relative;
+          filter: $drop-shadow-sp;
 
           &:after {
             content: '';
@@ -275,6 +329,11 @@ table {
             background-color: $white;
             margin-top: calc(108 / 375 * 100vw);
             margin-left: calc(78 / 375 * 100vw);
+            transform: scale(0, 1);
+            transform-origin: center top;
+            transition-property: transform;
+            transition-duration: .3s;
+            transition-delay: 5.7s;
           }
 
           span {
@@ -288,12 +347,26 @@ table {
           margin-top: calc(48 / 375 * 100vw);
           margin-left: calc(3 / 375 * 100vw);
           letter-spacing: 0.4vw;
+          filter: $drop-shadow-sp;
         }
       }
 
       &.animated {
         .kv-video {
           opacity: 1;
+        }
+
+        .fadeup-box {
+          opacity: 1;
+          transform: none;
+        }
+
+        .elem {
+          h1 {
+            &:after {
+              transform: scale(1, 1);
+            }
+          }
         }
       }
     }
@@ -305,7 +378,6 @@ table {
       width: 100vw;
 
       .elem {
-        // position: relative;
 
         figure {
           display: block;
@@ -327,6 +399,12 @@ table {
             top: auto;
             bottom: 0;
             margin-bottom: calc(-7 / 375 * 100vw);
+            transition: all .5s 1.2s;
+            transform: scale(0, 1);
+            transform-origin: center top;
+            @at-root #forest-top .panel-section.reason.active .elem h2:before {
+              transform: scale(1, 1);
+            }
           }
 
           span {
@@ -346,8 +424,6 @@ table {
 
       &.reason01 {
         background-image: url('../img/top/reason01-bg_sp.jpg');
-        // height: calc(548 / 375 * 100vw);
-        // padding-top: calc(186 / 375 * 100vw);
 
         .elem {
           .icon {
@@ -361,8 +437,6 @@ table {
 
       &.reason02 {
         background-image: url('../img/top/reason02-bg_sp.jpg');
-        // min-height: calc(592 / 375 * 100vw);
-        // padding-top: calc(186 / 375 * 100vw);
 
         .elem {
           .icon {
@@ -430,13 +504,11 @@ table {
         }
 
         &.open {
-          // height: calc(1218 / 375 * 100vw);
           padding-top: calc(120 / 375 * 100vw);
           padding-bottom: calc(60 / 375 * 100vw);
 
           @at-root #forest-top .panel-section.reason.reason02.open .elem .explanation h3 {
 
-            // padding-top: calc(16 / 375 * 100vw);
             &::after {
               transform: translateY(-50%) rotate(-45deg);
               margin-top: calc(4 / 375 * 100vw);
@@ -453,8 +525,6 @@ table {
 
       &.reason03 {
         background-image: url('../img/top/reason03-bg_sp.jpg');
-        // min-height: calc(546 / 375 * 100vw);
-        // padding-top: calc(178 / 375 * 100vw);
 
         .elem {
           .icon {
@@ -478,14 +548,14 @@ table {
       @include abs();
       width: calc(153 / 375 * 100vw);
 
-      &:first-of-type {
+      &.illust01 {
         margin-top: calc(12 / 375 * 100vw);
         left: auto;
         right: 0;
         margin-right: calc(-19 / 375 * 100vw);
       }
 
-      &:last-of-type {
+      &.illust02 {
         top: auto;
         bottom: 0;
         margin-bottom: calc(97 / 375 * 100vw);
@@ -527,7 +597,7 @@ table {
       align-items: center;
       position: relative;
       border: solid 2px $green;
-      transition: color 0.3s, background-color 0.7s, border-color 0.7s;
+      transition: color 0.3s, background-color 0.7s, border-color 0.7s, opacity 0.7s 0.5s, transform 0.7s cubic-bezier(0.33, 1, 0.68, 1) 0.5s;
 
       span {
         display: inline-block;
@@ -546,9 +616,6 @@ table {
         margin-right: calc(44 / 375 * 100vw);
       }
 
-      // &::before {
-      //   background: url('../img/top/icon-external-link_hov.svg') no-repeat center top/contain;
-      // }
       &::after {
         background: url('../img/top/icon-external-link.svg') no-repeat center top/contain;
         transition: opacity 0.3s;
@@ -557,9 +624,6 @@ table {
       &:hover {
         background-color: $green-hov;
         border-color: $green-hov;
-        // &::after {
-        //   opacity: 0;
-        // }
       }
     }
   }
@@ -959,7 +1023,6 @@ table {
     min-height: calc(1749 / 375 * 100vw);
     padding-top: calc(42 / 375 * 100vw);
 
-    // padding-bottom: calc(80 / 375 * 100vw);
     .container {
       width: 100%;
 
@@ -1165,6 +1228,16 @@ table {
         display: block;
         width: 100%;
         margin-top: calc(30 / 375 * 100vw);
+
+        figure {
+          transition: 0.4s;
+        }
+
+        &:hover {
+          figure {
+            filter: brightness(50%);
+          }
+        }
       }
     }
   }
@@ -1175,7 +1248,8 @@ table {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
+    height: 100%;
     padding: calc(17 / 375 * 100vw);
     display: flex;
     align-items: center;
@@ -1183,7 +1257,7 @@ table {
     transition: opacity 0.3s;
     pointer-events: none;
     opacity: 0;
-    z-index: -1;
+    // z-index: -1;
     background-color: rgba(0, 0, 0, 0.7);
 
     &.is-active {
@@ -1203,7 +1277,11 @@ table {
 
   .swiper {
     width: 100%;
-    height: calc(520 / 375 * 100vw);
+    height: calc(480 / 375 * 100vw);
+    max-height: 75vh;
+  }
+  
+  .swiper-wrapper {
     overflow-y: scroll;
     overflow-x: hidden;
   }
@@ -1229,14 +1307,17 @@ table {
 
     h2 {
       color: #fff;
-      background-color: $green;
+      // background-color: $green;
+      background-color: rgba(0, 0, 0, 0.5);
       font-family: 'Noto Sans JP', sans-serif;
       font-size: calc(16 / 375 * 100vw);
       font-weight: 500;
       line-height: calc(26 / 16);
       margin-top: 0;
       margin-bottom: 0;
-      padding: calc(10 / 375 * 100vw) calc(22 / 375 * 100vw);
+      padding: calc(10 / 375 * 100vw) calc(15 / 375 * 100vw);
+      position: absolute;
+      width: 100%;
 
       span {
         display: inline-block;
@@ -1245,7 +1326,6 @@ table {
 
     figure {
 
-      // margin-top: calc(20 / 375 * 100vw);
       figcaption {
         font-family: 'Noto Sans JP', sans-serif;
         font-size: calc(14 / 375 * 100vw);
@@ -1360,6 +1440,18 @@ table {
     }
   }
 
+  .pp-fadeup {
+    transform: translateY(calc(30 / 1440 * 100vw));
+  }
+
+  .pp-fade-to-left {
+    transform: translateX(calc(30 / 1440 * 100vw));
+  }
+
+  .pp-fade-to-right {
+    transform: translateX(calc(-30 / 1440 * 100vw));
+  }
+
   #forest-top {
     .panel-section {
       .elem {
@@ -1378,6 +1470,7 @@ table {
         .scrolldown {
           font-size: calc(22 / 1440 * 100vw);
           margin-top: calc(68 / 1440 * 100vw);
+          filter: $drop-shadow-pc;
 
           .cp_arrow {
             width: calc(18 / 1440 * 100vw);
@@ -1401,18 +1494,21 @@ table {
       }
 
       &.kv {
-        // height: calc(1073 / 1440 * 100vw);
 
         .kv-video {
           height: auto;
         }
 
+        .fadeup-box {
+          transform: translateY(calc(30 / 1440 * 100vw));
+        }
+
         .elem {
-          // margin-top: calc(256 / 1440 * 100%);
           margin-left: calc(-3 / 1440 * 100%);
 
           .logo-mark {
             width: calc(126 / 1440 * 100%);
+            filter: $drop-shadow-pc;
           }
 
           h1 {
@@ -1420,6 +1516,7 @@ table {
             margin-left: calc(10 / 1440 * 100%);
             line-height: 1.15;
             letter-spacing: 0.7vw;
+            filter: $drop-shadow-pc;
 
             &:after {
               width: calc(69 / 1440 * 100vw);
@@ -1438,6 +1535,7 @@ table {
             margin-top: calc(115 / 1440 * 100%);
             margin-left: calc(3 / 1440 * 100%);
             letter-spacing: 0.14vw;
+            filter: $drop-shadow-pc;
           }
         }
       }
@@ -1451,8 +1549,11 @@ table {
             &:before {
               width: 105%;
               left: 50%;
-              transform: translateX(-50%);
+              transform: translateX(-50%) scale(0, 1);
               margin-bottom: calc(-9 / 1440 * 100vw);
+              @at-root #forest-top .panel-section.reason.active .elem h2:before {
+                transform: translateX(-50%) scale(1, 1);
+              }
             }
 
             span {
@@ -1472,8 +1573,6 @@ table {
 
         &.reason01 {
           background-image: url('../img/top/reason01-bg_pc.jpg');
-          // height: calc(1000 / 1440 * 100vw);
-          // padding-top: calc(388 / 1440 * 100vw);
 
           .elem {
             .icon {
@@ -1486,10 +1585,8 @@ table {
 
         &.reason02 {
           background-image: url('../img/top/reason02-bg_pc.jpg');
-          // min-height: calc(900 / 1440 * 100vw);
-          // padding-top: calc(310 / 1440 * 100vw);
           padding-top: calc(120 / 1440 * 100vw);
-            padding-bottom: calc(60 / 1440 * 100vw);
+          padding-bottom: calc(60 / 1440 * 100vw);
 
           .elem {
             .icon {
@@ -1549,7 +1646,6 @@ table {
           }
 
           &.open {
-            // height: calc(1226 / 1440 * 100vw);
             padding-top: calc(120 / 1440 * 100vw);
             padding-bottom: calc(60 / 1440 * 100vw);
 
@@ -1563,8 +1659,6 @@ table {
 
         &.reason03 {
           background-image: url('../img/top/reason03-bg_pc.jpg');
-          // min-height: calc(998 / 1440 * 100vw);
-          // padding-top: calc(375 / 1440 * 100vw);
 
           .elem {
             .icon {
@@ -1584,17 +1678,18 @@ table {
     }
 
     .sdgs {
-      padding: calc(141 / 1440 * 100vw) 0 calc(221 / 1440 * 100vw);
+      padding: calc(141 / 1440 * 100vw) 0 0;
+      height: calc(760 / 1440 * 100vw);
 
       .illust {
         width: calc(308 / 1440 * 100vw);
 
-        &:first-of-type {
+        &.illust01 {
           margin-top: calc(85 / 1440 * 100vw);
           margin-right: calc(-29 / 1440 * 100vw);
         }
 
-        &:last-of-type {
+        &.illust02 {
           margin-bottom: calc(110 / 1440 * 100vw);
           margin-left: calc(-25 / 1440 * 100vw);
         }
@@ -1681,7 +1776,6 @@ table {
           justify-content: space-between;
           margin-top: calc(64 / 1440 * 100vw);
 
-          // margin-bottom: calc(300 / 1440 * 100vw);
           .bnr {
             width: calc(380 / 1440 * 100vw);
             height: calc(125 / 1440 * 100vw);
@@ -1739,6 +1833,14 @@ table {
 
             &:not(:first-of-type) {
               margin-top: 0;
+            }
+
+            &:nth-of-type(2) {
+              transition-delay: 0.2s, 0.2s;
+            }
+
+            &:nth-of-type(3) {
+              transition-delay: 0.4s, 0.4s;
             }
           }
         }
@@ -1876,6 +1978,16 @@ table {
               margin-left: calc(56 / 1440 * 100vw);
             }
 
+            &:nth-child(2),
+            &:nth-child(5) {
+              transition-delay: 0.2s, 0.2s;
+            }
+
+            &:nth-child(3),
+            &:nth-child(6) {
+              transition-delay: 0.4s, 0.4s;
+            }
+
             &:nth-child(4) {
               margin-left: calc(44 / 1440 * 100vw);
             }
@@ -1930,6 +2042,14 @@ table {
           &:not(:first-child) {
             margin-top: 0;
           }
+
+          &:nth-child(2) {
+            transition-delay: 0.2s, 0.2s;
+          }
+
+          &:nth-child(3) {
+            transition-delay: 0.4s, 0.4s;
+          }
         }
       }
     }
@@ -1949,7 +2069,6 @@ table {
 
           .box {
             figure {
-              // padding-top: calc(5 / 1440 * 100vw);
               padding-bottom: calc(5 / 1440 * 100vw);
 
               &.company-logo {
@@ -1983,6 +2102,7 @@ table {
         .right-content {
           width: calc(445 / 1440 * 100vw);
           margin-top: 0;
+          transition-delay: 0.2s, 0.2s;
 
           .box {
             figure {
@@ -2015,10 +2135,16 @@ table {
 
           &:nth-of-type(2) {
             width: calc(280 / 1440 * 100vw);
+            transition-delay: 0.2s, 0.2s;
+          }
+
+          &:nth-of-type(3) {
+            transition-delay: 0.4s, 0.4s;
           }
 
           &:last-of-type {
             width: calc(278 / 1440 * 100vw);
+            transition-delay: 0.6s, 0.6s;
           }
         }
       }
@@ -2030,24 +2156,22 @@ table {
     }
 
     .swiper {
-      // height: calc(796 / 1440 * 100vw);
       max-height: 85vh;
       width: auto;
-      // overflow: hidden;
     }
 
     .modal__content {
       h2 {
-        font-size: calc(21 / 1440 * 100vw);
+        font-size: calc(20 / 1440 * 100vw);
         line-height: calc(39 / 21);
-        padding: calc(16 / 1440 * 100vw) calc(32 / 1440 * 100vw);
+        padding: calc(10 / 1440 * 100vw) calc(24 / 1440 * 100vw);
       }
 
       figure {
         figcaption {
           font-size: calc(16 / 1440 * 100vw);
           line-height: calc(26 / 16);
-          padding: calc(15 / 1440 * 100vw) calc(30 / 1440 * 100vw);
+          padding: calc(15 / 1440 * 100vw) calc(24 / 1440 * 100vw);
         }
       }
     }
